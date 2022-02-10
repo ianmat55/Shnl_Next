@@ -45,6 +45,14 @@ input[type="text"], textarea {
   background-color : #d1d1d1; 
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
 html {
   box-sizing: border-box;
   }

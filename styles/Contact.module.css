@@ -1,0 +1,32 @@
+#contactTitle {
+	text-align: center;
+}
+
+#titleImage {
+	margin: 0.75rem auto;
+}
+
+#about {
+	margin: 1.25rem;
+}
+
+#aboutTitle {
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+#aboutContainer {
+	display: flex;
+}
+
+.formDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.formElement {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+}

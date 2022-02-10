@@ -1,0 +1,24 @@
+#commercialHero {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+}
+
+#heroImg {
+	object-fit: cover;
+	width: 100%;
+}
+
+#commercialTitle {
+	display: absolute;
+	bottom: 1.25rem;
+}
+
+.bodyContainer {
+	margin: 1.25rem;
+}
+
+.bodyText {
+	margin-top: 1.25rem;
+}

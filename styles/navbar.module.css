@@ -70,7 +70,7 @@
 	position: relative;
 }
 
-#carousel-container {
+#carouselContainer {
 	display: flex;
 	position: relative;
 	z-index: 50;

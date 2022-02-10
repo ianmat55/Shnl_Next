@@ -1,0 +1,24 @@
+#weddingHeader {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 24rem;
+	margin: auto;
+}
+
+#weddingTitle {
+	position: absolute;
+	z-index: 100;
+	left: 1.25em;
+}
+
+#img1 {
+	position: relative;
+	margin: auto;
+}
+
+#img2 {
+	position: absolute;
+	z-index: 100;
+	right: 1.25em;
+}

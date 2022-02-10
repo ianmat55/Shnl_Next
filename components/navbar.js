@@ -97,13 +97,13 @@ const Nav = ({ setDesktopImg }) => {
 	];
 	
 	return (
-		<div id={styles.carousel-container}>
+		<div id={styles.carouselContainer}>
 			<div className={styles.hamburgerContainer}>
 				<HamburgerMenu />
 				<h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1>
 			</div>
 			<div id={styles.navContainer}>
-				<nav className='fixed bg-[#fdf6f0] w-300 h-full p-6 py-7 pb-14 flex flex-col items-center justify-center translate_nav'>
+				<nav className='translate_nav'>
 					<Top />
 					<MenuItems menuLinks={menuLinks} setDesktopImg={setDesktopImg} />
 					<SocialIcons insta={instagram} facebook={facebook} email={mail} />

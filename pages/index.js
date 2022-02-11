@@ -2,12 +2,19 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 
+import img1 from '../public/assets/mobile_images/img1.jpg'
 import img2 from '../public/assets/mobile_images/img2.jpg'
 import img3 from '../public/assets/mobile_images/img3.jpg'
 import img4 from '../public/assets/mobile_images/img4.jpg'
 import img5 from '../public/assets/mobile_images/img5.jpg'
 
-const MobileImages = ({ mobileImages }) => {
+import desktop1 from '../public/assets/desktop_images/home.jpg'
+import desktop2 from '../public/assets/desktop_images/wedding.jpg'
+import desktop3 from '../public/assets/desktop_images/lifestyle.jpg'
+import desktop4 from '../public/assets/desktop_images/contact.jpg'
+import desktop5 from '../public/assets/desktop_images/about.jpg'
+
+const BackgroundImages = ({ mobileImages, desktopImages }) => {
 	const [count, setCount] = useState(0);
   	const [width, setWidth] = useState(1);
 
@@ -18,6 +25,11 @@ const MobileImages = ({ mobileImages }) => {
     	}
   	}, [width])
 
+	useEffect(() => {
+		const incrementCount = setInterval(() => setCount(count === mobileImages.length - 1 ? 0 : count + 1), 9000);
+		return () => clearInterval(incrementCount);
+	}, [count]);
+
 	const transform = {
 		transform: `translateX(-${width * count}px)`,
 		transition: 'transform 0.6s ease-in-out',
@@ -25,27 +37,20 @@ const MobileImages = ({ mobileImages }) => {
 		width: '100vw',
 	}
 
-	useEffect(() => {
-		const incrementCount = setInterval(() => setCount(count === mobileImages.length - 1 ? 0 : count + 1), 9000);
-		console.log('hello');
-		return () => clearInterval(incrementCount);
-	}, [count]);
-
-	if (width <= 1000) {
+	if (width <= 800) {
 		return (
 			<>
 				{mobileImages.map((image, index) => {	
 					return (
-						<div style={transform}>	
+						<div key={index}>
 							<Image 
-								key={index}
 								src={image} 
 								alt='idk'
 								priority
 								layout='fill'
-								className={styles.mobileBackground}
+								className={styles.imageWrapper}
 							/>
-						</div>
+						</div>		
 				)
 				})}
 			</>	
@@ -53,17 +58,16 @@ const MobileImages = ({ mobileImages }) => {
 	} else {
 		return (
 			<>
-				{mobileImages.map((image, index) => {	
+				{desktopImages.map((image, index) => {	
 					return (
-						<div className={styles.mobileBackground}>		
-							<Image
-								src={image} 
-								alt='idk'
-								key={index}
-								layout='fill'
-							/>
-						</div>
-						
+						<Image
+							src={image} 
+							alt='idk'
+							key={index}
+							priority
+							layout='fill'
+							className={styles.imageWrapper}
+						/>					
 					)
 				})}
 			</>	
@@ -73,12 +77,13 @@ const MobileImages = ({ mobileImages }) => {
 
 
 export default function Home() {
-	const mobileImages = [img2, img3, img4, img5];
+	const mobileImages = [img1, img2, img3, img4, img5];
+	const desktopImages = [desktop1, desktop2, desktop3, desktop4, desktop5];
 
 	return (
 		<section id={styles.home}>
-			<div id={styles.slideShowDiv}>
-				<MobileImages mobileImages={mobileImages} />
+			<div className={styles.background}>
+				<BackgroundImages mobileImages={mobileImages} desktopImages={desktopImages} />
 			</div>
 		</section>
 	)

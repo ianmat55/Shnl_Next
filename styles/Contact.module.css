@@ -1,9 +1,11 @@
 #contactTitle {
 	text-align: center;
+	margin: 0
 }
 
 #titleImage {
-	margin: 0.75rem auto;
+	margin: 0 auto 0.75rem auto;
+	width: 100%;
 }
 
 #about {
@@ -17,6 +19,12 @@
 
 #aboutContainer {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bioDiv {
+	width: 100%;
 }
 
 .formDiv {

@@ -34,32 +34,20 @@
   top: 1rem;
 }
 
-/* @media only screen and (min-width: 450px) {
-	#lifestyleHero {
-		width: 90%;
-	}
-} */
-
-@media only screen and (min-width: 1000px) {
-  #lifestyleHero {
-    width: 90%;
-  }
-}
-
 @media only screen and (min-width: 600px) {
   #lifestyleHero {
-    width: 65%;
+    width: 80%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   #lifestyleHero {
-    width: 40%;
+    width: 75%;
   }
 }
 
 @media only screen and (min-width: 1500px) {
   #lifestyleHero {
-    width: 35%;
+    width: 40%;
   }
 }

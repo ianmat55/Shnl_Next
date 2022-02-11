@@ -2,21 +2,21 @@ import styles from '../styles/Contact.module.css'
 
 const Header = () => {
 	return (
-		<div className={styles.formDiv}>
-			<h1 aria-invalid={styles.contactTitle}> HOWZIT </h1>
+		<div className={styles.bioDiv}>
+			<h1 className={styles.contactTitle}> HOWZIT </h1>
 			<img src='https://via.placeholder.com/850X1000' id={styles.titleImage} className='pl-10 pr-10 my-3 mx-auto' />
 		</div>
 	)
 };
 
-const Body = () => {
-	return (
-		<section id={styles.about}>
-			<h3 id={styles.aboutTitle}> About Me </h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-		</section>
-	)
-}
+// const Body = () => {
+// 	return (
+// 		<section id={styles.about}>
+// 			<h3 id={styles.aboutTitle}> About Me </h3>
+// 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+// 		</section>
+// 	)
+// }
 
 const Form = () => {
 	return (
@@ -66,7 +66,7 @@ export default function Contact() {
 		<div className='content'>
 			<div id={styles.aboutContainer}> 
 			    <Header />
-		        <Body />
+		        {/* <Body /> */}
 			</div>
 			<Form />
 		</div>

@@ -25,7 +25,7 @@ const MenuItems = ({ menuLinks }) => {
 const SocialIcons = ({ insta, facebook, email }) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
-		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} />  </li> 
+		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} priority />  </li> 
 	)
 
 	return (
@@ -100,7 +100,7 @@ const Nav = ({ setDesktopImg }) => {
 		<div id={styles.carouselContainer}>
 			<div className={styles.hamburgerContainer}>
 				<HamburgerMenu />
-				<h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1>
+				{/* <h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1> */}
 			</div>
 			<div id={styles.navContainer}>
 				<nav className='translate_nav'>

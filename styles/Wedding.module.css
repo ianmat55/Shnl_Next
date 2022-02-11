@@ -2,23 +2,51 @@
 	display: flex;
 	align-items: center;
 	position: relative;
-	width: 24rem;
+	width: 90%;
 	margin: auto;
 }
 
 #weddingTitle {
 	position: absolute;
-	z-index: 100;
-	left: 1.25em;
+	z-index: 10;
+	left: 1em;
 }
 
 #img1 {
 	position: relative;
 	margin: auto;
+	width: 50%;
+	height: auto;
 }
 
 #img2 {
 	position: absolute;
-	z-index: 100;
+	z-index: 10;
 	right: 1.25em;
+	width: 28%;
+	height: auto
 }
+
+@media only screen and (min-width: 1000px) {
+	#weddingHeader {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	#weddingHeader {
+		width: 35%;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	#weddingHeader {
+		width: 28%;
+	}
+}
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */

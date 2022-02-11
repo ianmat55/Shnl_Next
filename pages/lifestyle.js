@@ -13,8 +13,8 @@ const Hero = () => {
 
 export default function Lifestyle() {
 	return (
-		<div className='tablet:content'>
+		<section className='content'>
 			<Hero />
-		</div>
+		</section>
 	)
 }

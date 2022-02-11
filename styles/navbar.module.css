@@ -14,8 +14,8 @@
 	display: flex;
 	position: fixed;
 	align-items: center;
-	background-color: white;
-	opacity: 80%;
+	/* background-color: white;
+	opacity: 80%; */
 	width: 100vw;
 	z-index: 50
 }

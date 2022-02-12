@@ -8,11 +8,10 @@ import img3 from '../public/assets/mobile_images/img3.jpg'
 import img4 from '../public/assets/mobile_images/img4.jpg'
 import img5 from '../public/assets/mobile_images/img5.jpg'
 
-import desktop1 from '../public/assets/desktop_images/home.jpg'
-import desktop2 from '../public/assets/desktop_images/wedding.jpg'
-import desktop3 from '../public/assets/desktop_images/lifestyle.jpg'
-import desktop4 from '../public/assets/desktop_images/contact.jpg'
-import desktop5 from '../public/assets/desktop_images/about.jpg'
+import desktop1 from '../public/assets/desktop_images/wedding.jpg'
+import desktop2 from '../public/assets/desktop_images/lifestyle.jpg'
+import desktop3 from '../public/assets/desktop_images/contact.jpg'
+import desktop4 from '../public/assets/desktop_images/about.jpg'
 
 const BackgroundImages = ({ mobileImages, desktopImages }) => {
 	const [count, setCount] = useState(0);
@@ -20,7 +19,6 @@ const BackgroundImages = ({ mobileImages, desktopImages }) => {
 
   	useEffect(() => {
     	if (typeof window !== 'undefined') {
-      		console.log(window.innerWidth)
       		setWidth(window.innerWidth)
     	}
   	}, [width])
@@ -33,8 +31,9 @@ const BackgroundImages = ({ mobileImages, desktopImages }) => {
 	const transform = {
 		transform: `translateX(-${width * count}px)`,
 		transition: 'transform 0.6s ease-in-out',
-		height: '100vh',
+		position: 'relative',
 		width: '100vw',
+		height: '100vh'
 	}
 
 	if (width <= 800) {
@@ -42,12 +41,12 @@ const BackgroundImages = ({ mobileImages, desktopImages }) => {
 			<>
 				{mobileImages.map((image, index) => {	
 					return (
-						<div key={index}>
+						<div style={transform} key={index}>
 							<Image 
 								src={image} 
 								alt='idk'
-								priority
 								layout='fill'
+								priority
 								className={styles.imageWrapper}
 							/>
 						</div>		
@@ -60,14 +59,15 @@ const BackgroundImages = ({ mobileImages, desktopImages }) => {
 			<>
 				{desktopImages.map((image, index) => {	
 					return (
-						<Image
-							src={image} 
-							alt='idk'
-							key={index}
-							priority
-							layout='fill'
-							className={styles.imageWrapper}
-						/>					
+						<div className={styles.backgroundContainer}>
+							<Image
+								src={image} 
+								alt='idk'
+								key={index}
+								layout='fill'
+								className={styles.imageWrapper}
+							/>			
+						</div>		
 					)
 				})}
 			</>	
@@ -78,13 +78,11 @@ const BackgroundImages = ({ mobileImages, desktopImages }) => {
 
 export default function Home() {
 	const mobileImages = [img1, img2, img3, img4, img5];
-	const desktopImages = [desktop1, desktop2, desktop3, desktop4, desktop5];
+	const desktopImages = [desktop1, desktop2, desktop3, desktop4];
 
 	return (
 		<section id={styles.home}>
-			<div className={styles.background}>
-				<BackgroundImages mobileImages={mobileImages} desktopImages={desktopImages} />
-			</div>
+			<BackgroundImages mobileImages={mobileImages} desktopImages={desktopImages} />
 		</section>
 	)
 };

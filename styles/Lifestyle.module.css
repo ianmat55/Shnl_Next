@@ -44,6 +44,20 @@
   #lifestyleHero {
     width: 75%;
   }
+
+  #img1 {
+    right: 4.5rem
+  }
+
+  #img2 {
+    bottom: -3rem;
+    right: 12rem;
+    width: 25%;
+  }
+
+  #img3 {
+    right: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 1500px) {

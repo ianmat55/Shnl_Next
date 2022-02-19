@@ -1,4 +1,4 @@
-#contactTitle {
+.contactTitle {
 	text-align: center;
 	margin: 0
 }
@@ -25,6 +25,8 @@
 
 .bioDiv {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .formDiv {
@@ -38,3 +40,25 @@
 	flex-direction: column;
 	padding: 0.5rem;
 }
+
+@media only screen and (min-width: 1000px) {
+	#titleImage {
+		height: 70vh;
+		width: auto;
+	}
+	
+}
+
+/* @media only screen and (min-width: 1500px) {
+	#titleImage {
+		height: 70vh;
+		width: auto;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	#titleImage {
+		height: 70vh;
+		width: auto;
+	}
+} */

@@ -54,14 +54,20 @@ form {
   display: flex;
   flex-direction: column;
   width: 85%;
-  margin: auto;
+  margin: 2rem auto;
   text-align: center;
 }
 
 html {
   box-sizing: border-box;
-  }
+}
   
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+@media only screen and (min-width: 1000px) {
+	form {
+    width: 60%;
+  }
 }

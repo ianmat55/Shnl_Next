@@ -5,11 +5,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "admin": "npx directus start"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "next": "12.0.10",
+    "pg": "^8.7.3",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.3.1",
     "react": "17.0.2",

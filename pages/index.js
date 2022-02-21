@@ -49,7 +49,7 @@ const BackgroundImages = ({ images, size }) => {
 		height: '100vh',
 		width: `${size.width * images.length}`
 	}
-	console.log(size.width)
+	console.log(`width is ${size.width}`)
 	return (	
 		<div style={transform}>
 			{images.map((image, index) => {	

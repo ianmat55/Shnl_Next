@@ -1,15 +1,19 @@
 import styles from '../styles/Wedding.module.css'
 import Image from 'next/image'
-import headImg1 from '../public/assets/test_images/wedding/wedding4.jpg'
-import headImg2 from '../public/assets/test_images/wedding/wedding5.jpg'
+import headImg1 from '../public/assets/test_images/wedding/wedding6.jpg'
+import headImg2 from '../public/assets/test_images/wedding/wedding5.jpeg'
 
 
 const Header = () => {
 	return(
 		<div id={styles.weddingHeader}>
 			<h1 id={styles.weddingTitle}> WEDDING <br /> PHOTOGRAPHY </h1>
-			<Image src={headImg1} id={styles.img1} />
-			<Image src={headImg2} id={styles.img2} />
+			<div id={styles.img1}>
+				<Image src={headImg1} sizes='50vw' priority />
+			</div>
+			<div id={styles.img2}>
+				<Image src={headImg2} sizes='40vw' />
+			</div>
 		</div>
 	)
 }
@@ -25,3 +29,5 @@ export default function Wedding() {
 		</section>
 	)
 }
+
+// @refresh reset

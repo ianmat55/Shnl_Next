@@ -1,10 +1,14 @@
 import styles from '../styles/Contact.module.css'
+import profilePic from '../public/assets/desktop_images/about.jpg'
+import Image from 'next/image'
 
 const Header = () => {
 	return (
 		<div className={styles.bioDiv}>
 			<h1 className={styles.contactTitle}> HOWZIT </h1>
-			<img src='https://via.placeholder.com/850X1000' id={styles.titleImage} className='pl-10 pr-10 my-3 mx-auto' />
+			<div id={styles.titleImage}>
+				<Image src={profilePic} layout='responsive' priority />
+			</div>
 		</div>
 	)
 };

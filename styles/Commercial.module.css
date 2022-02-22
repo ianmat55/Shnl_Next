@@ -4,17 +4,44 @@
 	position: relative;
 	align-items: center;
 	height: 40vh;
+	margin: auto
 }
 
 #commercialTitle {
-	display: absolute;
-	bottom: 1.25rem;
+	position: relative;
+	z-index: 10;
+	/* bottom: 5rem; */
+	text-align: center
+}
+
+#commercialHeader {
+	max-width: 100%;
 }
 
 .bodyContainer {
-	margin: 1.25rem;
+	margin: 0 1.25rem 1.25rem 1.25rem;
 }
 
 .bodyText {
 	margin-top: 1.25rem;
+}
+
+@media only screen and (min-width: 1000px) {
+	#commercialHero {
+		height: 50vh;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	#commercialHero {
+		height: 60vh;
+		width: 80vw;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	#commercialHero {
+		height: 60vh;
+		width: 50vw;
+	}
 }

@@ -5,7 +5,8 @@
 
 #titleImage {
 	margin: 0 auto 0.75rem auto;
-	width: 100%;
+	width: 80%;
+	height: 75%;
 }
 
 #about {
@@ -24,7 +25,7 @@
 }
 
 .bioDiv {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -41,12 +42,12 @@
 	padding: 0.5rem;
 }
 
-@media only screen and (min-width: 1000px) {
+/* @media only screen and (min-width: 1000px) {
 	#titleImage {
-		height: 70vh;
-		width: auto;
+		width: 50%;
+		height: 50%;
 	}
-}
+} */
 
 /* @media only screen and (min-width: 1500px) {
 	#titleImage {

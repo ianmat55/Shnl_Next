@@ -42,12 +42,12 @@
 	padding: 0.5rem;
 }
 
-/* @media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
 	#titleImage {
 		width: 50%;
 		height: 50%;
 	}
-} */
+}
 
 /* @media only screen and (min-width: 1500px) {
 	#titleImage {

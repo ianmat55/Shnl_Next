@@ -22,26 +22,30 @@
 #img2 {
 	position: absolute;
 	z-index: 10;
-	right: 1.25em;
+	right: 2em;
 	width: 22%;
-	height: 30%;
+	border: .5rem solid white;
 }
 
 @media only screen and (min-width: 1000px) {
 	#weddingHeader {
 		width: 80%;
 	}
+	#img2 {
+		right: 5em;
+		width: 20%;
+	}
 }
 
 @media only screen and (min-width: 1500px) {
 	#weddingHeader {
-		width: 35%;
+		width: 50%;
 	}
 }
 
 @media only screen and (min-width: 2000px) {
 	#weddingHeader {
-		width: 28%;
+		width: 35%;
 	}
 }
 

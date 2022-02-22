@@ -1,9 +1,13 @@
 import styles from '../styles/Commercial.module.css'
+import header from '../public/assets/test_images/commercial/header.jpg'
+import Image from 'next/image'
 
 const Hero = () => {
 	return (
-		<div id={styles.commercialHero}>
-			<img src='https://via.placeholder.com/1000' id={styles.heroImg} />
+		<div>
+			<div id={styles.commercialHero}>
+				<Image src={header} layout='fill' priority />
+			</div>
 			<h1 id={styles.commercialTitle}> COMMERCIAL </h1>
 		</div>
 	)

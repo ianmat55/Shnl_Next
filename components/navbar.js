@@ -25,7 +25,7 @@ const MenuItems = ({ menuLinks }) => {
 const SocialIcons = ({ insta, facebook, email }) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
-		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} priority />  </li> 
+		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li> 
 	)
 
 	return (
@@ -45,7 +45,7 @@ const Top = () => {
 	return (
 		<div id={styles.top}>
 			<button onClick={closeMenu} id={styles.closeMenu}> X </button>
-			<button> Light/Dark </button>
+			{/* <button> Light/Dark </button> */}
 		</div>
 	)
 }

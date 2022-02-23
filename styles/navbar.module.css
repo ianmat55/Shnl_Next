@@ -49,8 +49,8 @@
 
 .sIcon {
 	height: 2rem;
-	width: auto;
-	max-height: 100%;
+	width: 2rem;
+	position: relative;
 	margin: 0 0.5rem;
 }
 

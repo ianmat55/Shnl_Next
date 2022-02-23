@@ -1,3 +1,8 @@
+.colorStrip {
+  width: 100vw;
+  background-color: antiquewhite;
+}
+
 #lifestyleHero {
   display: flex;
   align-items: center;
@@ -5,33 +10,41 @@
   position: relative;
   margin: auto;
   width: 90%;
+  /* background-color: antiquewhite; */
 }
 
 #lifestyleTitle {
   position: absolute;
   z-index: 10;
   left: 0.5em;
+  color: #7b9185;
 }
 
 #img1 {
   position: relative;
-  right: 1rem;
-  width: 40%;
+  /* right: 1rem; */
+  width: 35%;
+  bottom: 1rem;
+  border: 1px solid white;
 }
 
 #img2 {
   position: absolute;
   z-index: 10;
-  right: 5rem;
-  width: 30%;
+  right: 4rem;
+  border: 1px solid white;
+  width: 25%;
   bottom: -1rem;
 }
 
 #img3 {
   position: absolute;
-  right: 0;
-  width: 30%;
-  top: 1rem;
+  right: 1rem;
+  width: 25%;
+  top: .5rem;
+  z-index: 10;
+  border: 1px solid white;
+  
 }
 
 @media only screen and (min-width: 600px) {
@@ -46,22 +59,40 @@
   }
 
   #img1 {
-    right: 4.5rem
+    right: 3.5rem;
+    border: 5px solid white;
   }
 
   #img2 {
-    bottom: -3rem;
-    right: 12rem;
+    bottom: -4rem;
+    right: 12.5rem;
+    border: 5px solid white;
     width: 25%;
   }
 
   #img3 {
     right: 2.5rem;
+    border: 5px solid white;
   }
 }
 
 @media only screen and (min-width: 1500px) {
   #lifestyleHero {
-    width: 40%;
+    width: 50%;
+  }
+
+  #img1 {
+    right: 2rem
+  }
+
+  #img2 {
+    bottom: -4rem;
+    right: 11rem;
+    border: 5px solid white;
+    width: 28%;
+  }
+
+  #img3 {
+    right: 3rem;
   }
 }

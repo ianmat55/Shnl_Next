@@ -22,10 +22,12 @@ export default function Wedding() {
 	// const images = ['https://via.placeholder.com/600x400', 'https://via.placeholder.com/600x400', 'https://via.placeholder.com/600x400', 'https://via.placeholder.com/600x400', 'https://via.placeholder.com/600x400']
 	return (
 		<section className='content'>
+			<div className={styles.colorStrip}>
 			<Header />
-			{/* <Body /> */}
-			{/* <Slider images={images} /> */}
-			{/* <Banner /> */}
+				{/* <Body /> */}
+				{/* <Slider images={images} /> */}
+				{/* <Banner /> */}
+			</div>
 		</section>
 	)
 }

@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Header = () => {
 	return (
 		<div className={styles.bioDiv}>
-			<h1 className={styles.contactTitle}> HOWZIT </h1>
+			<h1 id={styles.contactTitle} className='title'> HOWZIT </h1>
 			<div id={styles.titleImage}>
 				<Image src={profilePic} layout='responsive' priority />
 			</div>

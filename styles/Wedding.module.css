@@ -1,7 +1,7 @@
-.colorStrip {
+/* .colorStrip {
 	width: 100vw;
 	background-color: #cdbca9;
-}
+} */
 
 #weddingHeader {
 	display: flex;
@@ -52,6 +52,10 @@
 @media only screen and (min-width: 1500px) {
 	#weddingHeader {
 		width: 50%;
+	}
+
+	#weddingTitle {
+		left: -2rem;
 	}
 }
 

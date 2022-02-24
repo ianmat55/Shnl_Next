@@ -7,7 +7,7 @@ import headImg2 from '../public/assets/test_images/wedding/wedding5.jpeg'
 const Header = () => {
 	return(
 		<div id={styles.weddingHeader}>
-			<h1 id={styles.weddingTitle}> WEDDING <br /> PHOTOGRAPHY </h1>
+			<h1 id={styles.weddingTitle} className="title"> WEDDING <br /> PHOTOGRAPHY </h1>
 			<div id={styles.img1}>
 				<Image src={headImg1} sizes='50vw' priority />
 			</div>

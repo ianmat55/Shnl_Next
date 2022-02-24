@@ -17,7 +17,7 @@
   position: absolute;
   z-index: 10;
   left: 0.5em;
-  color: #7b9185;
+  color: #43536E;
 }
 
 #img1 {
@@ -79,6 +79,10 @@
 @media only screen and (min-width: 1500px) {
   #lifestyleHero {
     width: 50%;
+  }
+
+  #lifestyleTitle {
+    left: -0.5rem;
   }
 
   #img1 {

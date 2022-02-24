@@ -83,6 +83,7 @@ export default function Home() {
 	
 	return (
 		<section id={styles.home}>
+			<h1 id={styles.mainTitle} className='title'> Shnl <br /> Photography </h1>
 			{background}
 		</section>
 	)

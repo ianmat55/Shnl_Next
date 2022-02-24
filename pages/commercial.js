@@ -8,7 +8,7 @@ const Hero = () => {
 			<div id={styles.commercialHero}>
 				<Image src={header} id={styles.commercialHeader} layout='fill' priority />
 			</div>
-			<h1 id={styles.commercialTitle}> COMMERCIAL </h1>
+			<h1 id={styles.commercialTitle} className="title"> COMMERCIAL </h1>
 		</div>
 	)
 }

@@ -1,4 +1,4 @@
-.contactTitle {
+#contactTitle {
 	text-align: center;
 	margin: 0
 }
@@ -11,11 +11,6 @@
 
 #about {
 	margin: 1.25rem;
-}
-
-#aboutTitle {
-	margin-bottom: 0.5rem;
-	text-align: center;
 }
 
 #aboutContainer {

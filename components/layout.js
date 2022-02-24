@@ -1,7 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
 import Nav from './navbar'
 
 export default function Layout({ children }) {
@@ -11,8 +8,8 @@ export default function Layout({ children }) {
         <title>Shanel Photography</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="Shanel Photography"
+          content="Proffessional photography portfolio"
         />
       </Head>
       <Nav />

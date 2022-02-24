@@ -2,20 +2,15 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function Gallery({ images }) {
-	console.log(images)
+	for (let image of images.data) {
+		console.log(image.title)
+	}
 	return (
 		<div>
-			<p> Testing </p>
+			<p> testing </p>
 		</div>
 	)
 }
 
-// export async function getStaticProps() {
-// 	console.log('API called')
-// 	const res = await fetch('http://localhost:8055/items/Lifestyle')
-// 	const images = await res.json()
-// 	return {
-// 	  props: { images }
-// 	}
-// }
+
 

@@ -22,15 +22,23 @@ const Hero = () => {
 	)
 };
 
-export default function Lifestyle() {
+export default function Lifestyle({ images }) {
 	return (
 		<section className='content'>
 			<div className={styles.colorStrip}>
 				<Hero />
 			</div>
 			<div>
-				<Gallery />
+				<Gallery images={images} />
 			</div>
 		</section>
 	)
+}
+
+export async function getStaticProps() {
+	const res = await fetch('http://localhost:8055/items/Lifestyle')
+	const images = await res.json()
+	return {
+	  props: { images }, // will be passed to the page component as props
+	}
 }

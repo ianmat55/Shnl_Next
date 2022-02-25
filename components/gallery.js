@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function Gallery({ images }) {
-	for (let image of images.data) {
-		console.log(image.title)
-	}
+	// console.log(images.data[0]['file'])
+	
 	return (
 		<div>
-			<p> testing </p>
+			{images.data.map(image => {
+				let source = `http://localhost:8055/assets/${image.file}`
+				console.log(source)
+				return (
+					<Image loader={() => source} src={source} width={500} height={500} />
+				)
+			})}
 		</div>
 	)
 }

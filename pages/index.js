@@ -7,7 +7,7 @@ import img2 from '../public/assets/mobile_images/img2.jpg'
 import img3 from '../public/assets/mobile_images/img3.jpg'
 import img4 from '../public/assets/mobile_images/img4.jpg'
 
-import desktop1 from '../public/assets/desktop_images/wedding.jpg'
+import desktop1 from '../public/assets/desktop_images/home.jpg'
 import desktop2 from '../public/assets/desktop_images/lifestyle.jpg'
 import desktop3 from '../public/assets/desktop_images/contact.jpg'
 import desktop4 from '../public/assets/desktop_images/about.jpg'

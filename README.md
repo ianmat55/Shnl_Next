@@ -8,4 +8,4 @@ In Development...
 <img src='./public/assets/development.png' />
 
 ### Installed Directus headless CMS which allows for easy database management via admin dashboard. Connected to a Postgresql database.
-<img src='./public/assets/directus.png />
+<img src='./public/assets/directus.png' />

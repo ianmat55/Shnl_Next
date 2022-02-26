@@ -1,15 +1,14 @@
 import Image from 'next/image'
 
 export default function Gallery({ images }) {
-	// console.log(images.data[0]['file'])
-	
+	console.log(images)
+
 	return (
 		<div>
-			{images.data.map(image => {
-				let source = `http://localhost:8055/assets/${image.file}`
-				console.log(source)
+			{images.map((image, index) => {
+				let source = `http://localhost:8055/assets/${image}`
 				return (
-					<Image loader={() => source} src={source} width={500} height={500} />
+					<Image key={index} loader={() => source} src={image} width={400} height={300} />
 				)
 			})}
 		</div>

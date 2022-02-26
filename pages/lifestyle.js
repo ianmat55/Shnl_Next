@@ -37,7 +37,10 @@ export default function Lifestyle({ images }) {
 
 export async function getStaticProps() {
 	const res = await fetch('http://localhost:8055/items/Lifestyle')
-	const images = await res.json()
+	const json = await res.json()
+	const values = json.data
+	const images = values.map(value => value.image)
+
 	return {
 	  props: { images }, // will be passed to the page component as props
 	}

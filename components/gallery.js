@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import styles from '../styles/gallery.module.css'
 
 export default function Gallery({ images }) {
-	console.log(images)
+	// console.log(images)
 
 	return (
-		<div>
+		<div id={styles.gallery}>
 			{images.map((image, index) => {
 				let source = `http://localhost:8055/assets/${image}`
 				return (

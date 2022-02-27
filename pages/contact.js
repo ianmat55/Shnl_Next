@@ -28,17 +28,17 @@ const Form = () => {
 			<form name="contact" method="POST" data-netlify="true">
 				<div className={styles.formDiv}>
 					<div className={styles.formElement}>
-						<label for='name'> Name </label> 
+						<label htmlFor='name'> Name </label> 
 						<input type="text" name="name" />  
 					</div>
 					<div className={styles.formElement}>
-						<label for='email'> Email </label>
+						<label htmlFor='email'> Email </label>
 						<input type="text" name="email" />
 					</div>
 				</div>
 				<div className={styles.formDiv}>
 					<div className={styles.formElement}>
-						<label for='type'> Type </label>
+						<label htmlFor='type'> Type </label>
 						<select name='type text-center'>
 							<option value="Wedding">Wedding</option>
 							<option value="Commercial">Commercial</option>
@@ -47,16 +47,16 @@ const Form = () => {
 						</select>
 					</div>
 					<div className={styles.formElement}>
-						<label for='insta'> Insta Handle (if applicable) </label>
+						<label htmlFor='insta'> Insta Handle (if applicable) </label>
 						<input type='text' name='insta' />
 					</div>
 				</div>
 				<div className={styles.formElement}>
-					<label for='wedding-location'> Wedding Loation (if applicable) </label> 
+					<label htmlFor='wedding-location'> Wedding Loation (if applicable) </label> 
 					<input type='text' name='wedding-location' /> 
 				</div>
 				<div className={styles.formElement}>
-					<label for='message'> Message </label> 
+					<label htmlFor='message'> Message </label> 
 					<textarea name="message"></textarea>
 				</div>
 				<button type="submit">Send</button>

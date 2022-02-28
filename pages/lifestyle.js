@@ -36,6 +36,7 @@ export default function Lifestyle({ images }) {
 }
 
 export async function getStaticProps() {
+	// const res = await fetch('https://shanelhonolulu.com/items/Lifestyle')
 	const res = await fetch('http://localhost:8055/items/Lifestyle')
 	const json = await res.json()
 	const values = json.data

@@ -8,7 +8,7 @@
 #gallery { /* Flexbox may be a better option to display images of different sizes */
 	display: flex;
 	flex-wrap: wrap;
-	margin: 5rem;
+	margin: 5rem 0;
 	justify-content: center;
 }
 

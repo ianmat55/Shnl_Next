@@ -42,6 +42,7 @@ export async function getStaticProps() {
 	const values = json.data
 	const images = values.map(value => value.image)
 
+
 	return {
 	  props: { images }, // will be passed to the page component as props
 	}

@@ -10,10 +10,10 @@ export default function Gallery({ images }) {
 				let source = `https://api.shanelhonolulu.com/assets/${image}`
 				// let source = `http://localhost:8055/assets/${image}`
 				return (
-					<ol className={styles.photoContainer}>
+					<li className={styles.photoContainer}>
 						{/* <Image className={styles.photo} key={index} loader={() => source} src={image} layout='fill' objectFit='cover' sizes='20vw' /> */}
 						<img key={index} src={source} className={styles.photo} />
-					</ol>
+					</li>
 				)
 			})}
 		</ul>

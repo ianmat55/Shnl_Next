@@ -16,7 +16,7 @@
 	border-radius: 10px;
 	margin: .5rem;
 	object-fit: cover;
-	height: 35vh;
+	height: 25vh;
 }
 
 .photoContainer:after {

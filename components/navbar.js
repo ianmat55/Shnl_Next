@@ -14,7 +14,6 @@ const MenuItems = ({ menuLinks }) => {
 	);
 	return (
 		<div className={styles.titleHeader}>
-			<h1 id={styles.title}> Shnl <br /> Photography </h1>
 			<ul id={styles.menu}>
 				{links}
 			</ul>
@@ -32,39 +31,6 @@ const SocialIcons = ({ insta, facebook, email }) => {
 		<ul className={styles.iconContainer}>
 			{renderIcons}
 		</ul>
-	)
-};
-
-const Top = () => {
-	function closeMenu() {
-		const navigation = document.querySelector('nav');
-		const width = navigation.clientWidth;
-		navigation.style.transition = 'transform 0.3s ease-in-out';
-		navigation.style.transform = `translateX(-${width}px)`;
-	}
-	return (
-		<div id={styles.top}>
-			<button onClick={closeMenu} id={styles.closeMenu}> X </button>
-			{/* <button> Light/Dark </button> */}
-		</div>
-	)
-}
-
-const HamburgerMenu = () => {
-	function MenuToggle() {
-		const navigation = document.querySelector('nav');
-		const width = navigation.clientWidth;
-		console.log(width);
-		navigation.style.transition = 'transform 0.3s ease-in-out';
-		navigation.style.transform = `translateX(0px)`;
-	}
-
-	return(
-		<div onClick={MenuToggle} id={styles.hamburger}>
-			<div className={styles.hamburgerLines}></div>
-			<div className={styles.hamburgerLines}></div>
-			<div className={styles.hamburgerLines}></div>
-		</div>
 	)
 };
 
@@ -98,15 +64,10 @@ const Nav = ({ setDesktopImg }) => {
 	
 	return (
 		<div id={styles.carouselContainer}>
-			<div className={styles.hamburgerContainer}>
-				<HamburgerMenu />
-				{/* <h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1> */}
-			</div>
 			<div id={styles.navContainer}>
-				<nav className='translate_nav'>
-					<Top />
+				<nav>
 					<MenuItems menuLinks={menuLinks} setDesktopImg={setDesktopImg} />
-					<SocialIcons insta={instagram} facebook={facebook} email={mail} />
+					{/* <SocialIcons insta={instagram} facebook={facebook} email={mail} /> */}
 				</nav>
 			</div>
 		</div>

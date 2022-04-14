@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="Shanel Photography"
-          content="Proffessional photography portfolio"
+          content="Professional photography portfolio"
         />
       </Head>
       <Nav />

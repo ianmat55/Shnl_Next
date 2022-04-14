@@ -1,24 +1,3 @@
-#hamburger {
-	margin: 0.5rem;
-	padding: 1rem;
-}
-
-.hamburgerLines {
-	width: 2rem;
-	height: 0.125rem;
-	margin: 5px 0;
-	background-color: black
-}
-
-.hamburgerContainer {
-	display: flex;
-	position: fixed;
-	align-items: center;
-	/* background-color: white;
-	opacity: 80%; */
-	width: 100vw;
-	z-index: 50
-}
 
 .menuItem {
 	padding: 0.25rem;
@@ -31,10 +10,11 @@
 
 .titleHeader {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	height: 100%;
+	width: 100%;
 	align-items: center;
-	justify-content: center;
+	justify-content: right;
 }
 
 #title {
@@ -45,6 +25,7 @@
 
 #menu {
 	text-align: center;
+	display: flex
 }
 
 .sIcon {
@@ -59,17 +40,6 @@
 	margin-bottom: 2rem;
 }
 
-#top {
-	z-index: 100;
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-}
-
-#closeMenu {
-	position: relative;
-}
-
 #carouselContainer {
 	display: flex;
 	position: relative;
@@ -78,9 +48,7 @@
 
 #navContainer {
 	background-size: cover;
-	height: 100vh;
 	position: fixed;
-	z-index: 50;
 	width: auto;
 }
 

@@ -97,7 +97,7 @@ const Nav = ({ setDesktopImg }) => {
 	];
 	
 	return (
-		<div id={styles.carouselContainer}>
+		<>
 			<div className={styles.hamburgerContainer}>
 				<HamburgerMenu />
 				{/* <h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1> */}
@@ -109,7 +109,7 @@ const Nav = ({ setDesktopImg }) => {
 					<SocialIcons insta={instagram} facebook={facebook} email={mail} />
 				</nav>
 			</div>
-		</div>
+		</>
 	)
 };
 

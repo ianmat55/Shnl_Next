@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '../styles/gallery.module.css'
 
-export default function Gallery({ images }) {
+export default function Gallery({images}) {
 	// console.log(images)
 
 	return (

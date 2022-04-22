@@ -89,8 +89,10 @@ html {
   nav {
     flex-direction: row;
     background-color: transparent;
-    width: 80%;
+    width: 100%;
     height: auto;
+    font-size: 1.15rem;
+    justify-content: space-around;
   }
 }
 

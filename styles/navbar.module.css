@@ -76,29 +76,33 @@
 	z-index: 50;
 }
 
-#navContainer {
+/* #navContainer {  This might be useless
 	background-size: cover;
 	height: 100vh;
 	position: fixed;
 	z-index: 50;
 	width: auto;
-}
+} */
 
 @media only screen and (min-width: 800px) {
 	#navbar_menu {
 		display: flex;
 	}
 
+	#menu ul{
+		display: flex;
+		flex-direction: row;
+	}
+
 	.titleHeader {
 		flex-direction: row;
-		font-size: 1.25em
 	}
 
 	.titleHeader ul {
 		display: flex;
 	}
 
-	#closeMenu, .hamburgerContainer, #hamburger, .hamburgerLines, #top, .sIcon {
+	#closeMenu, .hamburgerContainer, #hamburger, .hamburgerLines, #top, .sIcon, .iconContainer {
 		display: none
 	}
 

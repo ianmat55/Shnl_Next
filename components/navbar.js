@@ -14,12 +14,16 @@ const MenuItems = ({ menuLinks }) => {
 		</Link>
 	);
 	return (
+		<>
 		<div className={styles.titleHeader}>
 			<h1 id={styles.title}> Shnl <br /> Photography </h1>
-			<ul id={styles.menu}>
+		</div>
+		<div id={styles.menu}>
+			<ul>
 				{links}
 			</ul>
 		</div>
+		</>
 	);
 };
 
@@ -88,10 +92,10 @@ const Nav = ({ setDesktopImg }) => {
 			name: 'Commercial',
 			link: '/commercial',
 		},
-		{
-			name: 'Film',
-			link: '/film'
-		},
+		// {
+		// 	name: 'Film',
+		// 	link: '/film'
+		// },
 		{
 			name: 'Contact',
 			link: '/contact'
@@ -102,15 +106,14 @@ const Nav = ({ setDesktopImg }) => {
 		<>
 			<div className={styles.hamburgerContainer}>
 				<HamburgerMenu />
-				{/* <h1 id='mobile-Title' className='text-xl tablet:hidden'> Shnl Photography </h1> */}
 			</div>
-			<div id={styles.navContainer}>
+			{/* <div id={styles.navContainer}> */}
 				<nav className='translate_nav'>
 					<Top />
 					<MenuItems menuLinks={menuLinks} setDesktopImg={setDesktopImg} />
 					<SocialIcons insta={instagram} facebook={facebook} email={mail} />
 				</nav>
-			</div>
+			{/* </div> */}
 		</>
 	)
 };

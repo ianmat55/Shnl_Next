@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
+import { useWindowSizeContext } from '../components/context'
 
 import img1 from '../public/assets/mobile_images/img1.jpg'
 import img2 from '../public/assets/mobile_images/img2.jpg'
@@ -12,34 +13,13 @@ import desktop2 from '../public/assets/desktop_images/lifestyle.jpg'
 import desktop3 from '../public/assets/desktop_images/contact.jpg'
 import desktop4 from '../public/assets/desktop_images/about.jpg'
 
-const useWindowSize = () => {
-	const [windowSize, setWindowSize] = useState({
-		width: undefined,
-		height: undefined,
-	});
-
-	useEffect(() => {
-		function handleResize() {
-			setWindowSize({
-				width: window.innerWidth,
-				height: window.innerHeight,
-			});
-		}
-		window.addEventListener('resize', handleResize);
-		handleResize();
-		return () => window.removeEventListener('resize', handleResize);
-	}, []); // empty array ensures effect is only run on inital render
-
-	return windowSize;
-}
-
 const BackgroundImages = ({ images, size }) => {
 	const [count, setCount] = useState(0);
 
 	useEffect(() => {
 		const incrementCount = setInterval(() => setCount(count === images.length - 1 ? 0 : count + 1), 9000);
 		return () => clearInterval(incrementCount);
-	}, [count]);
+	}, [count, images.length]);
 
 	const transform = {
 		// transform: `translateX(-${size.width * count}px)`,
@@ -72,7 +52,7 @@ const BackgroundImages = ({ images, size }) => {
 export default function Home() {
 	const mobileImages = [img1, img2, img3, img4];
 	const desktopImages = [desktop1, desktop2, desktop3, desktop4];
-	const size = useWindowSize();	
+	const size = useWindowSizeContext();	
 	let background
 
 	if (size.width >= 800) {

@@ -8,7 +8,7 @@ import instagram from '../public/assets/icons/instagram.svg'
 
 const MenuItems = ({ menuLinks }) => {
 	const links = menuLinks.map((item, index) =>
-		<Link key={index} href={item.link}>
+		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
 		</Link>
 	);

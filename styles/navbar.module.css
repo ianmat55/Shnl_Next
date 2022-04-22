@@ -20,8 +20,13 @@
 	z-index: 50
 }
 
+#menu {
+	text-align: center;
+	padding-bottom: 5rem;
+}
+
 .menuItem {
-	padding: 0.25rem;
+	padding: 1rem;
 	letter-spacing: 0.025em;
 }
 
@@ -32,19 +37,15 @@
 .titleHeader {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	align-items: center;
 	justify-content: center;
+	padding-top: 5rem; 
 }
 
 #title {
 	margin-bottom: 0 auto 3.5rem auto;
 	text-align: left;
 	letter-spacing: 0.025em;
-}
-
-#menu {
-	text-align: center;
 }
 
 .sIcon {
@@ -84,18 +85,28 @@
 	width: auto;
 } */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 	#navbar_menu {
 		display: flex;
 	}
 
+	#menu {
+		padding: 0
+	}
+	
 	#menu ul{
 		display: flex;
 		flex-direction: row;
 	}
 
+	.menuItem {
+		padding: 0.5rem;
+		letter-spacing: 0.3em;
+	}
+
 	.titleHeader {
 		flex-direction: row;
+		padding: 0
 	}
 
 	.titleHeader ul {

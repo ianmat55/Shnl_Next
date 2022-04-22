@@ -22,7 +22,7 @@
   padding: 1rem
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   #mainTitle {
     display: none
   }

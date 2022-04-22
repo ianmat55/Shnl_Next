@@ -22,9 +22,8 @@
   padding: 1rem
 }
 
-/* @media (min-width: 800px) {
-  #mobileBackground {
-    position: relative;
-    overflow: hidden;
+@media (min-width: 800px) {
+  #mainTitle {
+    display: none
   }
-} */
+}

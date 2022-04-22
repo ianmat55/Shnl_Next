@@ -84,3 +84,27 @@
 	width: auto;
 }
 
+@media only screen and (min-width: 800px) {
+	#navbar_menu {
+		display: flex;
+	}
+
+	.titleHeader {
+		flex-direction: row;
+		font-size: 1.25em
+	}
+
+	.titleHeader ul {
+		display: flex;
+	}
+
+	#closeMenu, .hamburgerContainer, #hamburger, .hamburgerLines, #top, .sIcon {
+		display: none
+	}
+
+	#title {
+		margin-bottom: 0 auto 3.5rem auto;
+		text-align: left;
+		letter-spacing: 0.1em;
+	}
+}

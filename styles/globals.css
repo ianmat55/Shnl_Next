@@ -82,6 +82,18 @@ html {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .translate_nav {
+    transform: translateX(0);
+  }
+  nav {
+    flex-direction: row;
+    background-color: transparent;
+    width: 80%;
+    height: auto;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
 	form {
     width: 60%;

@@ -1,6 +1,7 @@
 .heroSection {
-    height: 80vh;
-    display: flex
+    height: 55vh;
+    width: auto;
+    display: flex;
 }
 
 .heroImage {
@@ -8,3 +9,15 @@
     width: 100%;
     position: relative;
 }
+
+@media only screen and (min-width: 700px) {
+  .heroSection {
+      height: 70vh
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+    .heroSection {
+        height: 85vh
+    }
+  }

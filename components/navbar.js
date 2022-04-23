@@ -5,7 +5,7 @@ import styles from '../styles/navbar.module.css'
 import facebook from '../public/assets/icons/facebook.svg'
 import mail from '../public/assets/icons/minutemailer.svg'
 import instagram from '../public/assets/icons/instagram.svg'
-import { useWindowSizeContext } from './context'
+import { useWindowSizeContext } from '../utils/context'
 
 const MenuItems = ({ menuLinks }) => {
 	const links = menuLinks.map((item, index) =>

@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
-import { WindowSizeProvider } from '../components/context'
+import { WindowSizeProvider } from '../utils/context'
 
 function MyApp({ Component, pageProps }) {
   return (

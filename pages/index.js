@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
-import { useWindowSizeContext } from '../components/context'
+import { useWindowSizeContext } from '../utils/context'
 
 import img1 from '../public/assets/mobile_images/img1.jpg'
 import img2 from '../public/assets/mobile_images/img2.jpg'

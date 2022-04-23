@@ -23,12 +23,12 @@
 #menu {
 	text-align: left;
 	font-size: 1.7rem;
-	font-weight: bolder;
+	/* font-weight: bolder; */
 	/* padding-bottom: 5rem; */
 }
 
 .menuItem {
-	padding: 1rem;
+	/* padding: 1rem; */
 	letter-spacing: 0.1em;
 }
 
@@ -93,13 +93,14 @@
 	}
 
 	#menu {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: normal;
 	}
 
 	#menu ul{
 		display: flex;
 		flex-direction: row;
+		margin: 10px
 	}
 
 	.menuItem {

@@ -16,15 +16,15 @@
 #mainTitle {
   position: absolute;
   z-index: 10;
-  top: 30%;
-  left: 15%;
+  top: 22%;
+  left: 12%;
   color: antiquewhite;
   padding: 1rem;
   letter-spacing: 0.1rem;
 }
 
-/* @media (min-width: 1000px) {
-  #mainTitle {
-    display: none
+@media (min-width: 1000px) {
+  #home{
+    height: 88vh;
   }
-} */
+}

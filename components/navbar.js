@@ -15,9 +15,9 @@ const MenuItems = ({ menuLinks }) => {
 	);
 	return (
 		<>
-		<div className={styles.titleHeader}>
+		{/* <div className={styles.titleHeader}>
 			<h1 id={styles.title}> Shnl <br /> Photography </h1>
-		</div>
+		</div> */}
 		<div id={styles.menu}>
 			<ul>
 				{links}

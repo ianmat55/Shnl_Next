@@ -19,11 +19,12 @@
   top: 30%;
   left: 15%;
   color: antiquewhite;
-  padding: 1rem
+  padding: 1rem;
+  letter-spacing: 0.1rem;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   #mainTitle {
     display: none
   }
-}
+} */

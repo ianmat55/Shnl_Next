@@ -21,13 +21,15 @@
 }
 
 #menu {
-	text-align: center;
-	padding-bottom: 5rem;
+	text-align: left;
+	font-size: 1.7rem;
+	font-weight: bolder;
+	/* padding-bottom: 5rem; */
 }
 
 .menuItem {
 	padding: 1rem;
-	letter-spacing: 0.025em;
+	letter-spacing: 0.1em;
 }
 
 .menuItem:hover {
@@ -91,17 +93,18 @@
 	}
 
 	#menu {
-		padding: 0
+		font-size: 1.25rem;
+		font-weight: normal;
 	}
-	
+
 	#menu ul{
 		display: flex;
 		flex-direction: row;
 	}
 
 	.menuItem {
-		padding: 0.5rem;
-		letter-spacing: 0.3em;
+		/* padding: 0.5rem; */
+		letter-spacing: 0.15em;
 	}
 
 	.titleHeader {

@@ -1,6 +1,6 @@
 import styles from '../styles/Lifestyle.module.css'
-import lifestyle1 from '../public/assets/test_images/liftestyle_test1-min.jpeg'
-import lifestyle2 from '../public/assets/test_images/liftestyle_test2-min.jpeg'
+import lifestyle1 from '../public/assets/test_images/lifestyle_test1-min.jpeg'
+import lifestyle2 from '../public/assets/test_images/lifestyle_test2-min.jpeg'
 import Gallery from '../components/gallery'
 import Header from '../components/header'
 
@@ -25,7 +25,7 @@ export default function Lifestyle({ images }) {
 	return (
 		<section className='content'>
 			<div className={styles.colorStrip}>
-				<Header header1={lifestyle1} header2={lifestyle2} />
+				<Header photo1={lifestyle1} photo2={lifestyle2} />
 			</div>
 			<div>
 				<Gallery images={images} />

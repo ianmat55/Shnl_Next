@@ -1,4 +1,10 @@
-.hero-section {
+.heroSection {
     height: 80vh;
     display: flex
+}
+
+.heroImage {
+    height: 100%;
+    width: 100%;
+    position: relative;
 }

@@ -103,6 +103,10 @@ html {
     width: 60%;
   }
 
+  .homeTitle {
+    font-size: 2.5rem;
+  }
+
   .title {
     font-size: 3rem;
   }

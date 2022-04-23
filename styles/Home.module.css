@@ -16,7 +16,7 @@
 #mainTitle {
   position: absolute;
   z-index: 10;
-  top: 22%;
+  top: 18%;
   left: 12%;
   color: antiquewhite;
   padding: 1rem;
@@ -26,5 +26,9 @@
 @media (min-width: 1000px) {
   #home{
     height: 88vh;
+  }
+
+  #mainTitle {
+    top: 35%
   }
 }

@@ -7,8 +7,12 @@ import mail from '../public/assets/icons/minutemailer.svg'
 import instagram from '../public/assets/icons/instagram.svg'
 import { useWindowSizeContext } from '../utils/context'
 
-const MenuItems = ({ menuLinks }) => {
-	const links = menuLinks.map((item, index) =>
+// interface MenuItemsProps {
+// 	menuLinks: string[]
+// };
+
+const MenuItems = ({ menuLinks }: MenuItemsProps) => {
+	const links = menuLinks.map((item, index: number) =>
 		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
 		</Link>
@@ -27,7 +31,13 @@ const MenuItems = ({ menuLinks }) => {
 	);
 };
 
-const SocialIcons = ({ insta, facebook, email }) => {
+interface SocialIcons {
+	insta: string,
+	facebook: string,
+	email: string
+};
+
+const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
 		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li> 

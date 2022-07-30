@@ -1,7 +1,12 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import styles from '../styles/header.module.css'
 
-export default function Header({ photo1, photo2 }) {
+interface HeaderProps {
+    photo1: StaticImageData,
+    photo2: StaticImageData,
+};
+
+export default function Header({ photo1, photo2 }: HeaderProps) {
     const header1 = photo1
     const header2 = photo2
 

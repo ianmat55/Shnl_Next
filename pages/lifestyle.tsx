@@ -3,6 +3,7 @@ import lifestyle1 from '../public/assets/test_images/lifestyle_test1-min.jpeg'
 import lifestyle2 from '../public/assets/test_images/lifestyle_test2-min.jpeg'
 import Gallery from '../components/gallery'
 import Header from '../components/header'
+import axios from 'axios';
 
 // const Hero = () => {
 // 	return(
@@ -21,28 +22,31 @@ import Header from '../components/header'
 // 	)
 // };
 
-export default function Lifestyle({ images }) {
+interface LifestyleProps {
+	images: string
+}
+
+export default function Lifestyle({ images }: LifestyleProps) {
 	return (
 		<section className='content'>
 			<div className={styles.colorStrip}>
 				<Header photo1={lifestyle1} photo2={lifestyle2} />
 			</div>
-			<div>
+			{/* <div>
 				<Gallery images={images} />
-			</div>
+			</div> */}
 		</section>
 	)
 }
 
-export async function getStaticProps() {
-	const res = await fetch('https://api.shanelhonolulu.com/items/Lifestyle')
-	// const res = await fetch('http://localhost:8055/items/Lifestyle')
-	const json = await res.json()
-	const values = json.data
-	const images = values.map(value => value.image)
+// export async function getStaticProps() {
+// 	const res = await axios('https://api.shanelhonolulu.com/items/Lifestyle')
+// 	// const res = await fetch('http://localhost:8055/items/Lifestyle')
+// 	const values = await res.data
+// 	const images = values.map((value: { image: string}) => value.image)
 
 
-	return {
-	  props: { images }, // will be passed to the page component as props
-	}
-}
+// 	return {
+// 	  props: { images }, // will be passed to the page component as props
+// 	}
+// }

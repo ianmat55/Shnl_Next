@@ -18,15 +18,16 @@
   z-index: 10;
   top: 18%;
   left: 12%;
-  color: antiquewhite;
+  /* color: #95715c; */
+  color: white;
   padding: 1rem;
   letter-spacing: 0.1rem;
 }
 
 @media (min-width: 1000px) {
-  #home{
+  /* #home{
     height: 88vh;
-  }
+  } */
 
   #mainTitle {
     top: 35%

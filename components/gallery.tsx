@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import styles from '../styles/gallery.module.css'
 
-export default function Gallery({ images }) {
+interface GalleryProps {
+	images: string[]
+};
+
+export default function Gallery({ images }: GalleryProps) {
 	// console.log(images)
 
 	return (
@@ -12,6 +16,7 @@ export default function Gallery({ images }) {
 				return (
 					<li key={index} className={styles.photoContainer}>
 						{/* <Image className={styles.photo} key={index} loader={() => source} src={image} layout='fill' objectFit='cover' sizes='20vw' /> */}
+						{/* eslint-disable-next-line @next/next/no-img-element */}
 						<img src={source} className={styles.photo} alt={`img${index}`} />
 					</li>
 				)

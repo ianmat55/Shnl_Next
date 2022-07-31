@@ -7,9 +7,9 @@ import mail from '../public/assets/icons/minutemailer.svg'
 import instagram from '../public/assets/icons/instagram.svg'
 import { useWindowSizeContext } from '../utils/context'
 
-// interface MenuItemsProps {
-// 	menuLinks: string[]
-// };
+interface MenuItemsProps {
+	menuLinks: string[]
+};
 
 const MenuItems = ({ menuLinks }: MenuItemsProps) => {
 	const links = menuLinks.map((item, index: number) =>

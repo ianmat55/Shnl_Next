@@ -18,26 +18,25 @@ import desktop6 from '../public/assets/desktop_images/wedding.jpg'
 interface BackgroundImagesProps {
 	images: string[],
 	size: {width: number}
-};
+}
 
 const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0)
 
 	useEffect(() => {
 		const incrementCount = setInterval(() => setCount(count === images.length - 1 ? 0 : count + 1), 11000);
-		return () => clearInterval(incrementCount);
+		return () => clearInterval(incrementCount)
 	}, [count, images.length]);
 
-	const transform = {
-		transform: `translateX(-${size.width * count}px)`,
-		transition: 'transform .8s ease-in-out',
-		position: 'relative',
-		display: 'flex',
-		height: '100vh',
-		width: `${size.width * images.length}`
-	}
 	return (	
-		<div style={transform}>
+		<div style={{
+			transform: `translateX(-${size.width * count}px)`, 
+			transition: 'transform .8s ease-in-out', 
+			position: 'relative',
+			display: 'flex',
+			height: '100vh',
+			width: `${size.width * images.length}`
+		}}>
 			{images.map((image, index) => {	
 				return (
 					<div className={styles.imageWrapper} key={`img${index}`}>
@@ -54,14 +53,14 @@ const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
 	)
 } 
 
-
 export default function Home() {
 	const mobileImages = [mobile1.src, mobile2.src, mobile3.src, mobile4.src]
 	const desktopImages = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src]
-	const size = useWindowSizeContext();	
+	const size = useWindowSizeContext()
 	let background
 
 	if (size.width >= 800) {
+		console.log(size.width);
 		background = <BackgroundImages images={desktopImages} size={size} />
 	} else {
 		background = <BackgroundImages images={mobileImages} size={size} />

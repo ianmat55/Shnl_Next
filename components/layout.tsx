@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           content="Proffessional photography portfolio"
         />
       </Head>
-      <Nav />
+      <Nav setDesktopImg={undefined} />
       <main id='main'>
         {children}
       </main>

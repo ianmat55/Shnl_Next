@@ -12,7 +12,7 @@ interface MenuItemsProps {
 };
 
 const MenuItems = ({ menuLinks }: MenuItemsProps) => {
-	const links = menuLinks.map((item, index: number) =>
+	const links = menuLinks.map((item: any, index: number) =>
 		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
 		</Link>

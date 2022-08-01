@@ -36,7 +36,8 @@
 
 @media only screen and (min-width: 1000px) {
 	#weddingHeader {
-		width: 80%;
+		/* width: 80%; */
+		padding-top: 7rem;
 	}
 	#img1 {
 		top: 1rem;

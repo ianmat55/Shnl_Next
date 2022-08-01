@@ -1,9 +1,9 @@
 import styles from '../styles/Lifestyle.module.css'
 import lifestyle1 from '../public/assets/test_images/lifestyle_test1-min.jpeg'
 import lifestyle2 from '../public/assets/test_images/lifestyle_test2-min.jpeg'
-import Gallery from '../components/gallery'
+// import Gallery from '../components/gallery'
 import Header from '../components/header'
-import axios from 'axios';
+// import axios from 'axios';
 
 // const Hero = () => {
 // 	return(

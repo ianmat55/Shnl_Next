@@ -22,9 +22,9 @@ import axios from 'axios';
 // 	)
 // };
 
-interface LifestyleProps {
-	images: string[]
-}
+// interface LifestyleProps {
+// 	images: string[]
+// }
 
 export default function Lifestyle({ images }: any) {
 	return (

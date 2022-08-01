@@ -5,10 +5,14 @@ import styles from '../styles/navbar.module.css'
 import facebook from '../public/assets/icons/facebook.svg'
 import mail from '../public/assets/icons/minutemailer.svg'
 import instagram from '../public/assets/icons/instagram.svg'
-import { useWindowSizeContext } from '../utils/context'
+
+interface MenuLink {
+	name: string,
+	link: string
+}
 
 interface MenuItemsProps {
-	menuLinks: string[]
+	menuLinks: MenuLink[]
 };
 
 const MenuItems = ({ menuLinks }: MenuItemsProps) => {
@@ -19,14 +23,14 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
 	);
 	return (
 		<>
-		{/* <div className={styles.titleHeader}>
-			<h1 id={styles.title}> Shnl <br /> Photography </h1>
-		</div> */}
-		<div id={styles.menu}>
-			<ul>
-				{links}
-			</ul>
-		</div>
+			{/* <div className={styles.titleHeader}>
+				<h1 id={styles.title}> Shnl <br /> Photography </h1>
+			</div> */}
+			<div id={styles.menu}>
+				<ul>
+					{links}
+				</ul>
+			</div>
 		</>
 	);
 };
@@ -53,9 +57,9 @@ const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 const Top = () => {
 	function closeMenu() {
 		const navigation = document.querySelector('nav');
-		const width = navigation.clientWidth;
-		navigation.style.transition = 'transform 0.3s ease-in-out';
-		navigation.style.transform = `translateX(-${width}px)`;
+		const width = navigation!.clientWidth;
+		navigation!.style.transition = 'transform 0.3s ease-in-out';
+		navigation!.style.transform = `translateX(-${width}px)`;
 	}
 	return (
 		<div id={styles.top}>
@@ -68,10 +72,8 @@ const Top = () => {
 const HamburgerMenu = () => {
 	function MenuToggle() {
 		const navigation = document.querySelector('nav');
-		const width = navigation.clientWidth;
-		console.log(width);
-		navigation.style.transition = 'transform 0.3s ease-in-out';
-		navigation.style.transform = `translateX(0px)`;
+		navigation!.style.transition = 'transform 0.3s ease-in-out';
+		navigation!.style.transform = `translateX(0px)`;
 	}
 
 	return(
@@ -83,8 +85,7 @@ const HamburgerMenu = () => {
 	)
 };
 
-const Nav = ({ setDesktopImg }) => {
-	const size = useWindowSizeContext()
+const Nav = () => {
 	const menuLinks = [
 		{
 			name: 'Home',
@@ -120,7 +121,7 @@ const Nav = ({ setDesktopImg }) => {
 			{/* <div id={styles.navContainer}> */}
 				<nav className='translate_nav'>
 					<Top />
-					<MenuItems menuLinks={menuLinks} setDesktopImg={setDesktopImg} />
+					<MenuItems menuLinks={menuLinks} />
 					<SocialIcons insta={instagram} facebook={facebook} email={mail} />
 				</nav>
 			{/* </div> */}

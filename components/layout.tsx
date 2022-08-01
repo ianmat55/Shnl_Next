@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Nav from './navbar'
 
 export default function Layout({ children }) {
+  console.log(children)
   return (
     <>
       <Head>
@@ -12,7 +13,7 @@ export default function Layout({ children }) {
           content="Proffessional photography portfolio"
         />
       </Head>
-      <Nav setDesktopImg={undefined} />
+      <Nav />
       <main id='main'>
         {children}
       </main>

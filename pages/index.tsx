@@ -13,6 +13,7 @@ import desktop3 from '../public/assets/desktop_images/home3.jpg'
 import desktop4 from '../public/assets/desktop_images/home4.jpeg'
 import desktop5 from '../public/assets/desktop_images/home5.jpeg'
 import desktop6 from '../public/assets/desktop_images/wedding.jpg'
+import desktop7 from '../public/assets/desktop_images/home6.jpeg'
 import { Size, useWindowSizeContext } from 'utils/context'
 
 interface BackgroundImagesProps {
@@ -55,7 +56,7 @@ const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
 
 export default function Home() {
 	const mobileImages = [mobile1.src, mobile2.src, mobile3.src, mobile4.src]
-	const desktopImages = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src]
+	const desktopImages = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src, desktop7.src]
 
 	const windowSize = useWindowSizeContext()
 

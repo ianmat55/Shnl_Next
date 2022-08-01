@@ -27,6 +27,7 @@ interface LifestyleProps {
 }
 
 export default function Lifestyle({ images }: LifestyleProps) {
+	console.log(images)
 	return (
 		<section className='content'>
 			<div className={styles.colorStrip}>

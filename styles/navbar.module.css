@@ -29,10 +29,19 @@
 
 .menuItem {
 	letter-spacing: 0.1em;
+	transition: 0.4s;
+	/* color: #ffffff; */
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .menuItem:hover {
-	font-weight: 600;
+	color: white;
+	color: brown;
+	/* background-color: #95715c; */
+	/* background-color: #faebd7;  */
+	background-color: #ffffff;
+	padding: 24px 10px;
 }
 
 .titleHeader {
@@ -77,14 +86,6 @@
 	position: relative;
 	z-index: 50;
 }
-
-/* #navContainer {  This might be useless
-	background-size: cover;
-	height: 100vh;
-	position: fixed;
-	z-index: 50;
-	width: auto;
-} */
 
 @media only screen and (min-width: 1000px) {
 	#navbar_menu {

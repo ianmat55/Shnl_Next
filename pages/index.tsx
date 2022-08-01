@@ -17,7 +17,7 @@ import { Size, useWindowSizeContext } from 'utils/context'
 
 interface BackgroundImagesProps {
 	images: string[],
-	size: Size | undefined
+	size: Size
 }
 
 const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {

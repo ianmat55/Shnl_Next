@@ -5,27 +5,6 @@ import Gallery from '../components/gallery'
 import Header from '../components/header'
 import axios from 'axios';
 
-// const Hero = () => {
-// 	return(
-// 		<div id={styles.lifestyleHero}>
-// 			<h1 id={styles.lifestyleTitle} className='title'> Waikiki/ <br /> Downtown/ <br /> Nature </h1>
-// 			<div id={styles.img1}>
-// 				<Image src={header1} priority />
-// 			</div>
-// 			<div id={styles.img2}>
-// 				<Image src={header2} />
-// 			</div>
-// 			<div id={styles.img3}>
-// 				<Image src={header3} />
-// 			</div>
-// 		</div>
-// 	)
-// };
-
-// interface LifestyleProps {
-// 	images: string[]
-// }
-
 export default function Lifestyle({ images }: any) {
 	return (
 		<section className='content'>

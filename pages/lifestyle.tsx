@@ -1,9 +1,9 @@
 import styles from '../styles/Lifestyle.module.css'
 import lifestyle1 from '../public/assets/test_images/lifestyle_header.jpeg'
 import lifestyle2 from '../public/assets/test_images/lifestyle2_header.jpeg'
-// import Gallery from '../components/gallery'
+import Gallery from '../components/gallery'
 import Header from '../components/header'
-// import axios from 'axios';
+import axios from 'axios';
 
 // const Hero = () => {
 // 	return(
@@ -23,31 +23,28 @@ import Header from '../components/header'
 // };
 
 interface LifestyleProps {
-	images: string
+	images: string[]
 }
 
-export default function Lifestyle({ images }: LifestyleProps) {
-	console.log(images)
+export default function Lifestyle({ images }: any) {
 	return (
 		<section className='content'>
 			<div className={styles.colorStrip}>
 				<Header photo1={lifestyle1} photo2={lifestyle2} />
 			</div>
-			{/* <div>
+			<div>
 				<Gallery images={images} />
-			</div> */}
+			</div>
 		</section>
 	)
 }
 
-// export async function getStaticProps() {
-// 	const res = await axios('https://api.shanelhonolulu.com/items/Lifestyle')
-// 	// const res = await fetch('http://localhost:8055/items/Lifestyle')
-// 	const values = await res.data
-// 	const images = values.map((value: { image: string}) => value.image)
+export async function getStaticProps() {
+	// const res = await axios('https://api.shanelhonolulu.com/items/Lifestyle')
+	const res =  await axios(`http://128.199.9.160/items/Test`)
+	const images = res.data
 
-
-// 	return {
-// 	  props: { images }, // will be passed to the page component as props
-// 	}
-// }
+	return {
+	  props: { images }, // will be passed to the page component as props
+	}
+}

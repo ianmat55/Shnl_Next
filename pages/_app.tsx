@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import Layout from '../components/layout'
 import { WindowSizeProvider } from '../utils/context'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any) {
   return (
     <WindowSizeProvider>
       <Layout>

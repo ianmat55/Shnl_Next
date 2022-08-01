@@ -13,11 +13,7 @@ import desktop3 from '../public/assets/desktop_images/home3.jpg'
 import desktop4 from '../public/assets/desktop_images/home4.jpeg'
 import desktop5 from '../public/assets/desktop_images/home5.jpeg'
 import desktop6 from '../public/assets/desktop_images/wedding.jpg'
-
-interface Size {
-	width: number,
-	height: number
-}
+import { Size, useWindowSizeContext } from 'utils/context'
 
 interface BackgroundImagesProps {
 	images: string[],
@@ -60,28 +56,14 @@ const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
 export default function Home() {
 	const mobileImages = [mobile1.src, mobile2.src, mobile3.src, mobile4.src]
 	const desktopImages = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src]
-	// const size = useWindowSizeContext()
 
-	const [size, setSize] = useState<Size>({width: 800, height: 800})
-
-	const resizeHandler = () => {
-		const width = window.innerWidth
-		const height = window.innerHeight
-	
-		setSize({
-			width: width, height: height
-		})
-	}
-
-	useEffect(() => {
-		window.onresize = resizeHandler
-	}, [])
+	const windowSize = useWindowSizeContext()
 
 	let background
-	if (size!.width >= 800) {
-		background = <BackgroundImages images={desktopImages} size={size} />
+	if (windowSize!.width >= 800) {
+		background = <BackgroundImages images={desktopImages} size={windowSize} />
 	} else {
-		background = <BackgroundImages images={mobileImages} size={size} />
+		background = <BackgroundImages images={mobileImages} size={windowSize} />
 	};
 	
 	return (

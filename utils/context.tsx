@@ -1,11 +1,16 @@
-import { useState, createContext, useContext, useEffect } from 'react'
+import { useState, createContext, useContext, useEffect, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react'
 
-export const WindowSizeContext = createContext({})
+export interface Size {
+	width: number,
+	height: number
+}
 
-export const WindowSizeProvider = (props) => {
-	const [windowSize, setWindowSize] = useState({
-		width: undefined,
-		height: undefined,
+export const WindowSizeContext = createContext({width: 0, height: 0})
+
+export const WindowSizeProvider = (props: { children: ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal }) => {
+	const [windowSize, setWindowSize] = useState<Size>({
+		width: 800,
+		height: 800,
 	});
 
 	useEffect(() => {
@@ -29,4 +34,4 @@ export const WindowSizeProvider = (props) => {
 
 export function useWindowSizeContext() {
     return useContext(WindowSizeContext)
-  }
+}

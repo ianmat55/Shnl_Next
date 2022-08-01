@@ -1,8 +1,8 @@
 import Head from 'next/head'
+import React from 'react'
 import Nav from './navbar'
 
-export default function Layout({ children }) {
-  console.log(children)
+export default function Layout({ children }: any) {
   return (
     <>
       <Head>

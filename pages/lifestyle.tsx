@@ -1,6 +1,6 @@
 import styles from '../styles/Lifestyle.module.css'
-import lifestyle1 from '../public/assets/test_images/lifestyle_test1-min.jpeg'
-import lifestyle2 from '../public/assets/test_images/lifestyle_test2-min.jpeg'
+import lifestyle1 from '../public/assets/test_images/lifestyle_header.jpeg'
+import lifestyle2 from '../public/assets/test_images/lifestyle2_header.jpeg'
 // import Gallery from '../components/gallery'
 import Header from '../components/header'
 // import axios from 'axios';

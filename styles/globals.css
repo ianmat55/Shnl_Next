@@ -46,13 +46,14 @@ nav {
   box-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
 }
 
-.translate_nav {
+#translate-nav {
   transform: translateX(-350px);
 }
 
 ul {
   list-style: none;
-  padding: 0
+  padding: 0;
+  margin: 0;
 }
 
 img {
@@ -79,15 +80,8 @@ html {
   box-sizing: inherit;
 }
 
-
-/* @media only screen and (min-width: 700px) {
-  .title {
-    font-size: 2.5rem;
-  }
-} */
-
 @media only screen and (min-width: 1000px) {
-  .translate_nav {
+  #translate-nav {
     transform: translateX(0);
   }
 
@@ -95,11 +89,16 @@ html {
     flex-direction: row;
     /* background-color: transparent; */
     position: absolute;
-    height: 8%;
+    height: auto;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
     justify-content: right;
-    padding: 0 2rem 0 0;   
+    padding: 0 2rem;   
+    /* color: #ffffff; */
+  }
+
+  ul {
+    display: flex;
   }
 
   form {

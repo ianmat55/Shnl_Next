@@ -11,11 +11,18 @@ interface MenuLink {
 	link: string
 }
 
+interface SocialIcons {
+	insta: string,
+	facebook: string,
+	email: string
+}
+
 interface MenuItemsProps {
 	menuLinks: MenuLink[]
-};
+	socialIcons: SocialIcons
+}
 
-const MenuItems = ({ menuLinks }: MenuItemsProps) => {
+const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 	const links = menuLinks.map((item: any, index: number) =>
 		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
@@ -26,19 +33,15 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
 			{/* <div className={styles.titleHeader}>
 				<h1 id={styles.title}> Shnl <br /> Photography </h1>
 			</div> */}
-			<div id={styles.menu}>
+			<nav id='translate-nav'>
+				<Top />
 				<ul>
 					{links}
 				</ul>
-			</div>
+				<SocialIcons insta={socialIcons.insta} facebook={socialIcons.facebook} email={socialIcons.email}/>
+			</nav>
 		</>
 	);
-};
-
-interface SocialIcons {
-	insta: string,
-	facebook: string,
-	email: string
 };
 
 const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
@@ -112,19 +115,15 @@ const Nav = () => {
 			link: '/contact'
 		}
 	];
+
+	const socialIcons = {insta: instagram, facebook, email: mail}
 	
 	return (
 		<>
 			<div className={styles.hamburgerContainer}>
 				<HamburgerMenu />
 			</div>
-			{/* <div id={styles.navContainer}> */}
-				<nav className='translate_nav'>
-					<Top />
-					<MenuItems menuLinks={menuLinks} />
-					<SocialIcons insta={instagram} facebook={facebook} email={mail} />
-				</nav>
-			{/* </div> */}
+			<MenuItems menuLinks={menuLinks} socialIcons={socialIcons} />
 		</>
 	)
 };

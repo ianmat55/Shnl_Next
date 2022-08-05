@@ -1,7 +1,7 @@
 import styles from '../styles/Wedding.module.css'
 import Image from 'next/image'
 import headImg1 from '../public/assets/test_images/wedding/wedding6.jpg'
-import headImg2 from '../public/assets/test_images/wedding/wedding5.jpeg'
+import headImg2 from '../public/assets/test_images/wedding/wedding3.jpeg'
 
 
 const Header = () => {

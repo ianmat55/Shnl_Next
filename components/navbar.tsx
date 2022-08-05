@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../styles/navbar.module.css'
 
-import facebook from '../public/assets/icons/facebook.svg'
-import mail from '../public/assets/icons/minutemailer.svg'
-import instagram from '../public/assets/icons/instagram.svg'
+// get our fontawesome imports
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface MenuLink {
 	name: string,
@@ -12,9 +12,9 @@ interface MenuLink {
 }
 
 interface SocialIcons {
-	insta: string,
-	facebook: string,
-	email: string
+	insta: any,
+	facebook: any,
+	email: any
 }
 
 interface MenuItemsProps {
@@ -47,7 +47,10 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
-		<li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li> 
+		// <li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li>
+		<li key={id}>
+			<FontAwesomeIcon className={styles.sIcon} icon={icon} size='sm'/>
+		</li> 
 	)
 
 	return (
@@ -116,7 +119,7 @@ const Nav = () => {
 		}
 	];
 
-	const socialIcons = {insta: instagram, facebook, email: mail}
+	const socialIcons = {insta: faInstagram, facebook: faFacebook, email: faEnvelope}
 	
 	return (
 		<>

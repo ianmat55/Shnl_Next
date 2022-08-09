@@ -1,5 +1,5 @@
-import styles from '../styles/Commercial.module.css'
-import header from '../public/assets/test_images/commercial/header.jpg'
+import styles from '../../styles/Commercial.module.css'
+import header from '../../public/assets/test_images/commercial/header.jpg'
 import Image from 'next/image'
 
 const Hero = () => {

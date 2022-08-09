@@ -1,5 +1,5 @@
-import styles from '../styles/Contact.module.css'
-import profilePic from '../public/assets/desktop_images/about.jpg'
+import styles from '../../styles/Contact.module.css'
+import profilePic from '../../public/assets/desktop_images/about.jpg'
 import Image from 'next/image'
 
 const Header = () => {

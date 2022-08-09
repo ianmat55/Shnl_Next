@@ -1,8 +1,8 @@
-import styles from '../styles/Lifestyle.module.css'
-import lifestyle1 from '../public/assets/test_images/lifestyle_header.jpeg'
-import lifestyle2 from '../public/assets/test_images/lifestyle2_header.jpeg'
-import Gallery from '../components/gallery'
-import Header from '../components/header'
+import styles from '../../styles/Lifestyle.module.css'
+import lifestyle1 from '../../public/assets/test_images/lifestyle_header.jpeg'
+import lifestyle2 from '../../public/assets/test_images/lifestyle2_header.jpeg'
+import Gallery from '../../components/gallery'
+import Header from '../../components/header'
 import axios from 'axios';
 
 export default function Lifestyle({ images }: any) {
@@ -19,8 +19,7 @@ export default function Lifestyle({ images }: any) {
 }
 
 export async function getStaticProps() {
-	// const res = await axios('https://api.shanelhonolulu.com/items/Lifestyle')
-	const res =  await axios(`http://128.199.9.160/items/Test`)
+	const res = await axios('https://api.shanelhonolulu.com/items/Test')
 	const images = res.data
 
 	return {

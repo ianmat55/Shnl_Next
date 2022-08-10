@@ -80,6 +80,8 @@
 
 #closeMenu {
 	position: relative;
+	width: 2rem;
+	cursor: pointer;
 }
 
 #carouselContainer {

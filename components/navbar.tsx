@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css'
 
 // get our fontawesome imports
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleXmark, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface MenuLink {
@@ -69,7 +69,7 @@ const Top = () => {
 	}
 	return (
 		<div id={styles.top}>
-			<button onClick={closeMenu} id={styles.closeMenu}> X </button>
+			<FontAwesomeIcon onClick={closeMenu} id={styles.closeMenu} icon={faCircleXmark} size='sm'/>
 			{/* <button> Light/Dark </button> */}
 		</div>
 	)

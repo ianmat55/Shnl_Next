@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css'
 
 // get our fontawesome imports
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope, faCircleXmark, faX } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface MenuLink {

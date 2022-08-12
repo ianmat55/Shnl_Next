@@ -19,7 +19,7 @@ export default function Lifestyle({ images }: any) {
 }
 
 export async function getStaticProps() {
-	const res = await axios('https://api.shanelhonolulu.com/items/Test')
+	const res = await axios('https://api.shanelhonolulu.com/items/Test') 
 	const images = res.data
 
 	return {

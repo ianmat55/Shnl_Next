@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import { GalleryProps, PhotoData } from 'shared/types'
+import Link from "next/link"
+import { GalleryProps, PhotoData } from "shared/types"
 import styles from '../styles/gallery.module.css'
 
-export default function Gallery({ images }: GalleryProps) {
+export default function PhotoSet({ images }: GalleryProps) {
 	return (
-		<ul id={styles.gallery}>
+		<ul>
 			{images.data.map((data: PhotoData) => {
 				const source = `https://api.shanelhonolulu.com/assets/${data.file_link}`
 
@@ -21,6 +21,3 @@ export default function Gallery({ images }: GalleryProps) {
 		</ul>
 	)
 }
-
-
-

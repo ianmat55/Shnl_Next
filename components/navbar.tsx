@@ -35,7 +35,7 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 			</div> */}
 			<nav id='translate-nav'>
 				<Top />
-				<ul>
+				<ul onClick={closeMenu}>
 					{links}
 				</ul>
 				<SocialIcons insta={socialIcons.insta} facebook={socialIcons.facebook} email={socialIcons.email}/>
@@ -60,13 +60,16 @@ const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	)
 };
 
-const Top = () => {
-	function closeMenu() {
-		const navigation = document.querySelector('nav');
-		const width = navigation!.clientWidth;
+function closeMenu() {
+	const navigation = document.querySelector('nav');
+	const width = navigation!.clientWidth;
+	if (width < 1000) {
 		navigation!.style.transition = 'transform 0.3s ease-in-out';
 		navigation!.style.transform = `translateX(-${width}px)`;
 	}
+}
+
+const Top = () => {
 	return (
 		<div id={styles.top}>
 			<FontAwesomeIcon onClick={closeMenu} id={styles.closeMenu} icon={faCircleXmark} size='sm'/>
@@ -91,7 +94,7 @@ const HamburgerMenu = () => {
 	)
 };
 
-const Nav = () => {
+export default function Nav() {
 	const menuLinks = [
 		{
 			name: 'Home',
@@ -130,5 +133,3 @@ const Nav = () => {
 		</>
 	)
 };
-
-export default Nav;

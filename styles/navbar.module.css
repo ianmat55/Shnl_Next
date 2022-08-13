@@ -1,6 +1,7 @@
 #hamburger {
 	margin: 0.5rem;
 	padding: 1rem;
+	cursor: pointer;
 }
 
 .hamburgerLines {
@@ -17,7 +18,7 @@
 	/* background-color: white;
 	opacity: 80%; */
 	width: 100vw;
-	z-index: 50
+	z-index: 50;
 }
 
 #menu {

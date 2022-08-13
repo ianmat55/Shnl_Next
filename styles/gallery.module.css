@@ -8,21 +8,22 @@
 #gallery { /* Flexbox may be a better option to display images of different sizes */
 	display: flex;
 	flex-wrap: wrap;
-	margin: 5rem 0;
+	margin: 5rem 0.5rem;
 	justify-content: center;
 }
 
 .photoContainer {
 	border-radius: 10px;
-	margin: .5rem;
+	margin: .2rem;
 	object-fit: cover;
-	height: 25vh;
+	width: 30vw;
+	cursor: pointer;
 }
 
 .photoContainer:after {
 	content: '';
 	display: block;
-	flex-grow: 10;
+	flex-grow: 1;
 }
 
 .photo {

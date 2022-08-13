@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css'
 
 // get our fontawesome imports
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleXmark, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface MenuLink {
@@ -86,10 +86,8 @@ const HamburgerMenu = () => {
 	}
 
 	return(
-		<div onClick={MenuToggle} id={styles.hamburger}>
-			<div className={styles.hamburgerLines}></div>
-			<div className={styles.hamburgerLines}></div>
-			<div className={styles.hamburgerLines}></div>
+		<div className={styles.hamburgerContainer}>
+			<FontAwesomeIcon onClick={MenuToggle} id={styles.hamburger} icon={faBars} size='sm' />
 		</div>
 	)
 };
@@ -126,9 +124,7 @@ export default function Nav() {
 	
 	return (
 		<>
-			<div className={styles.hamburgerContainer}>
-				<HamburgerMenu />
-			</div>
+			<HamburgerMenu />
 			<MenuItems menuLinks={menuLinks} socialIcons={socialIcons} />
 		</>
 	)

@@ -1,14 +1,12 @@
 #hamburger {
-	margin: 0.5rem;
-	padding: 1rem;
+	margin: 1rem;
 	cursor: pointer;
+	height: 2rem;
+	width: 2rem;
 }
 
-.hamburgerLines {
-	width: 2rem;
-	height: 0.125rem;
-	margin: 5px 0;
-	background-color: black
+#hamburger:hover {
+	transform: rotateY('360deg');
 }
 
 .hamburgerContainer {

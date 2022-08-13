@@ -49,7 +49,7 @@ const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	const renderIcons = socialImgs.map((icon, id) => 
 		// <li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li>
 		<li key={id}>
-			<FontAwesomeIcon className={styles.sIcon} icon={icon} size='sm'/>
+			<FontAwesomeIcon id={`sIcon${id}`} className={styles.sIcon} icon={icon} size='sm'/>
 		</li> 
 	)
 
@@ -86,7 +86,8 @@ const HamburgerMenu = () => {
 	}
 
 	return(
-		<div className={styles.hamburgerContainer}>
+		<div className={styles.hamburgerContainer}> 
+		{/* add some type of animation */}
 			<FontAwesomeIcon onClick={MenuToggle} id={styles.hamburger} icon={faBars} size='sm' />
 		</div>
 	)

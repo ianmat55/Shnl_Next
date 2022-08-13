@@ -3,6 +3,7 @@
 	cursor: pointer;
 	height: 2rem;
 	width: 2rem;
+	color: #8a5b40;
 }
 
 #hamburger:hover {
@@ -13,10 +14,9 @@
 	display: flex;
 	position: fixed;
 	align-items: center;
-	/* background-color: white;
-	opacity: 80%; */
 	width: 100vw;
 	z-index: 50;
+	background-color: hsl(150, 100%, 98%, 50%);
 }
 
 #menu {
@@ -58,11 +58,27 @@
 	letter-spacing: 0.025em;
 }
 
-.sIcon {
+ul li .sIcon {
 	height: 2rem;
 	width: 2rem;
 	position: relative;
 	margin: 0 0.5rem;
+	text-align: center;
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+#sIcon0:before {
+	background: rebeccapurple
+}
+
+#sIcon1:hover {
+	background: #3b5999;
+}
+
+#sIcon2:hover {
+	background: #dd4b39;
 }
 
 .iconContainer {

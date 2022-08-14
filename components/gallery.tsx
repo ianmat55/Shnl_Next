@@ -17,8 +17,7 @@ export default function Gallery({ images }: GalleryProps) {
 							</div>
 							<Image key={data.id} src={data.file_link} 
 									loader={({src}) => `https://api.shanelhonolulu.com/assets/${src}`} 
-									alt={`img${data.id}`} objectFit='cover' layout='fill'
-									width='100%' height='100%' />
+									alt={`img${data.id}`} objectFit='cover' layout='fill' />
 						</li>
 					</Link>
 					

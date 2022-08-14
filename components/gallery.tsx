@@ -12,11 +12,13 @@ export default function Gallery({ images }: GalleryProps) {
 				return (
 					<Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
 						<li className={styles.photoContainer}>
+							<div className={styles.caption}> 
+								<h1> {data.Text} </h1>
+							</div>
 							<Image key={data.id} src={data.file_link} 
 									loader={({src}) => `https://api.shanelhonolulu.com/assets/${src}`} 
-									alt={`img${data.id}`} objectFit='cover' layout='responsive'
+									alt={`img${data.id}`} objectFit='cover' layout='fill'
 									width='100%' height='100%' />
-							<div className={styles.caption}> {data.Text} </div>
 						</li>
 					</Link>
 					

@@ -44,7 +44,10 @@ export default function PhotoSetPage({ photoSet }: any) {
     //     })}
     //   </ul>
     // </div>
-    <PhotoSet images={photoSet} />
+    <section className='content'>
+      <div>  hello </div>
+      <PhotoSet images={photoSet} />
+    </section>
   )
 } 
 

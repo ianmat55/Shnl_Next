@@ -12,18 +12,22 @@
 	justify-content: center;
 }
 
+.photoWrapper {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	z-index: 50;
+	width: 100%;
+}
+
 .photoContainer {
 	border-radius: 10px;
 	margin: .2rem;
-	object-fit: cover;
+	text-align: center;
 	width: 30vw;
+	height: auto;
 	cursor: pointer;
-}
-
-.photoContainer:after {
-	content: '';
-	display: block;
-	flex-grow: 1;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
 }
 
 .photo {
@@ -37,4 +41,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+}
+
+.caption {
+	max-height: 100%;
+	margin: 0;
+	max-height: 100%;
+	display: block;
+	/* visibility: hidden; */
 }

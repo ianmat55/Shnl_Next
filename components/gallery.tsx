@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { GalleryProps, PhotoData } from 'shared/types'
 import styles from '../styles/gallery.module.css'
@@ -7,16 +8,25 @@ export default function Gallery({ images }: GalleryProps) {
 	return (
 		<ul id={styles.gallery}>
 			{images.data.map((data: PhotoData) => {
-				const source = `https://api.shanelhonolulu.com/assets/${data.file_link}`
-
+				// const source = `https://api.shanelhonolulu.com/assets/${data.file_link}`
 				return (
 					<Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
-						<li key={data.id} className={styles.photoContainer}>
-							{/* <Image className={styles.photo} key={index} loader={() => source} src={image} layout='fill' objectFit='cover' sizes='20vw' /> */}
-							{/* eslint-disable-next-line @next/next/no-img-element */}
-							<img src={source} className={styles.photo} alt={`img${data.id}`} />
+						<li className={styles.photoContainer}>
+							<Image key={data.id} src={data.file_link} 
+									loader={({src}) => `https://api.shanelhonolulu.com/assets/${src}`} 
+									alt={`img${data.id}`} objectFit='cover' layout='responsive'
+									width='100%' height='100%' />
+							<div className={styles.caption}> {data.Text} </div>
 						</li>
 					</Link>
+					
+					// <Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
+					// 	<li key={data.id} className={styles.photoContainer}>
+					// 		{/* eslint-disable-next-line @next/next/no-img-element */}
+					// 		<img src={source} className={styles.photo} alt={`img${data.id}`} />
+					// 		<div className={styles.caption}> {data.Text} </div>
+					// 	</li>
+					// </Link>
 				)
 			})}
 		</ul>

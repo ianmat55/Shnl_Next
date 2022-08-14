@@ -1,4 +1,3 @@
-import styles from '../../styles/Lifestyle.module.css'
 import lifestyle1 from '../../public/assets/test_images/lifestyle_header.jpeg'
 import lifestyle2 from '../../public/assets/test_images/lifestyle2_header.jpeg'
 import Gallery from '../../components/gallery'
@@ -8,9 +7,7 @@ import axios from 'axios';
 export default function Lifestyle({ images }: any) {
 	return (
 		<section className='content'>
-			<div className={styles.colorStrip}>
-				<Header photo1={lifestyle1} photo2={lifestyle2} />
-			</div>
+			<Header photo1={lifestyle1} photo2={lifestyle2} />
 			<Gallery images={images} />
 		</section>
 	)

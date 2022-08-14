@@ -6,7 +6,7 @@ const Hero = () => {
 	return (
 		<div>
 			<div id={styles.commercialHero}>
-				<Image src={header} id={styles.commercialHeader} layout='fill' priority />
+				<Image src={header} id={styles.commercialHeader} layout='fill' alt='commercial header' priority />
 			</div>
 			<h1 id={styles.commercialTitle} className="title"> COMMERCIAL </h1>
 		</div>

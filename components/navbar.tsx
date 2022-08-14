@@ -35,9 +35,12 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 	function closeMenu() {
 		const navigation = document.querySelector('nav');
 		const toggleButton = document.querySelector('#toggleIcon') as HTMLElement
-		navigation!.style.transition = 'transform 0.3s ease-in-out';
-		navigation!.style.transform = 'translateX(-300px)';
-		toggleButton!.style.transform = 'translateX(0px)';
+		const width = navigation!.clientWidth;
+		if (width < 1000) {
+			navigation!.style.transition = 'transform 0.3s ease-in-out';
+			navigation!.style.transform = 'translateX(-300px)';
+			toggleButton!.style.transform = 'translateX(0px)';
+		}
 	}
 
 	return (

@@ -1,7 +1,5 @@
 import axios from "axios"
-import Gallery from "components/gallery"
 import PhotoSet from "components/photo_set"
-import Link from "next/link"
 
 // This function gets called at build time
 export async function getStaticPaths() {

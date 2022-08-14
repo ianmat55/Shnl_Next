@@ -1,4 +1,6 @@
 import axios from "axios"
+import Gallery from "components/gallery"
+import PhotoSet from "components/photo_set"
 import Link from "next/link"
 
 // This function gets called at build time
@@ -27,25 +29,24 @@ export async function getStaticProps({params}: any) {
     }
 }
 
-export default function PhotoSetPage({ photoSet }: any) {          
+export default function PhotoSetPage({ photoSet }: any) {         
   return (
-    <div>
-      <ul>
-        {photoSet.map((data: any) => {
-          const source = `https://api.shanelhonolulu.com/assets/${data}`
+    // <div>
+    //   <ul>
+    //     {photoSet.map((data: any) => {
+    //       const source = `https://api.shanelhonolulu.com/assets/${data}`
 
-          return (
-            <Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
-              <li key={data.id}>
-                {/* <Image className={styles.photo} key={index} loader={() => source} src={image} layout='fill' objectFit='cover' sizes='20vw' /> */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={source} alt={`img${data.id}`} />
-              </li>
-            </Link>
-          )
-        })}
-      </ul>
-    </div>
+    //       return (
+    //         <Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
+    //           <li key={data.id}>
+    //             <img src={source} alt={`img${data.id}`} />
+    //           </li>
+    //         </Link>
+    //       )
+    //     })}
+    //   </ul>
+    // </div>
+    <PhotoSet images={photoSet} />
   )
 } 
 

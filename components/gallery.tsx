@@ -3,6 +3,7 @@ import { GalleryProps, PhotoData } from 'shared/types'
 import styles from '../styles/gallery.module.css'
 
 export default function Gallery({ images }: GalleryProps) {
+	console.log(images)
 	return (
 		<ul id={styles.gallery}>
 			{images.data.map((data: PhotoData) => {

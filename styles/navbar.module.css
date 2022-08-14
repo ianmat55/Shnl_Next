@@ -112,12 +112,8 @@ ul li .sIcon {
 	#navbar_menu {
 		display: flex;
 	}
-
-<<<<<<< HEAD
-	#logo {
-=======
+	
 	#logo h1{
->>>>>>> 288bdda (hide logo on screens larer than 1000px)
 		display: hidden
 	}
 

@@ -1,9 +1,11 @@
 #hamburger {
-	margin: 1rem;
+	padding: 1rem;
 	cursor: pointer;
-	height: 2rem;
-	width: 2rem;
+	width: 4rem;
+	height: auto;
 	color: #8a5b40;
+	background-color: #faebd7;
+	border-bottom-right-radius: 20px;
 }
 
 #hamburger:hover {
@@ -16,7 +18,8 @@
 	align-items: center;
 	width: 100vw;
 	z-index: 50;
-	background-color: hsl(150, 100%, 98%, 50%);
+	/* background-color: #faebd7; */
+	/* background-color: hsl(150, 100%, 98%, 50%); */
 }
 
 #menu {

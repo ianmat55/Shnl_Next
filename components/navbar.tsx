@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css'
 
 // get our fontawesome imports
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope, faCircleXmark, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from 'react';
 
@@ -42,10 +42,10 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 
 	return (
 		<>
-			{/* <div className={styles.titleHeader}>
-				<h1 id={styles.title}> Shnl <br /> Photography </h1>
-			</div> */}
 			<nav id='translate-nav'>
+				<div>
+					<h1> ShanelHonolulu </h1>
+				</div>
 				<ul onClick={closeMenu}>
 					{links}
 				</ul>

@@ -11,9 +11,7 @@ export default function Lifestyle({ images }: any) {
 			<div className={styles.colorStrip}>
 				<Header photo1={lifestyle1} photo2={lifestyle2} />
 			</div>
-			<div>
-				<Gallery images={images} />
-			</div>
+			<Gallery images={images} />
 		</section>
 	)
 }

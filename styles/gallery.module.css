@@ -32,3 +32,9 @@
 	vertical-align: bottom;
 	flex-grow: 1;
 }
+
+.photo_set {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}

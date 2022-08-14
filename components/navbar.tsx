@@ -5,6 +5,7 @@ import styles from '../styles/navbar.module.css'
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faCircleXmark, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from 'react';
 
 interface MenuLink {
 	name: string,
@@ -22,19 +23,29 @@ interface MenuItemsProps {
 	socialIcons: SocialIcons
 }
 
+// NEED TO REFACTOR 
+
 const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 	const links = menuLinks.map((item: any, index: number) =>
 		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
 		</Link>
 	);
+
+	function closeMenu() {
+		const navigation = document.querySelector('nav');
+		const toggleButton = document.querySelector('#toggleIcon') as HTMLElement
+		navigation!.style.transition = 'transform 0.3s ease-in-out';
+		navigation!.style.transform = 'translateX(-300px)';
+		toggleButton!.style.transform = 'translateX(0px)';
+	}
+
 	return (
 		<>
 			{/* <div className={styles.titleHeader}>
 				<h1 id={styles.title}> Shnl <br /> Photography </h1>
 			</div> */}
 			<nav id='translate-nav'>
-				<Top />
 				<ul onClick={closeMenu}>
 					{links}
 				</ul>
@@ -47,7 +58,6 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
-		// <li key={id} className={styles.sIcon}> <Image src={icon} alt={icon} layout='fill' priority />  </li>
 		<li key={id}>
 			<FontAwesomeIcon id={`sIcon${id}`} className={styles.sIcon} icon={icon} size='sm'/>
 		</li> 
@@ -60,35 +70,28 @@ const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	)
 };
 
-function closeMenu() {
-	const navigation = document.querySelector('nav');
-	const width = navigation!.clientWidth;
-	if (width < 1000) {
-		navigation!.style.transition = 'transform 0.3s ease-in-out';
-		navigation!.style.transform = `translateX(-${width}px)`;
-	}
-}
-
-const Top = () => {
-	return (
-		<div id={styles.top}>
-			<FontAwesomeIcon onClick={closeMenu} id={styles.closeMenu} icon={faCircleXmark} size='sm'/>
-			{/* <button> Light/Dark </button> */}
-		</div>
-	)
-}
-
-const HamburgerMenu = () => {
-	function MenuToggle() {
-		const navigation = document.querySelector('nav');
-		navigation!.style.transition = 'transform 0.3s ease-in-out';
-		navigation!.style.transform = `translateX(0px)`;
+const HamburgerMenu = ({ sideBar, setSideBar }: any) => {
+	
+	function menuToggle() {
+		const navigation = document.querySelector('nav')
+		const toggleButton = document.querySelector('#toggleIcon') as HTMLElement
+		const transition = 'transform 0.3s ease-in-out'
+		if (sideBar) {
+			navigation!.style.transform = 'translateX(-300px)'
+			toggleButton!.style.transform = 'translateX(0px)'
+			setSideBar(false)
+		} else {
+			navigation!.style.transform = 'translateX(0px)'
+			toggleButton!.style.transform = 'translateX(300px)'
+			setSideBar(true)
+		}
+		navigation!.style.transition = transition
+		toggleButton!.style.transition = transition
 	}
 
 	return(
-		<div className={styles.hamburgerContainer}> 
-		{/* add some type of animation */}
-			<FontAwesomeIcon onClick={MenuToggle} id={styles.hamburger} icon={faBars} size='sm' />
+		<div id='toggleIcon' className={styles.hamburgerContainer}> 
+			<FontAwesomeIcon onClick={menuToggle} id={styles.hamburger} icon={faBars} size='sm' />
 		</div>
 	)
 };
@@ -111,21 +114,19 @@ export default function Nav() {
 			name: 'Commercial',
 			link: '/commercial',
 		},
-		// {
-		// 	name: 'Film',
-		// 	link: '/film'
-		// },
 		{
 			name: 'Contact',
 			link: '/contact'
 		}
 	];
 
+	const [sideBar, setSideBar] = useState(false)
+
 	const socialIcons = {insta: faInstagram, facebook: faFacebook, email: faEnvelope}
-	
+
 	return (
 		<>
-			<HamburgerMenu />
+			<HamburgerMenu sideBar={sideBar} setSideBar={setSideBar} />
 			<MenuItems menuLinks={menuLinks} socialIcons={socialIcons} />
 		</>
 	)

@@ -2,7 +2,17 @@ import styles from '../../styles/Wedding.module.css'
 import Image from 'next/image'
 import headImg1 from '../../public/assets/test_images/wedding/wedding6.jpg'
 import headImg2 from '../../public/assets/test_images/wedding/wedding3.jpeg'
+import axios from 'axios'
+import Gallery from 'components/gallery'
 
+export async function getStaticProps() {
+	const res = await axios('https://api.shanelhonolulu.com/items/Test') 
+	const images = res.data
+
+	return {
+	  props: { images }, // will be passed to the page component as props
+	}
+}
 
 const Header = () => {
 	return(
@@ -18,14 +28,11 @@ const Header = () => {
 	)
 }
 
-export default function Wedding() {
+export default function Wedding({ images }: any) {
 	return (
 		<section className='content'>
-			<div className={styles.colorStrip}>
-				<Header />
-			</div>
+			<Header />
+			<Gallery images={images} />
 		</section>
 	)
 }
-
-// @refresh reset

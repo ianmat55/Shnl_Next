@@ -112,9 +112,9 @@ ul li .sIcon {
 	#navbar_menu {
 		display: flex;
 	}
-	
+
 	#logo h1{
-		display: hidden
+		display: none;
 	}
 
 	#menu {

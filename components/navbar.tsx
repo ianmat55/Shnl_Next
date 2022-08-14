@@ -43,9 +43,7 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 	return (
 		<>
 			<nav id='translate-nav'>
-				<div id={styles.logo}>
-					<h1> ShanelHonolulu </h1>
-				</div>
+				<h1 id={styles.logo}> ShanelHonolulu </h1>
 				<ul onClick={closeMenu}>
 					{links}
 				</ul>

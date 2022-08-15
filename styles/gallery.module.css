@@ -70,9 +70,9 @@
 	transition-delay: 0.2s;
 }
 
-.photoContainer:hover {
+/* .photoContainer:hover {
 	transform: scale(1.03)
-}
+} */
 
 .photoContainer:hover .caption {
 	height: 100%;

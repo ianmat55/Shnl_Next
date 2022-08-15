@@ -6,6 +6,7 @@
 	color: #8a5b40;
 	background-color: #faebd7;
 	border-bottom-right-radius: 20px;
+	box-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
 }
 
 #hamburger:hover {

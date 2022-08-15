@@ -26,8 +26,9 @@
 	z-index: 1;
 	text-align: center;
 	position: relative;
-	width: 30vw;
-	min-height: 40vh;
+	width: 60vw;
+	min-height: 60vh;
+	height: 100%;
 	overflow: hidden;
 	cursor: pointer;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
@@ -82,4 +83,11 @@
 	height: 100%;
 	display: block;
 	visibility: visible
+}
+
+@media only screen and (min-width: 1000px) {
+	.photoContainer {
+		width: 30vw;
+		min-height: 80vh;
+	}
 }

@@ -29,23 +29,8 @@ export async function getStaticProps({params}: any) {
 
 export default function PhotoSetPage({ photoSet }: any) {         
   return (
-    // <div>
-    //   <ul>
-    //     {photoSet.map((data: any) => {
-    //       const source = `https://api.shanelhonolulu.com/assets/${data}`
-
-    //       return (
-    //         <Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
-    //           <li key={data.id}>
-    //             <img src={source} alt={`img${data.id}`} />
-    //           </li>
-    //         </Link>
-    //       )
-    //     })}
-    //   </ul>
-    // </div>
     <section className='content'>
-      <div>  hello </div>
+      <div></div>
       <PhotoSet images={photoSet} />
     </section>
   )

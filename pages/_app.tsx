@@ -1,8 +1,14 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
 import { WindowSizeProvider } from '../utils/context'
+import React from 'react'
 
-function MyApp({ Component, pageProps }: any) {
+interface MyAppProps {
+  Component: React.FC,
+  pageProps: any
+}
+
+function MyApp({ Component, pageProps }: MyAppProps) {
   return (
     <WindowSizeProvider>
       <Layout>

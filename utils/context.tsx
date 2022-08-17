@@ -1,9 +1,5 @@
 import { useState, createContext, useContext, useEffect, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react'
-
-export interface Size {
-	width: number,
-	height: number
-}
+import { Size } from 'shared/types';
 
 export const WindowSizeContext = createContext({width: 0, height: 0})
 

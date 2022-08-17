@@ -46,7 +46,9 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 	return (
 		<>
 			<nav id='translate-nav'>
-				<h1 id={styles.logo}> ShanelHonolulu </h1>
+				<Link key='home' href='/' passHref={true}>
+					<h1 id={styles.logo}> ShanelHonolulu </h1>
+				</Link>
 				<ul onClick={closeMenu}>
 					{links}
 				</ul>
@@ -100,20 +102,20 @@ const HamburgerMenu = ({ sideBar, setSideBar }: any) => {
 export default function Nav() {
 	const menuLinks = [
 		{
-			name: 'Home',
-			link: '/'
-		},
-		{
-			name: 'Wedding',
-			link: '/wedding'
+			name: 'Love',
+			link: '/love'
 		},
 		{
 			name: 'Lifestyle',
 			link: '/lifestyle'
 		},
 		{
-			name: 'Commercial',
-			link: '/commercial',
+			name: 'Local',
+			link: '/local',
+		},
+		{
+			name: 'Film',
+			link: '/film',
 		},
 		{
 			name: 'Contact',

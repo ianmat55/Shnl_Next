@@ -3,11 +3,11 @@
 	background-color: #cdbca9;
 } */
 
-#weddingHeader {
+/* #weddingHeader {
 	display: flex;
 	align-items: center;
 	position: relative;
-	width: 90%;
+	justify-content: center;
 	padding-top: 5rem;
 	margin: auto;
 }
@@ -15,8 +15,7 @@
 #weddingTitle {
 	position: absolute;
 	z-index: 10;
-	left: 1em;
-}
+} */
 
 #img1 {
 	position: relative;
@@ -27,7 +26,6 @@
 }
 
 #img2 {
-	position: absolute;
 	z-index: 10;
 	right: 2em;
 	width: 22%;
@@ -37,7 +35,7 @@
 @media only screen and (min-width: 1000px) {
 	#weddingHeader {
 		/* width: 80%; */
-		padding-top: 7rem;
+		padding-top: 8rem;
 	}
 	#img1 {
 		top: 1rem;

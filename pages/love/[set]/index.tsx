@@ -1,5 +1,6 @@
 import axios from "axios"
-import Link from "next/link"
+import PhotoSet from "components/photo_set"
+import { file_link, PhotoSetProps } from "shared/types"
 
 // This function gets called at build time
 export async function getStaticPaths() {
@@ -27,25 +28,12 @@ export async function getStaticProps({params}: any) {
     }
 }
 
-export default function PhotoSetPage({ photoSet }: any) {          
+export default function PhotoSetPage({ photoSet }: any) {         
   return (
-    <div>
-      <ul>
-        {photoSet.map((data: any) => {
-          const source = `https://api.shanelhonolulu.com/assets/${data}`
-
-          return (
-            <Link key={data.id} href={`/lifestyle/${data.id}`} passHref={true}> 
-              <li key={data.id}>
-                {/* <Image className={styles.photo} key={index} loader={() => source} src={image} layout='fill' objectFit='cover' sizes='20vw' /> */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={source} alt={`img${data.id}`} />
-              </li>
-            </Link>
-          )
-        })}
-      </ul>
-    </div>
+    <section className='content'>
+      <div> hello </div>
+      <PhotoSet images={photoSet} />
+    </section>
   )
 } 
 

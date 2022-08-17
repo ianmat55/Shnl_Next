@@ -1,13 +1,12 @@
-import lifestyle1 from '../../public/assets/test_images/lifestyle_header.jpeg'
-import lifestyle2 from '../../public/assets/test_images/lifestyle2_header.jpeg'
 import Gallery from '../../components/gallery'
 import Header from '../../components/header'
 import axios from 'axios';
+import { GalleryProps } from 'shared/types';
 
-export default function Lifestyle({ images }: any) {
+export default function Lifestyle({ images }: GalleryProps) {
 	return (
 		<section className='content'>
-			<Header photo1={lifestyle1} photo2={lifestyle2} />
+			<Header title='LIFESTYLE' />
 			<Gallery images={images} />
 		</section>
 	)

@@ -1,17 +1,5 @@
 import styles from '../../styles/Contact.module.css'
-import profilePic from '../../public/assets/desktop_images/about.jpg'
-import Image from 'next/image'
-
-const Header = () => {
-	return (
-		<div className={styles.bioDiv}>
-			<h1 id={styles.contactTitle} className='title'> HOWZIT </h1>
-			<div id={styles.titleImage}>
-				<Image src={profilePic} layout='responsive' alt='contact header' priority />
-			</div>
-		</div>
-	)
-};
+import Header from 'components/header'
 
 // const Body = () => {
 // 	return (
@@ -69,7 +57,7 @@ export default function Contact() {
 	return (
 		<div className='content'>
 			<div id={styles.aboutContainer}> 
-			    <Header />
+			    <Header title='HOWZIT' />
 		        {/* <Body /> */}
 			</div>
 			<Form />

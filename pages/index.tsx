@@ -14,7 +14,8 @@ import desktop4 from '../public/assets/desktop_images/home4.jpeg'
 import desktop5 from '../public/assets/desktop_images/home5.jpeg'
 import desktop6 from '../public/assets/desktop_images/wedding.jpg'
 import desktop7 from '../public/assets/desktop_images/home6.jpeg' // this is a good one
-import { Size, useWindowSizeContext } from 'utils/context'
+import { useWindowSizeContext } from 'utils/context'
+import { Size } from 'shared/types'
 
 interface BackgroundImagesProps {
 	images: string[],

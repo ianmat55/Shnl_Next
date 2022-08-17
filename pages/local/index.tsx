@@ -1,17 +1,5 @@
 import styles from '../../styles/Commercial.module.css'
-import header from '../../public/assets/test_images/commercial/header.jpg'
-import Image from 'next/image'
-
-const Hero = () => {
-	return (
-		<div>
-			<div id={styles.commercialHero}>
-				<Image src={header} id={styles.commercialHeader} layout='fill' alt='commercial header' priority />
-			</div>
-			<h1 id={styles.commercialTitle} className="title"> COMMERCIAL </h1>
-		</div>
-	)
-}
+import Header from 'components/header'
 
 const Body = () => {
 	return (
@@ -25,7 +13,7 @@ const Body = () => {
 export default function Commercial() {
 	return (
 		<div className='content'>
-			<Hero />
+			<Header title='LOCAL' />
 			<Body />
 		</div>
 	)

@@ -1,14 +1,7 @@
-/* #gallery {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 1rem;
-	margin: 5rem;
-} */
-
 #gallery { /* Flexbox may be a better option to display images of different sizes */
 	display: flex;
 	flex-wrap: wrap;
-	margin: 5rem 0.5rem;
+	margin: 2rem 0.5rem;
 	justify-content: center;
 }
 
@@ -34,6 +27,10 @@
 	box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
 }
 
+.photo_set {
+	display: grid;
+}
+
 .photo {
 	max-height: 100%;
 	min-width: 100%;
@@ -50,9 +47,11 @@
 .caption {
 	height: 0;
 	width: 100%;
+	display: flex;
+	align-items: end;
+	justify-content: center;
 	margin: 0;
 	z-index: 1;
-	display: block;
 	position: absolute;
 	background: linear-gradient(
 		to bottom,
@@ -62,32 +61,28 @@
 	transition-property: bottom, opacity;
 	transition: height .5s ease-in-out;
 	bottom: 0;
+	position: absolute;
 }
 
 .caption h1 {
 	color: white;
-	height: 0;
-	visibility: hidden;
-	transition-delay: 0.2s;
+	height: 25%;
+	position: relative;
+	transition-delay: 0.3s;
+	margin: 0;
 }
-
-/* .photoContainer:hover {
-	transform: scale(1.03)
-} */
 
 .photoContainer:hover .caption {
 	height: 100%;
-}
-
-.photoContainer:hover .caption h1 {
-	height: 100%;
-	display: block;
-	visibility: visible
 }
 
 @media only screen and (min-width: 1000px) {
 	.photoContainer {
 		width: 30vw;
 		min-height: 80vh;
+	}
+
+	#gallery {
+		margin: 0;
 	}
 }

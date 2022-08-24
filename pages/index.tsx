@@ -70,7 +70,7 @@ export default function Home() {
 	
 	return (
 		<section id={styles.home}>
-			<h1 id={styles.mainTitle} className='homeTitle'> Shnl <br /> Photography </h1>
+			{/* <h1 id={styles.mainTitle} className='homeTitle'> Shnl <br /> Photography </h1> */}
 			{background}
 		</section>
 	)

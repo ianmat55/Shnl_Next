@@ -3,6 +3,13 @@ import styles from '../styles/gallery.module.css'
 import { file_link } from 'shared/types'
 import { useState } from 'react';
 
+// Sorts images in specific format: Landscape photo every 3rd row, fill rest with portraits if landscape runs out
+function sortImages() {
+	const portraitPosition = 0;
+	const landscapePosition = 0;
+	return
+}
+
 export default function PhotoSet({ images }: any) {
 	const [width, setWidth] = useState('0');
 	const setImages = images.map((image: file_link, index: number) => {
@@ -10,7 +17,7 @@ export default function PhotoSet({ images }: any) {
 			<li key={index} className={styles.photoSetPhoto} style={{width: width}}>
 					<Image className={styles.photo} src={image} 
 					loader={({src}) => `https://api.shanelhonolulu.com/assets/${src}`} 
-					alt={`photo${index}`} layout='fill' objectFit='contain'
+					alt={`photo${index}`} layout='fill' objectFit='cover'
 					onLoad={({ target }) => {
 						const { naturalWidth, naturalHeight } = target as HTMLImageElement;
 						console.log(naturalWidth)

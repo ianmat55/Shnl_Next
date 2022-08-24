@@ -28,6 +28,7 @@ export async function getStaticProps({params}: any) {
 }
 
 export default function PhotoSetPage({ photoSet }: any) {     
+  console.log(photoSet)
   return (
     <section className='content'>
       <div></div>

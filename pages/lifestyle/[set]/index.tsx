@@ -17,22 +17,26 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}: any) {
-    const photoSetId = params.set
-    const res = await axios(`https://api.shanelhonolulu.com/items/Test/${photoSetId}`)
-    const photoSet = res.data.data.photo_set
-    return {
-      props: {
-        photoSet
-      },
-    }
+  const photoSetId = params.set
+  const res = await axios(`https://api.shanelhonolulu.com/items/Test/${photoSetId}`)
+  const fileList = res.data.data.photo_set
+  const photoSet = await Promise.all(fileList.map(async (file: any) => {
+    const res = await axios(`https://api.shanelhonolulu.com/files/${file}`)
+    return res.data
+  }))
+
+  return {
+    props: {
+      photoSet
+    },
+  }
 }
 
 export default function PhotoSetPage({ photoSet }: any) {     
-  console.log(photoSet)
   return (
     <section className='content'>
       <div></div>
-      <PhotoSet images={photoSet} />
+      <PhotoSet photoSet={photoSet} />
     </section>
   )
 } 

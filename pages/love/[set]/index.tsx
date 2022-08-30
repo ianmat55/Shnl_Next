@@ -31,7 +31,7 @@ export default function PhotoSetPage({ photoSet }: any) {
   return (
     <section className='content'>
       <div> hello </div>
-      <PhotoSet images={photoSet} />
+      <PhotoSet photoSet={photoSet} />
     </section>
   )
 } 

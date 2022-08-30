@@ -10,9 +10,6 @@ function backFillLandscapePhotos(photoSet: PhotoSetObject[], portraitCount: numb
 	let landscapePos = 4 // Every x amound of photos will be a landscape
 	let pointer_a = portraitCount
 	
-	console.log(photoSet)
-	console.log(portraitCount)
-	
 	while (landscapePos <= photoSet.length - 1) {
 		// skip last element if odd number of portraits since we want to backfill landscape photos
 		if (photoSet[pointer_a].data.landscape_portrait !== 'landscape') {

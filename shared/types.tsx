@@ -1,4 +1,4 @@
-export interface PhotoData {
+export interface GalleryData {
 	id: number
 	status: string
 	image: string
@@ -11,8 +11,29 @@ export interface PhotoData {
 }
 
 export interface GalleryProps {
-	images: {data: PhotoData[]}
+	images: {data: GalleryData[]}
 };
+
+interface PhotoSetData {
+	id: string
+	filename_disk: string
+	filename_download: string
+	filesize: string
+	folder: string
+	height: number
+	width: number
+	landscape_portrait: string
+	title: string
+}
+
+export interface PhotoSetObject {
+	data: PhotoSetData
+}
+
+export interface SortedPhotoSetData {
+	header: PhotoSetObject | undefined
+	backFilledArray: PhotoSetObject[]
+}
 
 export interface PhotoSetProps {
 	photoSet: file_link[]

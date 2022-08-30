@@ -27,7 +27,7 @@ export async function getStaticProps({params}: any) {
 
   return {
     props: {
-      photoSet
+      photoSet,
     },
   }
 }

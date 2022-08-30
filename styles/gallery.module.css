@@ -71,13 +71,37 @@
 	justify-content: center;
 }
 
-.photoSetPhoto {
+/* .photoSetPhoto {
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
 	margin: .2rem;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
 	height: 60vh;
+	flex-grow: 1;
+	max-width: 100%;
+} */
+
+.landscapePhoto {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	margin: .2rem;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+	width: 60vw;
+	height: 60vh;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+.portraitPhoto {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	margin: .2rem;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+	height: 70vh;
+	width: 30vw;
 	flex-grow: 1;
 	max-width: 100%;
 }

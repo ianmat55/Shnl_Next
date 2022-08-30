@@ -46,8 +46,7 @@ const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
 							src={image} 
 							alt={`img${index}`}
 							className={styles.imageWrapper}
-							layout='fill'
-						/>
+							layout='fill' />
 					</div>		
 			)
 			})}
@@ -56,10 +55,10 @@ const BackgroundImages = ({ images, size }: BackgroundImagesProps) => {
 } 
 
 export default function Home() {
-	const mobileImages = [mobile1.src, mobile2.src, mobile3.src, mobile4.src]
-	const desktopImages = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src, desktop7.src]
+	const mobileImages: string[] = [mobile1.src, mobile2.src, mobile3.src, mobile4.src]
+	const desktopImages: string[] = [desktop1.src, desktop2.src, desktop3.src, desktop4.src, desktop5.src, desktop6.src, desktop7.src]
 
-	const windowSize = useWindowSizeContext()
+	const windowSize: Size = useWindowSizeContext()
 
 	let background
 	if (windowSize!.width >= 800) {

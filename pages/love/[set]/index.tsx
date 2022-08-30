@@ -1,6 +1,5 @@
 import axios from "axios"
 import PhotoSet from "components/photo_set"
-import { file_link, PhotoSetProps } from "shared/types"
 
 // This function gets called at build time
 export async function getStaticPaths() {

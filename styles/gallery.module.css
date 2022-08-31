@@ -4,7 +4,7 @@
 	margin: 2rem auto;
 	justify-content: center;
 	align-items: center;
-	/* width: 70%; */
+	width: 95%;
 }
 
 .photoSet {
@@ -13,7 +13,7 @@
 	margin: 2rem auto;
 	justify-content: center;
 	align-items: center;
-	width: 70%;
+	width: 90%;
 }
 
 .photoWrapper {
@@ -25,37 +25,16 @@
 }
 
 .photoContainer {
-	/* border-radius: 10px; */
 	margin: .2rem;
 	z-index: 1;
 	text-align: center;
 	position: relative;
-	min-height: 60vh;
-	width: 60vw;
+	min-height: 40vh;
+	width: 40vw;
 	overflow: hidden;
 	cursor: pointer;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
 }
-
-/* .portraitPhoto {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	margin: .2rem;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	height: 60vh;
-	flex-grow: 1;
-}
-
-.landscapePhoto {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	margin: .2rem;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	width: 100%;
-	height: auto;
-} */
 
 .photo {
 	max-height: 100%;
@@ -71,25 +50,14 @@
 	justify-content: center;
 }
 
-/* .photoSetPhoto {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	margin: .2rem;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	height: 60vh;
-	flex-grow: 1;
-	max-width: 100%;
-} */
-
 .landscapePhoto {
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
 	margin: .2rem;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	width: 60vw;
-	height: 60vh;
+	width: 100vw;
+	height: 35vh;
 	flex-grow: 1;
 	max-width: 100%;
 }
@@ -100,10 +68,37 @@
 	overflow: hidden;
 	margin: .2rem;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	height: 70vh;
-	width: 30vw;
+	height: 35vh;
+	width: 40vw;
 	flex-grow: 1;
 	max-width: 100%;
+}
+
+.setHeader {
+	width: 100vw;
+	height: 50vh;
+	display: flex;
+	justify-self: center;
+	align-items: center;
+}
+
+.headerPhoto {
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
+.headerDescription {
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	background-color: gray;
+}
+
+.headerDescription h1 {
+	margin: auto
 }
 
 .caption {
@@ -141,10 +136,29 @@
 @media only screen and (min-width: 1000px) {
 	.photoContainer {
 		width: 30vw;
-		min-height: 80vh;
+		min-height: 85vh;
 	}
 
-	#gallery {
-		margin: 0;
+	.photoSet {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2rem auto;
+		justify-content: center;
+		align-items: center;
+		width: 75%;
+	}
+
+	.portraitPhoto {
+		height: 75vh;
+		width: 30vw;
+	}
+
+	.landscapePhoto {
+		height: 60vh;
+	}
+
+	.gallery {
+		margin: 0 auto;
+		width: 100%;
 	}
 }

@@ -79,8 +79,13 @@ export default function PhotoSet({ photoSet }: PhotoSetProps) {
 
 	return (
 		<>	
-			<div>
-				{setHeader}
+			<div className={styles.setHeader}>
+				<div className={styles.headerPhoto}>
+					{setHeader}
+				</div>
+				<div className={styles.headerDescription}> 
+					<p> lorem ipsum dorem </p>
+				</div>
 			</div>
 			<ul className={styles.photoSet}>
 				{setImages}

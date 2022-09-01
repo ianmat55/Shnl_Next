@@ -31,6 +31,11 @@
 		height: 60vh;
 		width: 80vw;
 	}
+
+	.bodyContainer {
+		width: 75vw;
+		margin: auto;
+	}
 }
 
 @media only screen and (min-width: 2000px) {

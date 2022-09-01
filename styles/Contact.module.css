@@ -17,7 +17,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 4rem;
 }
 
 .bioDiv {
@@ -39,10 +38,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-	#aboutContainer {
-		padding-top: 7rem;
-	}
-
 	#titleImage {
 		width: 50%;
 		height: 50%;

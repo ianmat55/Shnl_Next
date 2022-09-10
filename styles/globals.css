@@ -13,7 +13,7 @@ body {
 	align-items: center;
 	position: relative;
 	justify-content: center;
-	padding-top: 5rem;
+  padding-top: 3rem;
 	margin: auto;
 }
 
@@ -86,9 +86,12 @@ input[type="text"], textarea {
 form {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  margin: 2rem auto;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 auto;
   text-align: center;
+  background-color: #faebd7;
 }
 
 html {
@@ -101,6 +104,7 @@ html {
 
 @media only screen and (min-width: 1000px) {
   #translate-nav {
+    position: relative;
     transform: translateX(0);
   }
 
@@ -124,6 +128,10 @@ html {
     width: 60%;
   }
 
+  .headerSection {
+    padding: 0;
+  }
+
   .homeTitle {
     font-size: 3rem;
   }
@@ -137,16 +145,9 @@ html {
     padding: 0;
     margin: 0 10rem;
   }
-  
-  .headerSection {
-    padding-top: 0;
-  }
 }
 
-@media only screen and (min-width: 1500px) {
-  .title {
-    font-size: 3.5rem;
-  }
+@media only screen and (min-width: 1000px) {
 }
 
 @media only screen and (min-width: 1500px) {

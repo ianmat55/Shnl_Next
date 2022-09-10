@@ -28,9 +28,9 @@ const Form = () => {
 					<div className={styles.formElement}>
 						<label htmlFor='type'> Type </label>
 						<select name='type text-center'>
-							<option value="Wedding">Wedding</option>
-							<option value="Commercial">Commercial</option>
-							<option value="Lifestyle">Lifestyle</option>
+							<option value='Wedding'>Wedding</option>
+							<option value='Commercial'>Commercial</option>
+							<option value='Lifestyle'>Lifestyle</option>
 							<option selected value="General">General</option>
 						</select>
 					</div>
@@ -45,9 +45,9 @@ const Form = () => {
 				</div>
 				<div className={styles.formElement}>
 					<label htmlFor='message'> Message </label> 
-					<textarea name="message"></textarea>
+					<textarea name='message'></textarea>
 				</div>
-				<button type="submit">Send</button>
+				<button id={styles.submit} type='submit'>Send</button>
 			</form>
 		</>
 	)

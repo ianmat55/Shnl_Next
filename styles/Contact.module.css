@@ -34,6 +34,25 @@
 .formElement {
 	display: flex;
 	flex-direction: column;
+	padding: 0.5rem 0;
+}
+
+.formElement input, .formElement textarea,
+.formElement select {
+	border: none;
+	outline: none;
+	/* background-color: #e8eeef; */
+	background-color: white;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03); 
+	padding: 5px;
+}
+
+.formElement label {
+	margin-bottom: 5px;
+}
+
+#submit {
+	margin: 1rem 0 0.5rem 0;
 	padding: 0.5rem;
 }
 

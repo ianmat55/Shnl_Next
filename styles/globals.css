@@ -150,7 +150,7 @@ html {
 #toggleIcon {
   overflow: visible;
   height: 4rem;
-  width: 4rem;
+  width: 4rem; 
 }
 
 @media only screen and (min-width: 1000px) {

@@ -1,5 +1,7 @@
 import styles from '../../styles/Contact.module.css'
 import Header from 'components/header'
+import Image from 'next/image'
+import contactHeader from '../../public/assets/test_images/lifestyle/header3.jpg'
 
 // const Body = () => {
 // 	return (
@@ -60,7 +62,12 @@ export default function Contact() {
 			    <Header title='HOWZIT' />
 		        {/* <Body /> */}
 			</div>
-			<Form />
+			<div id={styles.contact_portrait_container}>
+				<div id={styles.contact_header}>
+					<Image id={styles.contact_header} src={contactHeader} alt='contact header' />
+				</div>
+				<Form />
+			</div>
 		</div>
 	)
 }

@@ -25,6 +25,17 @@
 	flex-direction: column;
 }
 
+#contact_portrait_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#contact_header {
+	padding: 3rem;
+}
+
 .formDiv {
 	display: flex;
 	flex-direction: column;
@@ -57,12 +68,27 @@
 #submit {
 	padding: 1rem 0;
     margin: 1rem 0;
+	background-color: #d8ae83;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+
+#submit:hover {
+	cursor: pointer;
+	/* background-color: #018eb9; */
+	background-color: white;
+	color: brown;
 }
 
 @media only screen and (min-width: 1000px) {
 	#titleImage {
 		width: 50%;
 		height: 50%;
+	}
+
+	#contact_portrait_container {
+		flex-direction: row;
 	}
 }
 

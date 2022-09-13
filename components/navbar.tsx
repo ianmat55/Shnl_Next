@@ -61,8 +61,13 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
 	const socialImgs = [insta, facebook, email];
 	const renderIcons = socialImgs.map((icon, id) => 
-		<li key={id}>
-			<FontAwesomeIcon id={`sIcon${id}`} className={styles.sIcon} icon={icon} size='sm'/>
+		<li key={id} className={styles.social_icon_wrapper} id={`sIcon${id}`}>
+			<div className={styles.handle_wrapper}>
+				<p className={styles.handle}>
+					shanellnahs
+				</p>
+			</div>
+			<FontAwesomeIcon className={styles.sIcon} icon={icon} size='sm'/>
 		</li> 
 	)
 

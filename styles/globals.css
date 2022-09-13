@@ -52,7 +52,7 @@ body {
 nav {
   position: fixed;
   display: flex;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -63,6 +63,18 @@ nav {
   padding: 2rem 1.75rem;
   z-index: 100;
   box-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
+}
+
+#sIcon0 {
+	background-color: #E1306C;
+}
+
+#sIcon1 {
+	background-color: #3b5999;
+}
+
+#sIcon2 {
+	background-color: #dd4b39;
 }
 
 #translate-nav {

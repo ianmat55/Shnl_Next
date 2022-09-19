@@ -12,7 +12,7 @@ export interface GalleryData {
 
 export interface GalleryProps {
 	images: {data: GalleryData[]}
-};
+}
 
 interface PhotoSetData {
 	id: string

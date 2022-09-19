@@ -122,6 +122,18 @@ ul li .sIcon {
 	z-index: 50;
 }
 
+#emailIcon {
+	background-color: #E1306C;
+}
+
+#fbIcon {
+	background-color: #3b5999;
+}
+
+#instaIcon {
+	background-color: #dd4b39;
+}
+
 @media only screen and (min-width: 1000px) {
 	#navbar_menu {
 		display: flex;
@@ -160,8 +172,42 @@ ul li .sIcon {
 		display: flex;
 	}
 
-	#closeMenu, .hamburgerContainer, #hamburger, .hamburgerLines, #top, .sIcon, .iconContainer {
+	#closeMenu, .hamburgerContainer, #hamburger, .hamburgerLines, #top, .sIcon, #nav_social_icons {
 		display: none
+	}
+
+	#emailIcon {
+		background-color: transparent;
+	}
+	
+	#fbIcon {
+		background-color: transparent;
+	}
+	
+	#instaIcon {
+		background-color: transparent;
+	}
+
+	#emailIcon:hover {
+		background-color: #E1306C;
+	}
+	
+	#fbIcon:hover {
+		background-color: #3b5999;
+	}
+	
+	#instaIcon:hover {
+		background-color: #dd4b39;
+	}
+
+	.social_icon_wrapper {
+		height: 2.5rem;
+		width: 2.5rem;
+	}
+
+	ul li .sIcon {
+		height: 1.5rem;
+		width: 1.5rem;
 	}
 
 	#title {

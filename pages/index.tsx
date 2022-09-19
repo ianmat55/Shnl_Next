@@ -16,6 +16,7 @@ import desktop6 from '../public/assets/desktop_images/wedding.jpg'
 import desktop7 from '../public/assets/desktop_images/home6.jpeg' // this is a good one
 import { useWindowSizeContext } from 'utils/context'
 import { Size } from 'shared/types'
+import SocialIcons from 'components/socials'
 
 interface BackgroundImagesProps {
 	images: string[],
@@ -71,6 +72,9 @@ export default function Home() {
 		<section id={styles.home}>
 			{/* <h1 id={styles.mainTitle} className='homeTitle'> Shnl <br /> Photography </h1> */}
 			{background}
+			<div id={styles.home_social_icons}>
+				<SocialIcons />
+			</div>
 		</section>
 	)
 };

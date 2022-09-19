@@ -13,6 +13,10 @@
   overscroll-behavior: none; 
 }
 
+#home_social_icons {
+  display: none;
+}
+
 #mainTitle {
   position: absolute;
   z-index: 10;
@@ -26,9 +30,13 @@
 }
 
 @media (min-width: 1000px) {
-  /* #home{
-    height: 88vh;
-  } */
+  #home_social_icons {
+    position: absolute;
+    width: 20%;
+    bottom: 5rem;
+    margin-left: 3rem;
+    display: flex;
+  }
 
   #mainTitle {
     top: 35%

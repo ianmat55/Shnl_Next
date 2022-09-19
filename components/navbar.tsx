@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import styles from '../styles/navbar.module.css'
 
-// get our fontawesome imports
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useState } from 'react';
+import SocialIcons from './socials';
 
 interface MenuLink {
 	name: string,
@@ -20,12 +20,11 @@ interface SocialIcons {
 
 interface MenuItemsProps {
 	menuLinks: MenuLink[]
-	socialIcons: SocialIcons
 }
 
 // NEED TO REFACTOR 
 
-const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
+const MenuItems = ({ menuLinks }: MenuItemsProps) => {
 	const links = menuLinks.map((item: any, index: number) =>
 		<Link key={index} href={item.link} passHref={true}>
 			<li> <p className={styles.menuItem}> {item.name} </p> </li>
@@ -52,30 +51,12 @@ const MenuItems = ({ menuLinks, socialIcons }: MenuItemsProps) => {
 				<ul onClick={closeMenu}>
 					{links}
 				</ul>
-				<SocialIcons insta={socialIcons.insta} facebook={socialIcons.facebook} email={socialIcons.email}/>
+				<div id={styles.nav_social_icons}>
+					<SocialIcons />
+				</div>
 			</nav>
 		</>
 	);
-};
-
-const SocialIcons = ({ insta, facebook, email }: SocialIcons) => {
-	const socialImgs = [insta, facebook, email];
-	const renderIcons = socialImgs.map((icon, id) => 
-		<li key={id} className={styles.social_icon_wrapper} id={`sIcon${id}`}>
-			<div className={styles.handle_wrapper}>
-				<p className={styles.handle}>
-					shanellnahs
-				</p>
-			</div>
-			<FontAwesomeIcon className={styles.sIcon} icon={icon} size='sm'/>
-		</li> 
-	)
-
-	return (
-		<ul className={styles.iconContainer}>
-			{renderIcons}
-		</ul>
-	)
 };
 
 const HamburgerMenu = ({ sideBar, setSideBar }: any) => {
@@ -130,12 +111,10 @@ export default function Nav() {
 
 	const [sideBar, setSideBar] = useState(false)
 
-	const socialIcons = {insta: faInstagram, facebook: faFacebook, email: faEnvelope}
-
 	return (
 		<>
 			<HamburgerMenu sideBar={sideBar} setSideBar={setSideBar} />
-			<MenuItems menuLinks={menuLinks} socialIcons={socialIcons} />
+			<MenuItems menuLinks={menuLinks} />
 		</>
 	)
 };

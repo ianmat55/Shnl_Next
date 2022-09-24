@@ -27,6 +27,7 @@ const changeSelected = (event: any) => {
 	const general_form = document.getElementById("general_form_wrapper")
 
 	const background = document.getElementsByClassName("form_background")
+	console.log(background)
 
 	// put items into array for easy filtering
 	const formArray = [ {tab: wedding_tab, form: wedding_form}, 

@@ -123,16 +123,31 @@ ul li .sIcon {
 }
 
 #emailIcon {
-	background-color: #E1306C;
+	/* background-color: #dd4b39; */
+	background-color: #dd4b399c;
 }
 
 #fbIcon {
-	background-color: #3b5999;
+	/* background-color: #3b5999; */
+	background-color: #3b599987;
 }
 
 #instaIcon {
-	background-color: #dd4b39;
+	/* background-color: #E1306C; */
+	background-color: #e1306c75;
 }
+
+/* #emailIcon {
+	background-color: transparent;
+}
+
+#fbIcon {
+	background-color: transparent;
+}
+
+#instaIcon {
+	background-color: transparent;
+} */
 
 @media only screen and (min-width: 1000px) {
 	#navbar_menu {
@@ -177,30 +192,36 @@ ul li .sIcon {
 	}
 
 	#emailIcon {
-		background-color: transparent;
-	}
-	
+	background-color: transparent;
+	}	
+
 	#fbIcon {
-		background-color: transparent;
+	background-color: transparent;
 	}
-	
+
 	#instaIcon {
-		background-color: transparent;
+	background-color: transparent;
 	}
 
 	#emailIcon:hover {
-		background-color: #E1306C;
+		background-color: #dd4b399c;
 	}
 	
 	#fbIcon:hover {
-		background-color: #3b5999;
+		background-color: #3b599987;
 	}
 	
 	#instaIcon:hover {
-		background-color: #dd4b39;
+		background-color: #e1306c75;
 	}
 
 	.social_icon_wrapper {
+		height: 2.5rem;
+		width: 2.5rem;
+	}
+
+	.handle_wrapper:hover {
+		display: block;
 		height: 2.5rem;
 		width: 2.5rem;
 	}

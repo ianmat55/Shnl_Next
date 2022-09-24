@@ -1,6 +1,6 @@
 import styles from '../styles/navbar.module.css'
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope, IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SocialIcons() {

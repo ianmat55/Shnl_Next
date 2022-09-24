@@ -2,6 +2,7 @@ import styles from '../../styles/Contact.module.css'
 import Header from 'components/header'
 import Image from 'next/image'
 import contactHeader from '../../public/assets/test_images/lifestyle/header3.jpg'
+import { BusinessForm, GeneralForm, WeddingForm } from 'components/forms'
 
 // const Body = () => {
 // 	return (
@@ -12,47 +13,36 @@ import contactHeader from '../../public/assets/test_images/lifestyle/header3.jpg
 // 	)
 // }
 
-const Form = () => {
-	return (
-		<>
-			<form name="contact" method="POST" data-netlify="true">
-				<div className={styles.formDiv}>
-					<div className={styles.formElement}>
-						<label htmlFor='name'> Name </label> 
-						<input type="text" name="name" />  
-					</div>
-					<div className={styles.formElement}>
-						<label htmlFor='email'> Email </label>
-						<input type="text" name="email" />
-					</div>
-				</div>
-				<div className={styles.formDiv}>
-					<div className={styles.formElement}>
-						<label htmlFor='type'> Type </label>
-						<select name='type text-center'>
-							<option value='Wedding'>Wedding</option>
-							<option value='Commercial'>Commercial</option>
-							<option value='Lifestyle'>Lifestyle</option>
-							<option selected value="General">General</option>
-						</select>
-					</div>
-					<div className={styles.formElement}>
-						<label htmlFor='insta'> Insta Handle (if applicable) </label>
-						<input type='text' name='insta' />
-					</div>
-				</div>
-				<div className={styles.formElement}>
-					<label htmlFor='wedding-location'> Wedding Loation (if applicable) </label> 
-					<input type='text' name='wedding-location' /> 
-				</div>
-				<div className={styles.formElement}>
-					<label htmlFor='message'> Message </label> 
-					<textarea name='message'></textarea>
-				</div>
-				<button id={styles.submit} type='submit'>Send</button>
-			</form>
-		</>
-	)
+const changeSelected = (event: any) => {
+	// wedding form items
+	const wedding_tab = document.getElementById("wedding_tab")
+	const wedding_form = document.getElementById("wedding_form_wrapper")
+
+	// business form items
+	const business_tab = document.getElementById("business_tab")
+	const business_form = document.getElementById("business_form_wrapper")
+
+	// general form items
+	const general_tab = document.getElementById("general_tab")
+	const general_form = document.getElementById("general_form_wrapper")
+
+	const background = document.getElementsByClassName("form_background")
+
+	// put items into array for easy filtering
+	const formArray = [ {tab: wedding_tab, form: wedding_form}, 
+						{tab: business_tab, form: business_form}, 
+						{tab: general_tab, form: general_form} ]
+
+	formArray.forEach((formObj: any) => {
+		if (event.target == formObj.tab) {
+			console.log(formObj)
+			formObj.tab.classList = "selected"
+			formObj.form.style.display = "block"
+		} else {
+			formObj.tab.classList = "not_selected"
+			formObj.form.style.display = "none"
+		}
+	})
 }
 
 export default function Contact() {
@@ -62,11 +52,28 @@ export default function Contact() {
 			    <Header title='HOWZIT' />
 		        {/* <Body /> */}
 			</div>
-			<div id={styles.contact_portrait_container}>
-				<div id={styles.contact_header}>
-					<Image id={styles.contact_header} src={contactHeader} alt='contact header' />
+			<div className='form_background' id={styles.contact_portrait_container}>
+				<div id={styles.forms}>
+					<div id={styles.tab_list}>
+						<a id="wedding_tab" className='selected' onClick={changeSelected}> Wedding </a>
+						<a id="business_tab" className='not_selected' onClick={changeSelected}> Business </a>
+						<a id="general_tab" className='not_selected' onClick={changeSelected}> General </a>
+					</div>
+					<div id={styles.selected_form}>
+						<div id='wedding_form_wrapper'> 
+							<WeddingForm />
+						</div>
+						<div id='business_form_wrapper'>
+							<BusinessForm />
+						</div>
+						<div id='general_form_wrapper'>
+							<GeneralForm />
+						</div>
+					</div>
 				</div>
-				<Form />
+				<div id={styles.contact_header}>
+						<Image id={styles.contact_header} src={contactHeader} alt='contact header' />
+				</div>
 			</div>
 		</div>
 	)

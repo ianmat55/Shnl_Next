@@ -36,6 +36,41 @@
 	padding: 0 3rem;
 }
 
+#tab_list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80%;
+	border-style: solid;
+}
+
+#tab_list a {
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+#tab_list a:not(:last-child) {
+	border-right: solid black;
+}
+
+#tab_list a {
+	padding: 1rem;
+}
+
+#forms {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 4rem;
+}
+
+#selected_form {
+	width: 80%;
+}
+
 .formDiv {
 	display: flex;
 	flex-direction: column;
@@ -87,9 +122,9 @@
 		height: 50%;
 	}
 
-	#contact_portrait_container {
+	/* #contact_portrait_container {
 		flex-direction: row;
-	}
+	} */
 }
 
 /* @media only screen and (min-width: 1500px) {

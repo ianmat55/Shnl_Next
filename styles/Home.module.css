@@ -32,9 +32,9 @@
 @media (min-width: 1000px) {
   #home_social_icons {
     position: absolute;
-    width: 15%;
-    bottom: 5rem;
-    margin-left: 3rem;
+    width: 12%;
+    bottom: 3rem;
+    margin-left: 3.5rem;
     display: flex;
   }
 

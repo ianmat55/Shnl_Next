@@ -89,12 +89,34 @@ form {
   background-color: #faebd7;
 }
 
+#formsContainer {
+	width: 100%;
+	/* height: 50vh; */
+  max-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* padding: 4rem 0; */
+}
+
+#formBackground {
+  background-image: url("../public/assets/test_images/wedding/wedding6.jpg");
+	background-size: cover;
+  height: 100vh;
+}
+
 .selected {
   color: brown;
+  background: white;
 }
 
 .not_selected {
   background-color: #caccce;
+}
+
+.not_selected_form {
+  display: none;
 }
 
 html {
@@ -107,12 +129,12 @@ html {
 
 @media only screen and (min-width: 1000px) {
   #translate-nav {
-    position: absolute;
+    position: relative;
     transform: translateX(0);
   }
 
-  .content {
-    padding-top: 3.5rem;
+  #formsContainer {
+    width: 50%;
   }
 
   nav {
@@ -154,9 +176,6 @@ html {
   overflow: visible;
   height: 4rem;
   width: 4rem; 
-}
-
-@media only screen and (min-width: 1000px) {
 }
 
 @media only screen and (min-width: 1500px) {

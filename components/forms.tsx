@@ -14,24 +14,13 @@ export function WeddingForm() {
 						<input type="text" name="email" />
 					</div>
 				</div>
-				{/* <div className={styles.formDiv}>
-					<div className={styles.formElement}>
-						<label htmlFor='type'> Type </label>
-						<select name='type text-center'>
-							<option value='Wedding'>Wedding</option>
-							<option value='Commercial'>Commercial</option>
-							<option value='Lifestyle'>Lifestyle</option>
-							<option selected value="General">General</option>
-						</select>
-					</div> 
-				</div> */}
 				<div className={styles.formElement}>
-					<label htmlFor='wedding-location'> Wedding Loation </label> 
+					<label htmlFor='wedding-location'> Wedding Location </label> 
 					<input type='text' name='wedding-location' /> 
 				</div>
                 <div className={styles.formElement}>
                     <label htmlFor='wedding-date'> Wedding Date </label>
-                    <input type='date' name='wedding-date' />
+                    <input style={{width: '100%'}} type='date' name='wedding-date' />
                 </div>
 				<div className={styles.formElement}>
 					<label htmlFor='message'> Message </label> 
@@ -60,10 +49,14 @@ export function BusinessForm() {
 						<label htmlFor='email'> Name of Business </label>
 						<input type="text" name="business-name" />
 					</div>
-                    <div className={styles.formElement}>
+                    {/* <div className={styles.formElement}>
 						<label htmlFor='email'> Business Address </label>
 						<input type="text" name="business-address" />
-					</div>
+					</div> */}
+					<div className={styles.formElement}>
+                    	<label htmlFor='business-date'> Photoshoot Date </label>
+                    <input style={{width: '100%'}} type='date' name='business-date' />
+                </div>
 				</div>
 				<div className={styles.formElement}>
 					<label htmlFor='message'> Message </label> 
@@ -92,6 +85,10 @@ export function GeneralForm() {
 						<label htmlFor='insta'> Insta Handle (if applicable) </label>
 						<input type='text' name='insta' />
 					</div>
+					<div className={styles.formElement}>
+                    	<label htmlFor='general-date'> Photoshoot Date </label>
+                    <input style={{width: '100%'}} type='date' name='general-date' />
+                </div>
 				</div>
 				<div className={styles.formElement}>
 					<label htmlFor='message'> Message </label> 

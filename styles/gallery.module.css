@@ -127,6 +127,7 @@
 .caption h1 {
 	color: white;
 	height: 15%;
+	/* font-size: 12px; */
 	position: relative;
 	transition-delay: 0.3s;
 	margin: 0;
@@ -143,6 +144,10 @@
 		display: flex;
 		justify-self: center;
 		align-items: center;
+	}
+
+	.caption h1 {
+		font-size: 24px;
 	}
 
 	.photoContainer {

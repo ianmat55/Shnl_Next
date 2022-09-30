@@ -69,8 +69,8 @@
 }
 
 ul li .sIcon {
-	height: 2rem;
-	width: 2rem;
+	height: 1rem;
+	width: 1rem;
 	position: relative; 
 	text-align: center;
 	display: block;
@@ -79,15 +79,17 @@ ul li .sIcon {
 }
 
 .handle_wrapper {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	transition: position .5s, visibility 0.001s;
 }
 
 .social_icon_wrapper {
 	border-radius: 0.5rem;
 	cursor: pointer;
 	border-radius: 0.5rem;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
 	color: #ffffff;
     display: flex;
     justify-content: center;
@@ -154,6 +156,11 @@ ul li .sIcon {
 		display: flex;
 	}
 
+	ul li .sIcon {
+		height: 2rem;
+		width: 2rem;
+	}
+
 	#logo {
 		padding: 0 2rem;
 		margin: 0;
@@ -210,20 +217,36 @@ ul li .sIcon {
 	#fbIcon:hover {
 		background-color: #3b599987;
 	}
+
+	#fbIcon:hover .handle_wrapper {
+		display: block;
+	}
 	
 	#instaIcon:hover {
 		background-color: #e1306c75;
 	}
 
-	.social_icon_wrapper {
-		height: 2.5rem;
-		width: 2.5rem;
+	#instaIcon:hover .handle_wrapper {
+		display: block;
 	}
 
-	.handle_wrapper:hover {
-		display: block;
+	.social_icon_wrapper {
+		display: flex;
+		justify-content: space-evenly;
 		height: 2.5rem;
 		width: 2.5rem;
+		transition-duration: 0.5s;
+	}
+
+	.social_icon_wrapper:hover {
+		width: 11rem;
+		transition-duration: 0.8s;
+	}
+
+	.social_icon_wrapper:hover .handle_wrapper {
+		visibility: visible;
+		position: static;
+		transition: position .5s, visibility 0.001s;
 	}
 
 	ul li .sIcon {

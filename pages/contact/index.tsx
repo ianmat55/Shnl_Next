@@ -4,6 +4,7 @@ import Header from 'components/header'
 // import contactHeader from '../../public/assets/test_images/lifestyle/header3.jpg'
 import { BusinessForm, GeneralForm, WeddingForm } from 'components/forms'
 // test background images
+import aboutImage from '../../public/assets/desktop_images/about.jpg'
 import weddingBackground from '../../public/assets/test_images/wedding/wedding6.jpg'
 import commercialBackground from '../../public/assets/test_images/lifestyle/header1.jpeg'
 import lifestyleBackground from '../../public/assets/test_images/lifestyle/header2.jpeg'
@@ -47,7 +48,7 @@ export default function Contact() {
 		<div className='content'>
 			<div id="formBackground">
 				<div id={styles.aboutContainer}> 
-					<Header title='HOWZIT' />
+					<Header title='HOWZIT' image={aboutImage} />
 					{/* <Body /> */}
 				</div>
 				<div id={styles.contact_portrait_container}>

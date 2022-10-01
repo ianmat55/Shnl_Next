@@ -13,8 +13,30 @@ body {
 	align-items: center;
 	position: relative;
 	justify-content: center;
-  padding-top: 3rem;
+  padding: 4rem;
 	margin: auto;
+}
+
+.headerSection h1 {
+  text-align: left;
+}
+
+#header_container {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  top: 18%;
+  left: 12%;
+}
+
+.headerImage {
+  padding: 2rem;
+}
+
+#header_container h1 {
+  margin: 10px;
+  padding: 10px;
 }
 
 .title {
@@ -151,10 +173,6 @@ html {
 
   ul {
     display: flex;
-  }
-
-  .headerSection {
-    padding: 0;
   }
 
   .homeTitle {

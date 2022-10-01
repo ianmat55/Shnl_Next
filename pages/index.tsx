@@ -70,7 +70,9 @@ export default function Home() {
 	
 	return (
 		<section id={styles.home}>
-			{/* <h1 id={styles.mainTitle} className='homeTitle'> Shnl <br /> Photography </h1> */}
+			{/* <div id="header_container">
+				<h1 id={styles.mainTitle} className='homeTitle'> Lifestyle, <br/> Business, <br/> & Wedding <br/> Photography </h1>
+			</div> */}
 			{background}
 			<div id={styles.home_social_icons}>
 				<SocialIcons />

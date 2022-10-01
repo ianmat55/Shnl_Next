@@ -18,10 +18,7 @@
 }
 
 #mainTitle {
-  position: absolute;
   z-index: 10;
-  top: 18%;
-  left: 12%;
   /* color: #95715c; */
   color: #faebd7;
   /* color: white; */

@@ -1,5 +1,6 @@
 import styles from '../../styles/Commercial.module.css'
 import Header from 'components/header'
+import localHeader from '../../public/assets/desktop_images/commercial.jpg' 
 
 const Body = () => {
 	return (
@@ -13,7 +14,7 @@ const Body = () => {
 export default function Commercial() {
 	return (
 		<div className='content'>
-			<Header title='LOCAL' />
+			<Header title='LOCAL BUSSINESS' image={localHeader} />
 			<Body />
 		</div>
 	)

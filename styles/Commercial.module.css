@@ -18,6 +18,12 @@
 	max-width: 100%;
 }
 
+.localHeader {
+	width: 100vw;
+	height: auto;
+	margin: auto;
+}
+
 .bodyContainer {
 	margin: 0 1.25rem 1.25rem 1.25rem;
 }
@@ -30,6 +36,13 @@
 	#commercialHero {
 		height: 60vh;
 		width: 80vw;
+	}
+
+	.localHeader {
+		width: 75vw;
+		height: auto;
+		padding: 3rem;
+		margin: auto;
 	}
 
 	.bodyContainer {

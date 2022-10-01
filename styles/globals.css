@@ -10,15 +10,16 @@ body {
 
 .headerSection {
   display: flex;
+  flex-direction: column;
 	align-items: center;
 	position: relative;
 	justify-content: center;
-  padding: 4rem;
 	margin: auto;
 }
 
 .headerSection h1 {
   text-align: left;
+  width: 75vw;
 }
 
 #header_container {
@@ -28,10 +29,6 @@ body {
   flex-direction: column;
   top: 18%;
   left: 12%;
-}
-
-.headerImage {
-  padding: 2rem;
 }
 
 #header_container h1 {
@@ -187,6 +184,19 @@ html {
     height: 85vh;
     padding: 0;
     margin: 0 10rem;
+  }
+
+  .headerSection {
+    flex-direction: row;
+    padding: 4rem;
+  }
+  
+  .headerSection h1 {
+    width: 100vw;
+  }
+
+  .headerImage {
+    padding: 2rem;
   }
 }
 

@@ -126,7 +126,7 @@
 
 .caption h1 {
 	color: white;
-	height: 15%;
+	height: 35%;
 	/* font-size: 12px; */
 	position: relative;
 	transition-delay: 0.3s;
@@ -148,6 +148,7 @@
 
 	.caption h1 {
 		font-size: 24px;
+		height: 15%;
 	}
 
 	.photoContainer {

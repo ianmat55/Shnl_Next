@@ -48,7 +48,7 @@ export default function Contact() {
 		<div className='content'>
 			<div id="formBackground">
 				<div id={styles.aboutContainer}> 
-					<Header title='HOWZIT' image={aboutImage} />
+					{/* <Header title='HOWZIT' image={aboutImage} /> */}
 					{/* <Body /> */}
 				</div>
 				<div id={styles.contact_portrait_container}>

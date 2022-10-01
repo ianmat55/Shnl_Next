@@ -10,7 +10,6 @@
 #commercialTitle {
 	position: relative;
 	z-index: 10;
-	/* bottom: 5rem; */
 	text-align: center
 }
 
@@ -39,7 +38,7 @@
 	}
 
 	.localHeader {
-		width: 75vw;
+		width: 85vw;
 		height: auto;
 		padding: 3rem;
 		margin: auto;

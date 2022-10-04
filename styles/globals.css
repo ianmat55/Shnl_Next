@@ -11,10 +11,10 @@ body {
 .headerSection {
   display: flex;
   flex-direction: column;
-	align-items: center;
-	position: relative;
-	justify-content: center;
-	margin: auto;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin: auto;
 }
 
 .headerSection h1 {
@@ -47,7 +47,6 @@ body {
 
 .homeTitle {
   font-size: 2rem;
-
 }
 
 .slightlyBigger {
@@ -70,7 +69,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
-  background-color: #faebd7; 
+  background-color: #faebd7;
   width: 300px;
   height: 100%;
   padding: 2rem 1.75rem;
@@ -86,21 +85,22 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-} 
-
-img {
-  max-width: 100%
 }
 
-input[type="text"], textarea {
-  background-color : #d1d1d1; 
+img {
+  max-width: 100%;
+}
+
+input[type="text"],
+textarea {
+  background-color: #d1d1d1;
 }
 
 form {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 1rem;
+  position: absolute;
+  flex-direction: row;
+  /* width: 100%; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin: 0 auto;
@@ -109,19 +109,19 @@ form {
 }
 
 #formsContainer {
-	width: 100%;
-	/* height: 50vh; */
+  width: 100%;
+  /* height: 50vh; */
   max-height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	/* padding: 4rem 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 4rem 0; */
 }
 
 #formBackground {
   background-image: url("../public/assets/test_images/wedding/wedding6.jpg");
-	background-size: cover;
+  background-size: cover;
   padding-bottom: 3rem;
   height: 100vh;
 }
@@ -142,8 +142,10 @@ form {
 html {
   box-sizing: border-box;
 }
-  
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -165,7 +167,7 @@ html {
     width: 100%;
     font-size: 1rem;
     justify-content: space-between;
-    padding: 0 2rem;   
+    padding: 0 2rem;
     /* color: #ffffff; */
   }
 
@@ -191,7 +193,7 @@ html {
     flex-direction: row;
     padding: 4rem;
   }
-  
+
   .headerSection h1 {
     width: 100vw;
     text-align: left;
@@ -205,7 +207,7 @@ html {
 #toggleIcon {
   overflow: visible;
   height: 4rem;
-  width: 4rem; 
+  width: 4rem;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -219,4 +221,3 @@ html {
     font-size: 4.5rem;
   }
 }
-

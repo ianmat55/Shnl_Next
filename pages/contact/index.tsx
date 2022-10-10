@@ -11,10 +11,10 @@ import { useState } from "react";
 interface IFormInput {
   category: string;
   fullName: string;
-  phoneNumber: string;
+  phoneNumber: any;
   email: string;
   insta?: string;
-  eventDate?: Date;
+  eventDate?: any;
   message?: string;
 }
 
@@ -28,20 +28,17 @@ export default function Contact() {
   const [validated, setValidated] = useState(false);
 
   const handleNext = () => {
-    console.log(step * -100);
     const form = document.getElementById("form");
-    form!.style.transform = `translateX(-${step * 100}vw)`;
+    form!.style.transform = `translateY(-${step * 100}vh)`;
     form!.style.transition = "transform .8s ease-in-out";
     setStep(step + 1);
-    console.log(step);
   };
 
   const handleBack = () => {
     setStep(step - 1);
-    console.log(step);
-    // const form = document.getElementById("form");
-    // form!.style.transform = `translateX(-${step * 100}vw)`;
-    // form!.style.transition = "transform .8s ease-in-out";
+    const form = document.getElementById("form");
+    form!.style.transform = `translateY(-${step * 100}vh)`;
+    form!.style.transition = "transform .8s ease-in-out";
   };
 
   const onFormSubmit = (data: IFormInput) => console.log(data);
@@ -49,112 +46,135 @@ export default function Contact() {
 
   return (
     <div className="content">
-      {/* Listen for enter to navigate between form sections
+      <div className={styles.formContainer}>
+        {/* Listen for enter to navigate between form sections
 			Change background based on category selected
 			Change some input options based on category
 			Add error messages for missing info
 			Call function to validate and update on every next button click or 'enter' */}
-      <form
-        id="form"
-        name="contact"
-        method="POST"
-        onSubmit={handleSubmit(onFormSubmit, onErrors)}
-      >
-        <div className={styles.formDiv} id="step1">
-          <div>
-            <p> Add image here </p>
+        <form
+          id="form"
+          name="contact"
+          method="POST"
+          onSubmit={handleSubmit(onFormSubmit, onErrors)}
+        >
+          <div className={styles.formDiv} id="step1">
+            <div>
+              <p> Add image here </p>
+            </div>
+            <div>
+              <p> 1 </p>
+              <h1> Interested in a photoshoot? </h1>
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="category"> Select a category </label>
+              <label htmlFor="wedding"> Wedding </label>
+              <input
+                {...(register("category"), { required: false })}
+                type="radio"
+                name="category"
+                value="wedding"
+              />
+              <label htmlFor="business"> Business </label>
+              <input
+                {...(register("category"), { required: false })}
+                type="radio"
+                name="category"
+                value="business"
+              />
+              <label htmlFor="general"> General </label>
+              <input
+                {...(register("category"), { required: false })}
+                type="radio"
+                name="category"
+                value="general"
+              />
+              <button type="button" onClick={handleNext}>
+                {" "}
+                Next{" "}
+              </button>
+            </div>
           </div>
-          <div>
-            <p> {step} </p>
-            <h1> Interested in a photoshoot? </h1>
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="category"> Select a category </label>
-            <select
-              {...register("category", {
-                required: "Please Select a category",
-              })}
-              name="category"
-              id="category"
-              form="category-form"
-            >
-              <option value="wedding">Wedding</option>
-              <option value="business">Business</option>
-              <option value="general">General</option>
-            </select>
-            <button onClick={handleNext}> Next </button>
-          </div>
-        </div>
 
-        <div className={styles.formDiv} id="step2">
-          <button onClick={handleBack}> back </button>
-          <div>
-            <p> {step} </p>
-            <label htmlFor="name"> What is your Name? </label>
-          </div>
-          <div className={styles.formElement}>
-            <input {...register("fullName")} type="text" name="name" />
-          </div>
-          <button onClick={handleNext}> Next </button>
-        </div>
-
-        <div className={styles.formDiv} id="step3">
-          <button onClick={handleBack}> back </button>
-          <div>
-            <p> {step} </p>
-            <h1> Aloha insert name, how can I reach you? </h1>
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="email"> Email </label>
-            <input {...register("email")} type="text" name="email" />
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="phone"> Phone number </label>
-            <input {...register("phoneNumber")} type="text" name="email" />
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="insta"> Insta Handle (if applicable) </label>
-            <input {...register("insta")} type="text" name="insta" />
-          </div>
-          <button onClick={handleNext}> Next </button>
-        </div>
-
-        <div className={styles.formDiv} id="step4">
-          <button onClick={handleBack}> back </button>
-          <div>
-            <p> {step} </p>
-            <label htmlFor="name"> Save the date? </label>
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="general-date"> Photoshoot Date </label>
-            <input
-              {...register("eventDate")}
-              style={{ width: "100%" }}
-              type="date"
-              name="general-date"
-            />
-          </div>
-          <button onClick={handleNext}> Next </button>
-        </div>
-
-        <div className={styles.formDiv}>
-          <button onClick={handleBack}> back </button>
-          <div>
-            <p> {step} </p>
-            <label htmlFor="name">
+          <div className={styles.formDiv} id="step2">
+            <button onClick={handleBack}> back </button>
+            <div>
+              <p> 2 </p>
+              <label htmlFor="name"> What is your Name? </label>
+            </div>
+            <div className={styles.formElement}>
+              <input {...register("fullName")} type="text" name="name" />
+            </div>
+            <button type="button" onClick={handleNext}>
               {" "}
-              Anything else you would like me to know?{" "}
-            </label>
+              Next{" "}
+            </button>
           </div>
-          <div className={styles.formElement}>
-            <label htmlFor="message"> Message </label>
-            <textarea {...register("message")} name="message"></textarea>
+
+          <div className={styles.formDiv} id="step3">
+            <button onClick={handleBack}> back </button>
+            <div>
+              <p> 3 </p>
+              <h1> Aloha insert name, how can I reach you? </h1>
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="email"> Email </label>
+              <input {...register("email")} type="text" name="email" />
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="phone"> Phone number </label>
+              <input {...register("phoneNumber")} type="text" name="email" />
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="insta"> Insta Handle (if applicable) </label>
+              <input {...register("insta")} type="text" name="insta" />
+            </div>
+            <button type="button" onClick={handleNext}>
+              {" "}
+              Next{" "}
+            </button>
           </div>
-          <button id={styles.submit} type="submit">
-            Send
-          </button>
-        </div>
-      </form>
+
+          <div className={styles.formDiv} id="step4">
+            <button onClick={handleBack}> back </button>
+            <div>
+              <p> 4 </p>
+              <label htmlFor="name"> Save the date? </label>
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="general-date"> Photoshoot Date </label>
+              <input
+                {...register("eventDate")}
+                style={{ width: "100%" }}
+                type="date"
+                name="general-date"
+              />
+            </div>
+            <button type="button" onClick={handleNext}>
+              {" "}
+              Next{" "}
+            </button>
+          </div>
+
+          <div className={styles.formDiv}>
+            <button onClick={handleBack}> back </button>
+            <div>
+              <p> 5 </p>
+              <label htmlFor="name">
+                {" "}
+                Anything else you would like me to know?{" "}
+              </label>
+            </div>
+            <div className={styles.formElement}>
+              <label htmlFor="message"> Message </label>
+              <textarea {...register("message")} name="message"></textarea>
+            </div>
+            <button id={styles.submit} type="submit">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

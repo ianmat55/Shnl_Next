@@ -59,8 +59,10 @@
   padding: 0.5rem;
 }
 
-#selected_form {
-  width: 80%;
+.formContainer {
+  overflow: hidden;
+  overscroll-behavior: none;
+  max-height: 100vh;
 }
 
 .formDiv {
@@ -71,6 +73,7 @@
   height: 100%;
   padding: 4rem;
   margin: auto;
+  background-color: #faebd7;
 }
 
 .formElement {

@@ -33,10 +33,6 @@
   height: 100vh;
 }
 
-#contact_header {
-  padding: 0 3rem;
-}
-
 #tab_list {
   display: flex;
   justify-content: space-evenly;
@@ -71,18 +67,76 @@
   justify-content: center;
   width: 100vw;
   height: 100%;
-  padding: 4rem;
+  padding: 3rem;
   margin: auto;
   background-color: #faebd7;
+}
+
+#contactHeader {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  margin: auto;
 }
 
 .formElement {
   display: flex;
   flex-direction: column;
   padding: 5px 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.formElement input,
+.input {
+  border: 0;
+  border-bottom: 2px solid black;
+  background-color: #faebd7;
+}
+
+.formElement:focus {
+  border-bottom-color: brown;
+}
+
+.formStep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+
+.formStep p {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  padding: 5px 0;
+}
+
+.formStep h1 {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  padding: 5px 0;
+}
+
+.formStep div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+}
+
+.formStep div p {
+  margin: 0;
+  height: 30%;
+}
+
+.formStep div h1 {
+  margin: 0;
+  height: 70%;
+}
+
 .formElement textarea,
 .formElement select {
   border: none;
@@ -98,6 +152,63 @@
 
 .formElement label {
   margin-bottom: 5px;
+}
+
+.radioLabel input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radioLabel {
+  margin: 0 0.5rem;
+}
+
+.raioLabel i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  box-shadow: inset 0 0 0 8px #fff;
+}
+
+.radioImg {
+  position: relative;
+  object-fit: contain;
+  height: 6rem;
+  width: 6rem;
+}
+
+.radioLabel,
+.radioImg {
+  cursor: pointer;
+}
+
+.radioLabel input[type="radio"]:checked + .radioLabel > .radioImg {
+  outline: 2px solid #f00;
+  box-shadow: inset 0 0 0 3px #fff;
+  height: 10rem;
+}
+
+.next_btn {
+  margin: 2rem;
+  padding: 0.5rem;
+}
+
+.category_choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.category_choices div {
+  padding: 5px;
+}
+
+.back_button {
+  width: 25%;
+  padding: 0.5rem;
 }
 
 #submit {
@@ -117,11 +228,18 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  #titleImage {
+  .formDiv {
     width: 50%;
-    height: 50%;
   }
 
+  .formStep {
+    width: 60%;
+  }
+
+  #contactHeader {
+    position: relative;
+    width: 100%;
+  }
   /* #contact_portrait_container {
 		flex-direction: row;
 	} */

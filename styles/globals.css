@@ -91,9 +91,14 @@ img {
   max-width: 100%;
 }
 
+input[type="text"] {
+  font-size: 24px;
+  background: #faebd7;
+}
+
 input[type="text"],
 textarea {
-  background-color: #d1d1d1;
+  background-color: #faebd7;
 }
 
 form {

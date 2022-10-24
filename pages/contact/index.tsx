@@ -1,31 +1,27 @@
 import styles from "../../styles/Contact.module.css";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import Image from "next/image";
 // test background images
 import aboutImage from "../../public/assets/desktop_images/about.jpg";
-import weddingBackground from "../../public/assets/test_images/wedding/wedding6.jpg";
-import commercialBackground from "../../public/assets/test_images/lifestyle/header1.jpeg";
-import lifestyleBackground from "../../public/assets/test_images/lifestyle/header2.jpeg";
-import { StaticImageData } from "next/image";
+import weddingRad from "../../public/assets/test_images/wedding/wedding6.jpg";
+import commercialRad from "../../public/assets/test_images/lifestyle/header1.jpeg";
+import lifestyleRad from "../../public/assets/test_images/lifestyle/header2.jpeg";
 import { useState } from "react";
 
 interface IFormInput {
-  category: string;
-  fullName: string;
+  category: any;
+  fullName: any;
   phoneNumber: any;
-  email: string;
-  insta?: string;
+  email: any;
+  insta?: any;
   eventDate?: any;
-  message?: string;
+  message?: any;
 }
 
 export default function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormInput>();
+  const { register, handleSubmit } = useForm<IFormInput>();
   const [step, setStep] = useState(1);
-  const [validated, setValidated] = useState(false);
+  // const [validated, setValidated] = useState(false);
 
   const handleNext = () => {
     const form = document.getElementById("form");
@@ -34,12 +30,12 @@ export default function Contact() {
     setStep(step + 1);
   };
 
-  const handleBack = () => {
-    setStep(step - 1);
-    const form = document.getElementById("form");
-    form!.style.transform = `translateY(-${step * 100}vh)`;
-    form!.style.transition = "transform .8s ease-in-out";
-  };
+  // const handleBack = () => {
+  //   setStep(step - 1);
+  //   const form = document.getElementById("form");
+  //   form!.style.transform = `translateY(-${step * 100}vh)`;
+  //   form!.style.transition = "transform .8s ease-in-out";
+  // };
 
   const onFormSubmit = (data: IFormInput) => console.log(data);
   const onErrors = (errors: any) => console.error(errors);
@@ -59,87 +55,148 @@ export default function Contact() {
           onSubmit={handleSubmit(onFormSubmit, onErrors)}
         >
           <div className={styles.formDiv} id="step1">
-            <div>
-              <p> Add image here </p>
+            <h1> Howzit </h1>
+            <div id={styles.contactHeader}>
+              <Image src={aboutImage} layout="fill" />
             </div>
-            <div>
+            <div className={styles.formStep}>
               <p> 1 </p>
-              <h1> Interested in a photoshoot? </h1>
+              <div>
+                <h1> Interested in a photoshoot? </h1>
+                <p> Select a Category </p>
+              </div>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="category"> Select a category </label>
-              <label htmlFor="wedding"> Wedding </label>
-              <input
-                {...(register("category"), { required: false })}
-                type="radio"
-                name="category"
-                value="wedding"
-              />
-              <label htmlFor="business"> Business </label>
-              <input
-                {...(register("category"), { required: false })}
-                type="radio"
-                name="category"
-                value="business"
-              />
-              <label htmlFor="general"> General </label>
-              <input
-                {...(register("category"), { required: false })}
-                type="radio"
-                name="category"
-                value="general"
-              />
-              <button type="button" onClick={handleNext}>
-                {" "}
-                Next{" "}
+              <div className={styles.category_choices}>
+                <label className={styles.radioLabel} htmlFor="wedding">
+                  <div className={styles.radioImg}>
+                    <Image src={weddingRad} layout="fill" alt="Wedding" />
+                  </div>
+                  <i>Wedding</i>
+                  <input
+                    {...(register("category"), { required: true })}
+                    type="radio"
+                    name="category"
+                    value="wedding"
+                    className={styles.radioInput}
+                  />
+                </label>
+                <label className={styles.radioLabel} htmlFor="business">
+                  <div className={styles.radioImg}>
+                    <Image src={commercialRad} layout="fill" alt="Business" />
+                  </div>
+                  <i>Business</i>
+                  <input
+                    {...(register("category"), { required: true })}
+                    type="radio"
+                    name="category"
+                    value="business"
+                    className={styles.radioInput}
+                  />
+                </label>
+                <label className={styles.radioLabel} htmlFor="general">
+                  <div className={styles.radioImg}>
+                    <Image src={lifestyleRad} layout="fill" alt="General" />
+                  </div>
+                  <i>General</i>
+                  <input
+                    {...(register("category"), { required: true })}
+                    type="radio"
+                    name="category"
+                    value="general"
+                    className={styles.radioInput}
+                  />
+                </label>
+              </div>
+              <button
+                className={styles.next_btn}
+                type="button"
+                onClick={handleNext}
+              >
+                Next
               </button>
             </div>
           </div>
 
           <div className={styles.formDiv} id="step2">
-            <button onClick={handleBack}> back </button>
-            <div>
+            {/* <button className={styles.back_button} onClick={handleBack}>
+              {" "}
+              back{" "}
+            </button> */}
+            <div className={styles.formStep}>
               <p> 2 </p>
-              <label htmlFor="name"> What is your Name? </label>
+              <h1> What is your Name? </h1>
             </div>
             <div className={styles.formElement}>
-              <input {...register("fullName")} type="text" name="name" />
+              <input
+                {...register("fullName")}
+                type="text"
+                name="fullName"
+                className={styles.input}
+              />
             </div>
-            <button type="button" onClick={handleNext}>
-              {" "}
-              Next{" "}
+            <button
+              className={styles.next_btn}
+              type="button"
+              onClick={handleNext}
+            >
+              Next
             </button>
           </div>
 
           <div className={styles.formDiv} id="step3">
-            <button onClick={handleBack}> back </button>
-            <div>
+            {/* <button className={styles.back_button} onClick={handleBack}>
+              {" "}
+              back{" "}
+            </button> */}
+            <div className={styles.formStep}>
               <p> 3 </p>
               <h1> Aloha insert name, how can I reach you? </h1>
             </div>
             <div className={styles.formElement}>
               <label htmlFor="email"> Email </label>
-              <input {...register("email")} type="text" name="email" />
+              <input
+                {...register("email")}
+                type="text"
+                name="email"
+                className={styles.input}
+              />
             </div>
             <div className={styles.formElement}>
               <label htmlFor="phone"> Phone number </label>
-              <input {...register("phoneNumber")} type="text" name="email" />
+              <input
+                {...register("phoneNumber")}
+                type="text"
+                name="phoneNumber"
+                className={styles.input}
+              />
             </div>
             <div className={styles.formElement}>
               <label htmlFor="insta"> Insta Handle (if applicable) </label>
-              <input {...register("insta")} type="text" name="insta" />
+              <input
+                {...register("insta")}
+                type="text"
+                name="insta"
+                className={styles.input}
+              />
             </div>
-            <button type="button" onClick={handleNext}>
-              {" "}
-              Next{" "}
+            <button
+              className={styles.next_btn}
+              type="button"
+              onClick={handleNext}
+            >
+              Next
             </button>
           </div>
 
           <div className={styles.formDiv} id="step4">
-            <button onClick={handleBack}> back </button>
-            <div>
+            {/* <button className={styles.back_button} onClick={handleBack}>
+              {" "}
+              back{" "}
+            </button> */}
+            <div className={styles.formStep}>
               <p> 4 </p>
-              <label htmlFor="name"> Save the date? </label>
+              <h1> Save the date? </h1>
             </div>
             <div className={styles.formElement}>
               <label htmlFor="general-date"> Photoshoot Date </label>
@@ -147,29 +204,37 @@ export default function Contact() {
                 {...register("eventDate")}
                 style={{ width: "100%" }}
                 type="date"
-                name="general-date"
+                name="eventDate"
+                className={styles.input}
               />
             </div>
-            <button type="button" onClick={handleNext}>
-              {" "}
-              Next{" "}
+            <button
+              className={styles.next_btn}
+              type="button"
+              onClick={handleNext}
+            >
+              Next
             </button>
           </div>
 
           <div className={styles.formDiv}>
-            <button onClick={handleBack}> back </button>
-            <div>
+            {/* <button className={styles.back_button} onClick={handleBack}>
+              {" "}
+              back{" "}
+            </button> */}
+            <div className={styles.formStep}>
               <p> 5 </p>
-              <label htmlFor="name">
-                {" "}
-                Anything else you would like me to know?{" "}
-              </label>
+              <h1>Anything else you would like me to know?</h1>
             </div>
             <div className={styles.formElement}>
               <label htmlFor="message"> Message </label>
               <textarea {...register("message")} name="message"></textarea>
             </div>
-            <button id={styles.submit} type="submit">
+            <button
+              className={styles.next_btn}
+              id={styles.submit}
+              type="submit"
+            >
               Send
             </button>
           </div>

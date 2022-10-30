@@ -55,10 +55,10 @@ export default function Contact() {
           onSubmit={handleSubmit(onFormSubmit, onErrors)}
         >
           <div className={styles.formDiv} id="step1">
-            <h1> Howzit </h1>
-            <div id={styles.contactHeader}>
+            <h1> Howzit, </h1>
+            {/* <div id={styles.contactHeader}>
               <Image src={aboutImage} layout="fill" />
-            </div>
+            </div> */}
             <div className={styles.formStep}>
               <p> 1 </p>
               <div>

@@ -67,6 +67,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           </svg>
         </div>
       </div>
+      {/* Try to get rid of this wrapping div */}
       <div
         style={{
           transform: `translateX(-${size!.width * count}px)`,

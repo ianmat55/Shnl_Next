@@ -22,20 +22,6 @@ body {
   width: 75vw;
 }
 
-#header_container {
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  top: 18%;
-  left: 12%;
-}
-
-#header_container h1 {
-  margin: 10px;
-  padding: 10px;
-}
-
 .title {
   font-size: 2rem;
   text-align: center;
@@ -62,7 +48,6 @@ body {
 }
 
 nav {
-  position: fixed;
   display: flex;
   position: fixed;
   flex-direction: column;
@@ -91,6 +76,10 @@ img {
   max-width: 100%;
 }
 
+svg {
+  cursor: pointer;
+}
+
 input[type="text"] {
   font-size: 24px;
   background: #faebd7;
@@ -106,6 +95,10 @@ form {
   margin: 0 auto;
   text-align: center;
   background-color: #faebd7;
+}
+
+main {
+  height: 100%;
 }
 
 #formBackground {
@@ -162,10 +155,6 @@ html {
 
   ul {
     display: flex;
-  }
-
-  .homeTitle {
-    font-size: 3rem;
   }
 
   .title {

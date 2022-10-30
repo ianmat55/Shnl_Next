@@ -2,7 +2,6 @@ import styles from "../../styles/Contact.module.css";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 // test background images
-import aboutImage from "../../public/assets/desktop_images/about.jpg";
 import weddingRad from "../../public/assets/test_images/wedding/wedding6.jpg";
 import commercialRad from "../../public/assets/test_images/lifestyle/header1.jpeg";
 import lifestyleRad from "../../public/assets/test_images/lifestyle/header2.jpeg";

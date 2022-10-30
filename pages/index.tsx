@@ -39,31 +39,38 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
         <div className="leftArrow">
           <svg
             onClick={() => incrementCount(-1)}
-            width="24"
-            height="24"
             xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
             fill-rule="evenodd"
             clip-rule="evenodd"
-            transform="scale(-1.5,1.5)"
-            stroke="black"
-            stroke-width="0.5"
+            viewBox="0 0 24 24"
+            transform="scale(-1, -1)"
+            stroke="#faebd7"
           >
-            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            <path
+              fill="#9e6e6e"
+              d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              className="color000 svgShape"
+            />
           </svg>
         </div>
         <div className="rightArrow">
           <svg
             onClick={() => incrementCount(1)}
-            width="24"
-            height="24"
             xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
             fill-rule="evenodd"
             clip-rule="evenodd"
-            transform="scale(1.5,1.5)"
-            stroke="black"
-            stroke-width="0.5"
+            viewBox="0 0 24 24"
           >
-            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            <path
+              fill="#9e6e6e"
+              d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              className="color000 svgShape"
+              stroke="#faebd7"
+            />
           </svg>
         </div>
       </div>

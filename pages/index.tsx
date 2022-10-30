@@ -33,25 +33,25 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
     setCount(count === background.length - 1 ? 0 : count + int);
   };
 
+  const arrowSize = size.width < 1000 ? 24 : 34;
+
   return (
     <div id={styles.homeBackgrounds}>
       <div id={styles.arrows}>
         <div className="leftArrow">
           <svg
             onClick={() => incrementCount(-1)}
+            width={arrowSize}
+            height={arrowSize}
             xmlns="http://www.w3.org/2000/svg"
-            width="34"
-            height="34"
             fill-rule="evenodd"
             clip-rule="evenodd"
             viewBox="0 0 24 24"
-            transform="scale(-1, -1)"
             stroke="#faebd7"
           >
             <path
               fill="#9e6e6e"
-              d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
-              className="color000 svgShape"
+              d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
             />
           </svg>
         </div>
@@ -59,8 +59,8 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           <svg
             onClick={() => incrementCount(1)}
             xmlns="http://www.w3.org/2000/svg"
-            width="34"
-            height="34"
+            width={arrowSize}
+            height={arrowSize}
             fill-rule="evenodd"
             clip-rule="evenodd"
             viewBox="0 0 24 24"

@@ -37,7 +37,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   return (
     <div id={styles.homeBackgrounds}>
       <div id={styles.arrows}>
-        <div className="leftArrow">
+        <div className={styles.leftArrow}>
           <svg
             onClick={() => incrementCount(-1)}
             width={arrowSize}
@@ -73,7 +73,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           );
         })}
 
-        <div className="rightArrow">
+        <div className={styles.rightArrow}>
           <svg
             onClick={() => incrementCount(1)}
             xmlns="http://www.w3.org/2000/svg"

@@ -8,6 +8,10 @@ body {
   font-size: 16px;
 }
 
+h1 {
+  font-size: 24px;
+}
+
 .headerSection {
   display: flex;
   flex-direction: column;
@@ -63,6 +67,7 @@ nav {
 }
 
 #translate-nav {
+  padding-top: 45%;
   transform: translateX(-350px);
 }
 
@@ -132,7 +137,12 @@ html {
 }
 
 @media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 32px;
+  }
   #translate-nav {
+    padding-top: 0;
+    justify-content: end;
     transform: translateX(0);
     /* height: 4rem; */
   }
@@ -190,12 +200,20 @@ html {
 }
 
 @media only screen and (min-width: 1500px) {
+  h1 {
+    font-size: 40px;
+  }
+
   .title {
     font-size: 3.5rem;
   }
 }
 
 @media only screen and (min-width: 2000px) {
+  h1 {
+    font-size: 48px;
+  }
+
   .title {
     font-size: 4.5rem;
   }

@@ -26,7 +26,6 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   const [count, setCount] = useState(0);
 
   const incrementCount = (int: number) => {
-    console.log(int);
     if (count == 0 && int < 0) {
       return;
     }
@@ -55,6 +54,25 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             />
           </svg>
         </div>
+
+        {background.map((item, index) => {
+          return (
+            <div
+              style={{
+                position: "relative",
+                display: index == count ? "flex" : "none",
+                transition: "transform .8s ease-in-out",
+              }}
+            >
+              <div className={styles.header_container}>
+                <Link key={index} href={item.link} passHref={true}>
+                  <h1 className={styles.hero_title}> {item.title} </h1>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+
         <div className="rightArrow">
           <svg
             onClick={() => incrementCount(1)}
@@ -74,25 +92,25 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           </svg>
         </div>
       </div>
-      {/* Try to get rid of this wrapping div */}
-      <div
-        style={{
-          transform: `translateX(-${size!.width * count}px)`,
-          transition: "transform .8s ease-in-out",
-          position: "relative",
-          display: "flex",
-          height: "100vh",
-          width: `${size!.width * background.length}`,
-        }}
-      >
-        {background.map((item, index) => {
-          return (
-            <div className={styles.imageWrapper} key={`img${index}`}>
-              <div className={styles.header_container}>
-                <Link key={index} href={item.link} passHref={true}>
-                  <h1 className={styles.hero_title}> {item.title} </h1>
-                </Link>
-              </div>
+      {background.map((item, index) => {
+        return (
+          <div
+            style={{
+              transform: `translateX(-${size!.width * count}px)`,
+              transition: "transform .8s ease-in-out",
+              position: "relative",
+              // position: "absolute",
+              // display: index == count ? "flex" : "none",
+              display: "flex",
+              height: "100vh",
+              width: `${size!.width * background.length}`,
+            }}
+          >
+            <div
+              id={`img${index}`}
+              className={styles.imageWrapper}
+              key={`img${index}`}
+            >
               <Image
                 src={item.image}
                 alt={`img${index}`}
@@ -100,9 +118,9 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
                 layout="fill"
               />
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import styles from "../../styles/Contact.module.css";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // test background images
 import weddingRad from "../../public/assets/test_images/wedding/wedding6.jpg";
 import commercialRad from "../../public/assets/test_images/lifestyle/header1.jpeg";
@@ -29,12 +31,12 @@ export default function Contact() {
     setStep(step + 1);
   };
 
-  // const handleBack = () => {
-  //   setStep(step - 1);
-  //   const form = document.getElementById("form");
-  //   form!.style.transform = `translateY(-${step * 100}vh)`;
-  //   form!.style.transition = "transform .8s ease-in-out";
-  // };
+  const handleBack = () => {
+    setStep(step - 1);
+    const form = document.getElementById("form");
+    form!.style.transform = `translateY(-${step * 100}vh)`;
+    form!.style.transition = "transform .8s ease-in-out";
+  };
 
   const onFormSubmit = (data: IFormInput) => console.log(data);
   const onErrors = (errors: any) => console.error(errors);
@@ -107,21 +109,21 @@ export default function Contact() {
                   />
                 </label>
               </div>
-              <button
-                className={styles.next_btn}
-                type="button"
-                onClick={handleNext}
-              >
-                Next
-              </button>
+              <div className={styles.next_container}>
+                <FontAwesomeIcon
+                  icon={faRightToBracket}
+                  className={styles.next_btn}
+                  type="button"
+                  onClick={handleNext}
+                />
+              </div>
             </div>
           </div>
 
           <div className={styles.formDiv} id="step2">
-            {/* <button className={styles.back_button} onClick={handleBack}>
-              {" "}
-              back{" "}
-            </button> */}
+            <p className={styles.back_button} onClick={handleBack}>
+              back
+            </p>
             <div className={styles.formStep}>
               <p> 2 </p>
               <h1> What is your Name? </h1>
@@ -133,107 +135,126 @@ export default function Contact() {
                 name="fullName"
                 className={styles.input}
               />
+              <label className={styles.input_label} htmlFor="fullName">
+                {" "}
+                Name{" "}
+              </label>
             </div>
-            <button
-              className={styles.next_btn}
-              type="button"
-              onClick={handleNext}
-            >
-              Next
-            </button>
+            <div className={styles.next_container}>
+              <FontAwesomeIcon
+                icon={faRightToBracket}
+                className={styles.next_btn}
+                type="button"
+                onClick={handleNext}
+              />
+            </div>
           </div>
 
           <div className={styles.formDiv} id="step3">
-            {/* <button className={styles.back_button} onClick={handleBack}>
-              {" "}
-              back{" "}
-            </button> */}
+            <p className={styles.back_button} onClick={handleBack}>
+              back
+            </p>
             <div className={styles.formStep}>
               <p> 3 </p>
               <h1> Aloha insert name, how can I reach you? </h1>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="email"> Email </label>
               <input
                 {...register("email")}
                 type="text"
                 name="email"
                 className={styles.input}
               />
+              <label className={styles.input_label} htmlFor="email">
+                {" "}
+                Email{" "}
+              </label>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="phone"> Phone number </label>
               <input
                 {...register("phoneNumber")}
                 type="text"
                 name="phoneNumber"
                 className={styles.input}
               />
+              <label className={styles.input_label} htmlFor="phone">
+                {" "}
+                Phone number{" "}
+              </label>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="insta"> Insta Handle (if applicable) </label>
               <input
                 {...register("insta")}
                 type="text"
                 name="insta"
                 className={styles.input}
               />
+              <label className={styles.input_label} htmlFor="insta">
+                {" "}
+                Insta Handle (if applicable){" "}
+              </label>
             </div>
-            <button
-              className={styles.next_btn}
-              type="button"
-              onClick={handleNext}
-            >
-              Next
-            </button>
+            <div className={styles.next_container}>
+              <FontAwesomeIcon
+                icon={faRightToBracket}
+                className={styles.next_btn}
+                type="button"
+                onClick={handleNext}
+              />
+            </div>
           </div>
 
           <div className={styles.formDiv} id="step4">
-            {/* <button className={styles.back_button} onClick={handleBack}>
-              {" "}
-              back{" "}
-            </button> */}
+            <p className={styles.back_button} onClick={handleBack}>
+              back
+            </p>
             <div className={styles.formStep}>
               <p> 4 </p>
               <h1> Save the date? </h1>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="general-date"> Photoshoot Date </label>
+              <label className={styles.input_label} htmlFor="general-date">
+                {" "}
+                Photoshoot Date{" "}
+              </label>
               <input
                 {...register("eventDate")}
                 style={{ width: "100%" }}
                 type="date"
                 name="eventDate"
-                className={styles.input}
+                className={`${styles.input}, ${styles.date_input}`}
               />
             </div>
-            <button
-              className={styles.next_btn}
-              type="button"
-              onClick={handleNext}
-            >
-              Next
-            </button>
+            <div className={styles.next_container}>
+              <FontAwesomeIcon
+                icon={faRightToBracket}
+                className={styles.next_btn}
+                type="button"
+                onClick={handleNext}
+              />
+            </div>
           </div>
 
           <div className={styles.formDiv}>
-            {/* <button className={styles.back_button} onClick={handleBack}>
-              {" "}
-              back{" "}
-            </button> */}
+            <p className={styles.back_button} onClick={handleBack}>
+              back
+            </p>
             <div className={styles.formStep}>
               <p> 5 </p>
-              <h1>Anything else you would like me to know?</h1>
+              <h1>Anything else?</h1>
             </div>
             <div className={styles.formElement}>
-              <label htmlFor="message"> Message </label>
-              <textarea {...register("message")} name="message"></textarea>
+              <textarea
+                className={styles.input}
+                {...register("message")}
+                name="message"
+              ></textarea>
+              <label className={styles.input_label} htmlFor="message">
+                {" "}
+                Message{" "}
+              </label>
             </div>
-            <button
-              className={styles.next_btn}
-              id={styles.submit}
-              type="submit"
-            >
+            <button id={styles.submit} type="submit">
               Send
             </button>
           </div>

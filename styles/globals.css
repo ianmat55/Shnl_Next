@@ -84,6 +84,25 @@ svg {
   cursor: pointer;
 }
 
+input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus + label,
+input:valid + label {
+  top: -20px;
+  font-size: 16px;
+}
+
 input[type="text"] {
   font-size: 24px;
   background: #faebd7;

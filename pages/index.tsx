@@ -61,7 +61,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               style={{
                 position: "relative",
                 display: index == count ? "flex" : "none",
-                transition: "transform .8s ease-in-out",
+                transition: "transform .1s ease-in-out",
               }}
             >
               <div className={styles.header_container}>
@@ -160,3 +160,5 @@ export default function Home() {
     </section>
   );
 }
+
+//I've been experimenting with ai text generation for generating short stories. Considering maybe having the ai generate the first half of the story, and having an actual person finish it/edit the inconsistencies.

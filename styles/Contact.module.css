@@ -79,22 +79,8 @@
   margin: auto;
 }
 
-.formElement {
-  display: flex;
-  flex-direction: column;
-  padding: 5px 0;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.input {
-  border: 0;
-  border-bottom: 2px solid black;
-  background-color: #faebd7;
-}
-
-.formElement:focus {
-  border-bottom-color: brown;
+.date_input {
+  margin-top: 2rem;
 }
 
 .formStep {
@@ -139,6 +125,16 @@
   height: 70%;
 }
 
+.formElement {
+  position: relative;
+  display: flex;
+  flex-flow: column-reverse;
+  flex-direction: column;
+  padding: 5px 0;
+  width: 90%;
+  margin: 10px auto;
+}
+
 .formElement textarea,
 .formElement select {
   border: none;
@@ -152,11 +148,51 @@
   padding: 10px;
 }
 
-.formElement label {
+.formElement .input_label {
   margin-bottom: 5px;
+  font-size: 8px;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 20px;
+  transition: 0.2s ease all;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
-.radioLabel input {
+.input {
+  border: 0;
+  border-bottom: 2px solid black;
+  background-color: #faebd7;
+}
+
+.input:focus {
+  outline: 0;
+  border-bottom-color: brown;
+}
+
+.formElement textarea:focus ~ .input_label,
+.formElement input:focus ~ .input_label,
+.formElement input:valid .input_label {
+  top: -30px;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.formElement input ~ label {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  pointer-events: none;
+  position: relative;
+}
+
+.radio input {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -187,14 +223,21 @@
 }
 
 .radioLabel input[type="radio"]:checked + .radioLabel > .radioImg {
-  outline: 2px solid #f00;
+  outline: 2px solid #008ac6;
   box-shadow: inset 0 0 0 3px #fff;
   height: 10rem;
 }
 
 .next_btn {
-  margin: 2rem;
-  padding: 0.5rem;
+  margin: 2rem 0;
+  max-height: 100%;
+  width: 3rem;
+}
+
+.next_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .category_choices {
@@ -214,8 +257,12 @@
 }
 
 #submit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem 0;
-  margin: 1rem 0;
+  margin: 2rem auto;
+  width: 60%;
   background-color: #d8ae83;
   outline: none;
   border: none;
@@ -234,6 +281,10 @@
     width: 60%;
   }
 
+  .next_container {
+    justify-content: center;
+  }
+
   #contactHeader {
     position: relative;
     width: 100%;
@@ -244,10 +295,6 @@
     height: 100%;
     margin: auto;
   }
-
-  /* #contact_portrait_container {
-		flex-direction: row;
-	} */
 }
 
 /* @media only screen and (min-width: 1500px) {

@@ -192,22 +192,8 @@
   position: relative;
 }
 
-.radio input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
 .radioLabel {
   margin: 0 0.5rem;
-}
-
-.raioLabel i {
-  display: inline-block;
-  vertical-align: middle;
-  height: 16px;
-  box-shadow: inset 0 0 0 8px #fff;
 }
 
 .radioImg {
@@ -217,12 +203,11 @@
   width: 6rem;
 }
 
-.radioLabel,
-.radioImg {
+.radioLabel > .radioImg {
   cursor: pointer;
 }
 
-.radioLabel input[type="radio"]:checked + .radioLabel > .radioImg {
+.radioImg:focus + .radioLabel > input[type="radio"]:checked {
   outline: 2px solid #008ac6;
   box-shadow: inset 0 0 0 3px #fff;
   height: 10rem;

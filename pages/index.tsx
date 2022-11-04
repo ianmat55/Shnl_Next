@@ -43,8 +43,8 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             width={arrowSize}
             height={arrowSize}
             xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             viewBox="0 0 24 24"
             stroke="#faebd7"
           >
@@ -63,9 +63,10 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
                 display: index == count ? "flex" : "none",
                 transition: "transform .1s ease-in-out",
               }}
+              key={`title${index}`}
             >
-              <div className={styles.header_container}>
-                <Link key={index} href={item.link} passHref={true}>
+              <div key={index} className={styles.header_container}>
+                <Link href={item.link} passHref={true}>
                   <h1 className={styles.hero_title}> {item.title} </h1>
                 </Link>
               </div>
@@ -79,8 +80,8 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             xmlns="http://www.w3.org/2000/svg"
             width={arrowSize}
             height={arrowSize}
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             viewBox="0 0 24 24"
           >
             <path
@@ -103,12 +104,9 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               height: "100vh",
               width: `${size!.width * background.length}`,
             }}
+            key={`img${index}`}
           >
-            <div
-              id={`img${index}`}
-              className={styles.imageWrapper}
-              key={`img${index}`}
-            >
+            <div id={`img${index}`} className={styles.imageWrapper}>
               <Image
                 src={item.image}
                 alt={`img${index}`}

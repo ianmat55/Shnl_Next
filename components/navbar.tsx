@@ -20,11 +20,12 @@ interface SocialIcons {
 
 interface MenuItemsProps {
   menuLinks: MenuLink[];
+  setSideBarOpen: any;
 }
 
 // NEED TO REFACTOR
 
-const MenuItems = ({ menuLinks }: MenuItemsProps) => {
+const MenuItems = ({ menuLinks, setSideBarOpen }: MenuItemsProps) => {
   const links = menuLinks.map((item: any, index: number) => (
     <Link key={index} href={item.link} passHref={true}>
       <li>
@@ -34,6 +35,7 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
     </Link>
   ));
 
+  // closes menu after link click
   function closeMenu() {
     const navigation = document.querySelector("nav");
     const toggleButton = document.querySelector("#toggleIcon") as HTMLElement;
@@ -42,15 +44,16 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
       navigation!.style.transition = "transform 0.3s ease-in-out";
       navigation!.style.transform = "translateX(-300px)";
       toggleButton!.style.transform = "translateX(0px)";
+      setSideBarOpen(false);
     }
   }
 
   return (
     <>
       <nav id="translate-nav">
-        {/* <Link key="home" href="/" passHref={true}>
+        <Link key="home" href="/" passHref={true}>
           <h1 id={styles.logo}> ShanelHonolulu </h1>
-        </Link> */}
+        </Link>
         <ul id={styles.nav_links} onClick={closeMenu}>
           {links}
         </ul>
@@ -62,19 +65,22 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
   );
 };
 
-const HamburgerMenu = ({ sideBar, setSideBar }: any) => {
+const HamburgerMenu = ({ sideBarOpen, setSideBarOpen }: any) => {
   function menuToggle() {
+    console.log(`Side open?: ${sideBarOpen}`);
     const navigation = document.querySelector("nav");
     const toggleButton = document.querySelector("#toggleIcon") as HTMLElement;
     const transition = "transform 0.3s ease-in-out";
-    if (sideBar) {
+    if (sideBarOpen) {
+      console.log("close");
       navigation!.style.transform = "translateX(-300px)";
       toggleButton!.style.transform = "translateX(0px)";
-      setSideBar(false);
+      setSideBarOpen(false);
     } else {
+      console.log("open");
       navigation!.style.transform = "translateX(0px)";
       toggleButton!.style.transform = "translateX(300px)";
-      setSideBar(true);
+      setSideBarOpen(true);
     }
     navigation!.style.transition = transition;
     toggleButton!.style.transition = transition;
@@ -120,12 +126,15 @@ export default function Nav() {
     },
   ];
 
-  const [sideBar, setSideBar] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   return (
     <>
-      <HamburgerMenu sideBar={sideBar} setSideBar={setSideBar} />
-      <MenuItems menuLinks={menuLinks} />
+      <HamburgerMenu
+        sideBarOpen={sideBarOpen}
+        setSideBarOpen={setSideBarOpen}
+      />
+      <MenuItems menuLinks={menuLinks} setSideBarOpen={setSideBarOpen} />
     </>
   );
 }

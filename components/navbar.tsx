@@ -51,7 +51,9 @@ const MenuItems = ({ menuLinks }: MenuItemsProps) => {
         {/* <Link key="home" href="/" passHref={true}>
           <h1 id={styles.logo}> ShanelHonolulu </h1>
         </Link> */}
-        <ul onClick={closeMenu}>{links}</ul>
+        <ul id={styles.nav_links} onClick={closeMenu}>
+          {links}
+        </ul>
         <div id={styles.nav_social_icons}>
           <SocialIcons />
         </div>
@@ -111,6 +113,10 @@ export default function Nav() {
     {
       name: "Contact",
       link: "/contact",
+    },
+    {
+      name: "Ai",
+      link: "/",
     },
   ];
 

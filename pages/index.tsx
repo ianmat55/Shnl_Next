@@ -99,8 +99,6 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               transform: `translateX(-${size!.width * count}px)`,
               transition: "transform .8s ease-in-out",
               position: "relative",
-              // position: "absolute",
-              // display: index == count ? "flex" : "none",
               display: "flex",
               height: "100vh",
               width: `${size!.width * background.length}`,

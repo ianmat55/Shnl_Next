@@ -67,7 +67,6 @@ nav {
 }
 
 #translate-nav {
-  padding-top: 45%;
   transform: translateX(-350px);
 }
 
@@ -141,7 +140,6 @@ html {
     font-size: 32px;
   }
   #translate-nav {
-    padding-top: 0;
     justify-content: end;
     transform: translateX(0);
     /* height: 4rem; */

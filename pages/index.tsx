@@ -15,6 +15,7 @@ import desktop1 from "../public/assets/desktop_images/home1.jpeg";
 import { useWindowSizeContext } from "utils/context";
 import { Size } from "shared/types";
 import SocialIcons from "components/socials";
+import Link from "next/link";
 // import Link from "next/link";
 
 interface BackgroundImagesProps {
@@ -33,14 +34,14 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   //   setCount(count === background.length - 1 ? 0 : count + int);
   // };
 
-  // const arrowSize = size.width < 1000 ? 24 : 34;
+  const arrowSize = size.width < 1000 ? 24 : 34;
 
   return (
     <div id={styles.homeBackgrounds}>
-      {/* <div id={styles.arrows}>
+      <div id={styles.arrows}>
         <div className={styles.leftArrow}>
           <svg
-            onClick={() => incrementCount(-1)}
+            // onClick={() => incrementCount(-1)}
             width={arrowSize}
             height={arrowSize}
             xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +57,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           </svg>
         </div>
 
-         {background.map((item, index) => {
+        {background.map((item, index) => {
           return (
             <div
               style={{
@@ -73,11 +74,10 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               </div>
             </div>
           );
-        })} 
-
+        })}
         <div className={styles.rightArrow}>
           <svg
-            onClick={() => incrementCount(1)}
+            // onClick={() => incrementCount(1)}
             xmlns="http://www.w3.org/2000/svg"
             width={arrowSize}
             height={arrowSize}
@@ -93,7 +93,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             />
           </svg>
         </div>
-      </div> */}
+      </div>
       {background.map((item, index) => {
         return (
           <div

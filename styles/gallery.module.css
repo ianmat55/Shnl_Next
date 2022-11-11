@@ -37,6 +37,10 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
 
+.photoContainer:hover .caption {
+  height: 100%;
+}
+
 .photo {
   max-height: 100%;
   min-width: 100%;
@@ -132,10 +136,6 @@
   position: relative;
   transition-delay: 0.3s;
   margin: 0;
-}
-
-.photoContainer:active .caption {
-  height: 100%;
 }
 
 @media only screen and (min-width: 1000px) {

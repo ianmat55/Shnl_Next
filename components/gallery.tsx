@@ -9,7 +9,7 @@ export default function Gallery({ images, page }: GalleryProps) {
       <Link key={data.id} href={`/${page}/${data.id}`} passHref={true}>
         <li className={styles.photoContainer}>
           <div className={styles.caption}>
-            <h1> {data.Text} </h1>
+            <h1> {data.title} </h1>
           </div>
           <Image
             key={data.id}

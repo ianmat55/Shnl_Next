@@ -3,7 +3,7 @@ export interface GalleryData {
   status: string;
   image: string;
   file: file_link;
-  Text: string;
+  title: string;
   user_created: string;
   user_updated?: string;
   date_updated?: string;

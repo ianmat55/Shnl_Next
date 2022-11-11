@@ -5,7 +5,7 @@ import { GalleryProps } from "shared/types";
 import lifestyleImage from "../../public/assets/home1.jpeg";
 
 export async function getStaticProps() {
-  const res = await axios("https://api.shanelhonolulu.com/items/Test");
+  const res = await axios("https://api.shanelhonolulu.com/items/Lifestyle");
   const images = res.data;
 
   return {

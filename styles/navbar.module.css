@@ -103,16 +103,16 @@ ul li .sIcon {
   align-items: center;
 }
 
-.social_icon_wrapper:hover {
+.social_icon_wrapper:active {
   width: 11rem;
   transition-duration: 0.8s;
 }
 
-.social_icon_wrapper:hover svg {
+.social_icon_wrapper:active svg {
   display: none;
 }
 
-.social_icon_wrapper:hover .handle_wrapper {
+.social_icon_wrapper:active .handle_wrapper {
   visibility: visible;
   position: static;
   transition: position 0.5s, visibility 0.001s;
@@ -268,6 +268,17 @@ ul li .sIcon {
     height: 2.5rem;
     width: 2.5rem;
     transition-duration: 0.5s;
+  }
+
+  .social_icon_wrapper:hover {
+    width: 11rem;
+    transition-duration: 0.8s;
+  }
+
+  .social_icon_wrapper:hover .handle_wrapper {
+    visibility: visible;
+    position: static;
+    transition: position 0.5s, visibility 0.001s;
   }
 
   .social_icon_wrapper:hover svg {

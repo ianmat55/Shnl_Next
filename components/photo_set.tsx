@@ -38,10 +38,11 @@ function sortImages(photoSet: PhotoSetObject[]) {
   // then iterate though list again and fill every 5xth position w/ a landscape photo where possible
   // if number of portrait photos is odd, move last portrait to end of array
   for (let i = 0; i < photoSet.length; i++) {
+    console.log(photoSet[i].data);
     const isLandscape: boolean =
       photoSet[i].data.landscape_portrait == "landscape" ? true : false;
 
-    if (photoSet[i].data.title.toLowerCase() == "header") {
+    if (photoSet[i].data.header) {
       header = photoSet[i];
     } else if (isLandscape) {
       sortedPhotos.push(photoSet[i]);
@@ -77,7 +78,7 @@ export default function PhotoSet({ photoSet }: PhotoSetProps) {
     return (
       <li key={index} className={photoWidth}>
         <Image
-          src={data.filename_disk}
+          src={data.file}
           loader={({ src }) => `https://api.shanelhonolulu.com/assets/${src}`}
           alt={`photo${index}`}
           layout="fill"
@@ -89,7 +90,7 @@ export default function PhotoSet({ photoSet }: PhotoSetProps) {
 
   const setHeader = header ? (
     <Image
-      src={header.data.filename_disk}
+      src={header.data.file}
       loader={({ src }) => `https://api.shanelhonolulu.com/assets/${src}`}
       alt={`set header`}
       layout="fill"

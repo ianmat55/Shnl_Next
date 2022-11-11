@@ -19,11 +19,14 @@ h1 {
   position: relative;
   justify-content: center;
   margin: auto;
+  margin-bottom: 3rem;
 }
 
 .headerSection h1 {
+  color: white;
+  position: absolute;
+  bottom: 1rem;
   text-align: center;
-  width: 75vw;
 }
 
 .title {
@@ -198,12 +201,12 @@ html {
   .headerSection {
     flex-direction: row;
     padding: 4rem;
-    padding-top: 6rem;
   }
 
   .headerSection h1 {
+    color: black;
+    position: relative;
     width: 100vw;
-    text-align: left;
   }
 
   .headerImage {

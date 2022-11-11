@@ -103,6 +103,21 @@ ul li .sIcon {
   align-items: center;
 }
 
+.social_icon_wrapper:hover {
+  width: 11rem;
+  transition-duration: 0.8s;
+}
+
+.social_icon_wrapper:hover svg {
+  display: none;
+}
+
+.social_icon_wrapper:hover .handle_wrapper {
+  visibility: visible;
+  position: static;
+  transition: position 0.5s, visibility 0.001s;
+}
+
 .iconContainer {
   display: flex;
   width: 100%;
@@ -255,15 +270,8 @@ ul li .sIcon {
     transition-duration: 0.5s;
   }
 
-  .social_icon_wrapper:hover {
-    width: 11rem;
-    transition-duration: 0.8s;
-  }
-
-  .social_icon_wrapper:hover .handle_wrapper {
-    visibility: visible;
-    position: static;
-    transition: position 0.5s, visibility 0.001s;
+  .social_icon_wrapper:hover svg {
+    display: block;
   }
 
   ul li .sIcon {

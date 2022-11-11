@@ -19,7 +19,7 @@ h1 {
   position: relative;
   justify-content: center;
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .headerSection h1 {
@@ -159,9 +159,14 @@ html {
 }
 
 @media only screen and (min-width: 1000px) {
+  .content {
+    padding-top: 5.5rem;
+  }
+
   h1 {
     font-size: 32px;
   }
+
   #translate-nav {
     justify-content: space-between;
     transform: translateX(0);
@@ -200,7 +205,7 @@ html {
 
   .headerSection {
     flex-direction: row;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 
   .headerSection h1 {

@@ -1,181 +1,186 @@
-.gallery { /* Flexbox may be a better option to display images of different sizes */
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto 2rem auto;
-	justify-content: center;
-	align-items: center;
-	width: 95%;
+.gallery {
+  /* Flexbox may be a better option to display images of different sizes */
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 2rem auto;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
 }
 
 .photoSet {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 2rem auto;
-	justify-content: center;
-	align-items: center;
-	width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
 }
 
 .photoWrapper {
-	display: block;
-	visibility: hidden;
-	position: relative;
-	z-index: 50;
-	width: 100%;
+  display: block;
+  visibility: hidden;
+  position: relative;
+  z-index: 50;
+  width: 100%;
 }
 
 .photoContainer {
-	margin: .2rem;
-	z-index: 1;
-	text-align: center;
-	position: relative;
-	min-height: 40vh;
-	width: 40vw;
-	overflow: hidden;
-	cursor: pointer;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+  margin: 0.5rem;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  min-height: 40vh;
+  width: 40vw;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .photo {
-	max-height: 100%;
-	min-width: 100%;
-	vertical-align: bottom;
-	flex-grow: 1;
+  max-height: 100%;
+  min-width: 100%;
+  vertical-align: bottom;
+  flex-grow: 1;
 }
 
 .photo_set {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 2rem auto;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  justify-content: center;
 }
 
 .landscapePhoto {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	margin: .2rem;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	width: 100vw;
-	height: 35vh;
-	flex-grow: 1;
-	max-width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 35vh;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .portraitPhoto {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	margin: .2rem;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-	height: 35vh;
-	width: 40vw;
-	flex-grow: 1;
-	max-width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  height: 35vh;
+  width: 40vw;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .setHeader {
-	width: 100vw;
-	height: 50vh;
-	margin: auto;
-	display: flex;
-	justify-self: center;
-	align-items: center;
+  width: 100vw;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
 .headerPhoto {
-	position: relative;
-	width: 50%;
-	height: 100%;
+  position: relative;
+  width: 50%;
+  height: 100%;
 }
 
 .headerDescription {
-	display: flex;
-	justify-self: center;
-	align-items: center;
-	width: 50%;
-	height: 100%;
-	background-color: gray;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: gray;
 }
 
 .headerDescription p {
-	margin: auto;
-	width: 100%;
-	text-align: center;
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 .caption {
-	height: 0;
-	width: 100%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	margin: 0;
-	z-index: 1;
-	position: absolute;
-	background: linear-gradient(
-		to bottom,
-		rgba(0,0,0,0) 0%,
-		rgba(0,0,0,0.7) 100%
-	);
-	transition-property: bottom, opacity;
-	transition: height .5s ease-in-out;
-	bottom: 0;
-	position: absolute;
+  height: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition-property: bottom, opacity;
+  transition: height 0.5s ease-in-out;
+  bottom: 0;
+  position: absolute;
 }
 
 .caption h1 {
-	color: white;
-	height: 35%;
-	/* font-size: 12px; */
-	position: relative;
-	transition-delay: 0.3s;
-	margin: 0;
+  color: white;
+  height: 35%;
+  /* font-size: 12px; */
+  position: relative;
+  transition-delay: 0.3s;
+  margin: 0;
 }
 
-.photoContainer:hover .caption {
-	height: 100%;
+.photoContainer:active .caption {
+  height: 100%;
 }
 
 @media only screen and (min-width: 1000px) {
-	.setHeader {
-		width: 75vw;
-		height: 85vh;
-		display: flex;
-		justify-self: center;
-		align-items: center;
-	}
+  .setHeader {
+    width: 75vw;
+    height: 85vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  }
 
-	.caption h1 {
-		font-size: 24px;
-		height: 15%;
-	}
+  .caption h1 {
+    font-size: 24px;
+    height: 15%;
+  }
 
-	.photoContainer {
-		width: 30vw;
-		min-height: 85vh;
-	}
+  .photoContainer {
+    width: 30vw;
+    min-height: 85vh;
+  }
 
-	.photoSet {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 2rem auto;
-		justify-content: center;
-		align-items: center;
-		width: 75%;
-	}
+  .photoContainer.hover .caption {
+    height: 100%;
+  }
 
-	.portraitPhoto {
-		height: 85vh;
-		width: 30vw;
-	}
+  .photoSet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
 
-	.landscapePhoto {
-		height: 60vh;
-	}
+  .portraitPhoto {
+    height: 85vh;
+    width: 30vw;
+  }
 
-	.gallery {
-		margin: 0 auto;
-		width: 100%;
-	}
+  .landscapePhoto {
+    height: 60vh;
+  }
+
+  .gallery {
+    margin: 0 auto;
+    width: 100%;
+  }
 }

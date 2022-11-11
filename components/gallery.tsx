@@ -5,6 +5,7 @@ import styles from "../styles/gallery.module.css";
 
 export default function Gallery({ images, page }: GalleryProps) {
   const galleryImages = images.data.map((data: GalleryData) => {
+    console.log(data.id);
     return (
       <Link key={data.id} href={`/${page}/${data.id}`} passHref={true}>
         <li className={styles.photoContainer}>

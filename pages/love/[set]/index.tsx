@@ -42,7 +42,6 @@ export default function PhotoSetPage({ photoSet }: any) {
   console.log(photoSet);
   return (
     <section className="content">
-      <div> hello </div>
       <PhotoSet photoSet={photoSet} />
     </section>
   );

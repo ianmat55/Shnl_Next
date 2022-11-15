@@ -37,10 +37,6 @@ export interface SortedPhotoSetData {
   backFilledArray: PhotoSetObject[];
 }
 
-export interface PhotoSetProps {
-  photoSet: file_link[];
-}
-
 export interface Size {
   width: number;
   height: number;

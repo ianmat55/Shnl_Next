@@ -4,6 +4,8 @@ import styles from "../styles/gallery.module.css";
 
 interface PhotoSetProps {
   photoSet: PhotoSetObject[];
+  title: string;
+  location: string;
 }
 
 function backFillLandscapePhotos(
@@ -61,7 +63,7 @@ function sortImages(photoSet: PhotoSetObject[]) {
   return { header, backFilledArray };
 }
 
-export default function PhotoSet({ photoSet }: PhotoSetProps) {
+export default function PhotoSet({ photoSet, title, location }: PhotoSetProps) {
   const photos: SortedPhotoSetData = sortImages(photoSet);
   const header = photos.header;
   photoSet = photos.backFilledArray;
@@ -100,7 +102,8 @@ export default function PhotoSet({ photoSet }: PhotoSetProps) {
       <div className={styles.setHeader}>
         <div className={styles.headerPhoto}>{setHeader}</div>
         <div className={styles.headerDescription}>
-          <p> lorem ipsum dorem </p>
+          <h1> {title} </h1>
+          <h3> {location} </h3>
         </div>
       </div>
       <ul className={styles.photoSet}>{setImages}</ul>

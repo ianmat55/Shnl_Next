@@ -31,18 +31,22 @@ export async function getStaticProps({ params }: any) {
     })
   );
 
+  const title = res.data.data.title;
+  const location = res.data.data.location;
+
   return {
     props: {
       photoSet,
+      title,
+      location,
     },
   };
 }
 
-export default function PhotoSetPage({ photoSet }: any) {
-  console.log(photoSet);
+export default function PhotoSetPage({ photoSet, title, location }: any) {
   return (
     <section className="content">
-      <PhotoSet photoSet={photoSet} />
+      <PhotoSet photoSet={photoSet} title={title} location={location} />
     </section>
   );
 }

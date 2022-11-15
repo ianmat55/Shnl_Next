@@ -96,11 +96,14 @@
 
 .headerDescription {
   display: flex;
-  justify-self: center;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: gray;
+  /* background-color: #526b71; */
+  background-color: #8ea397;
+  /* background-color: #d8cac8; */
 }
 
 .headerDescription p {

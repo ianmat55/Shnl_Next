@@ -2,12 +2,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 
-import mobile1 from "../public/assets/mobile_images/img1.jpg";
+import mobile1 from "../public/assets/home_mobile.jpg";
 // import mobile2 from "../public/assets/mobile_images/img2.jpg";
 // import mobile3 from "../public/assets/mobile_images/img3.jpg";
 // import mobile4 from "../public/assets/mobile_images/img4.jpg";
 
-import desktop1 from "../public/assets/desktop_images/home1.jpeg";
+import desktop1 from "../public/assets/home.jpg";
 // import desktop2 from "../public/assets/desktop_images/home4.jpeg";
 // import desktop3 from "../public/assets/desktop_images/home5.jpeg";
 // import desktop4 from "../public/assets/desktop_images/wedding.jpg";
@@ -22,6 +22,9 @@ interface BackgroundImagesProps {
   background: any[];
   size: Size;
 }
+
+// potentially get all image data at home page with get static props, use shallow
+// routing to set pages
 
 const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // const [count, setCount] = useState(0);

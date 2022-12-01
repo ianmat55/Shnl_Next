@@ -23,8 +23,6 @@ interface MenuItemsProps {
   setSideBarOpen: any;
 }
 
-// NEED TO REFACTOR
-
 const MenuItems = ({ menuLinks, setSideBarOpen }: MenuItemsProps) => {
   const links = menuLinks.map((item: any, index: number) => (
     <Link key={index} href={item.link} passHref={true}>
@@ -120,10 +118,10 @@ export default function Nav() {
       name: "Contact",
       link: "/contact",
     },
-    {
-      name: "Ai",
-      link: "/",
-    },
+    // {
+    //   name: "Ai",
+    //   link: "/",
+    // },
   ];
 
   const [sideBarOpen, setSideBarOpen] = useState(false);

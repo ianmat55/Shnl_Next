@@ -2,7 +2,7 @@ import axios from "axios";
 import Gallery from "components/gallery";
 import { GalleryProps } from "../../shared/types";
 import Header from "components/header";
-import wedding6 from "../../public/assets/test_images/wedding/wedding6.jpg";
+import wedding6 from "../../public/assets/wedding.jpg";
 
 export async function getStaticProps() {
   const res = await axios("https://api.shanelhonolulu.com/items/Love");

@@ -110,10 +110,10 @@ export default function Nav() {
       name: "Local",
       link: "/local",
     },
-    {
-      name: "Film",
-      link: "/film",
-    },
+    // {
+    //   name: "Film",
+    //   link: "/film",
+    // },
     {
       name: "Contact",
       link: "/contact",

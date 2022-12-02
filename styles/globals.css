@@ -159,10 +159,6 @@ html {
 }
 
 @media only screen and (min-width: 1000px) {
-  .content {
-    padding-top: 5.5rem;
-  }
-
   h1 {
     font-size: 32px;
   }
@@ -180,7 +176,7 @@ html {
   nav {
     flex-direction: row;
     /* background-color: transparent; */
-    /* position: relative; */
+    position: relative;
     height: auto;
     width: 100%;
     font-size: 1rem;

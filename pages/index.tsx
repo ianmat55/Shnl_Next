@@ -37,12 +37,12 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   //   setCount(count === background.length - 1 ? 0 : count + int);
   // };
 
-  const arrowSize = size.width < 1000 ? 24 : 34;
+  // const arrowSize = size.width < 1000 ? 24 : 34;
 
   return (
     <div id={styles.homeBackgrounds}>
       <div id={styles.arrows}>
-        <div className={styles.leftArrow}>
+        {/* <div className={styles.leftArrow}>
           <svg
             // onClick={() => incrementCount(-1)}
             width={arrowSize}
@@ -58,7 +58,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
             />
           </svg>
-        </div>
+        </div> */}
 
         {background.map((item, index) => {
           return (
@@ -78,7 +78,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             </div>
           );
         })}
-        <div className={styles.rightArrow}>
+        {/* <div className={styles.rightArrow}>
           <svg
             // onClick={() => incrementCount(1)}
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               stroke="#faebd7"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
       {background.map((item, index) => {
         return (

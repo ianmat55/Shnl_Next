@@ -121,6 +121,8 @@ ul li .sIcon {
 .iconContainer {
   display: flex;
   width: 100%;
+  position: relative;
+  z-index: 10;
   overflow: hidden;
   justify-content: space-evenly;
   align-items: center;
@@ -273,6 +275,7 @@ ul li .sIcon {
   .social_icon_wrapper:hover {
     width: 11rem;
     transition-duration: 0.8s;
+    cursor: pointer;
   }
 
   .social_icon_wrapper:hover .handle_wrapper {

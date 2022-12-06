@@ -44,7 +44,10 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
     <>
       <Head>
         <title>Novelry.ai</title>
-        <meta name="description" content="Short stories and romance novels" />
+        <meta
+          name="description"
+          content="Honolulu based wedding, gradutaiton and general photography services."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id={styles.homeBackgrounds}>

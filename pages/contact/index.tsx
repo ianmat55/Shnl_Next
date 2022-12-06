@@ -8,6 +8,8 @@ import weddingRad from "../../public/assets/test_images/wedding/wedding6.jpg";
 import commercialRad from "../../public/assets/test_images/lifestyle/header1.jpeg";
 import lifestyleRad from "../../public/assets/test_images/lifestyle/header2.jpeg";
 import { useState } from "react";
+import { useWindowSizeContext } from "utils/context";
+import { Size } from "shared/types";
 
 interface IFormInput {
   category: any;
@@ -23,6 +25,9 @@ export default function Contact() {
   const { register, handleSubmit } = useForm<IFormInput>();
   const [step, setStep] = useState(0);
   // const [validated, setValidated] = useState(false);
+
+  const windowSize: Size = useWindowSizeContext();
+  const translateDistance = windowSize!.width >= 1000 ? 96 : 100;
 
   const handleNext = () => {
     setStep(step + 1);
@@ -51,7 +56,7 @@ export default function Contact() {
         >
           <div
             style={{
-              transform: `translateY(-${100 * step}vh)`,
+              transform: `translateY(-${translateDistance * step}vh)`,
               transition: "transform .8s ease-in-out",
             }}
           >
@@ -61,7 +66,6 @@ export default function Contact() {
               <Image src={aboutImage} layout="fill" />
             </div> */}
               <div className={styles.formStep}>
-                <p> 1 </p>
                 <div>
                   <h1> Interested in a photoshoot? </h1>
                   <p> Select a Category </p>
@@ -125,7 +129,6 @@ export default function Contact() {
                 back
               </p>
               <div className={styles.formStep}>
-                <p> 2 </p>
                 <h1> What is your Name? </h1>
               </div>
               <div className={styles.formElement}>
@@ -155,7 +158,6 @@ export default function Contact() {
                 back
               </p>
               <div className={styles.formStep}>
-                <p> 3 </p>
                 <h1> Aloha insert name, how can I reach you? </h1>
               </div>
               <div className={styles.formElement}>
@@ -209,7 +211,6 @@ export default function Contact() {
                 back
               </p>
               <div className={styles.formStep}>
-                <p> 4 </p>
                 <h1> Save the date? </h1>
               </div>
               <div className={styles.formElement}>
@@ -240,7 +241,6 @@ export default function Contact() {
                 back
               </p>
               <div className={styles.formStep}>
-                <p> 5 </p>
                 <h1>Anything else?</h1>
               </div>
               <div className={styles.formElement}>

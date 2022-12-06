@@ -15,7 +15,8 @@ import desktop1 from "../public/assets/home.jpg";
 import { useWindowSizeContext } from "utils/context";
 import { Size } from "shared/types";
 import SocialIcons from "components/socials";
-import Link from "next/link";
+// import Link from "next/link";
+import Head from "next/head";
 // import Link from "next/link";
 
 interface BackgroundImagesProps {

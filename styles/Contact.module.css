@@ -201,7 +201,7 @@
   position: relative;
   object-fit: contain;
   height: 6rem;
-  width: 6rem;
+  width: 8rem;
 }
 
 .radioLabel > .radioImg {
@@ -218,6 +218,10 @@
   margin: 2rem 0;
   max-height: 100%;
   width: 3rem;
+}
+
+.next_btn:hover {
+  color: cadetblue;
 }
 
 .next_container {
@@ -240,6 +244,15 @@
 .back_button {
   width: 25%;
   padding: 0.5rem;
+  background-color: #f2c892;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 8rem;
+}
+
+.back_button:hover {
+  background-color: white;
+  color: brown;
 }
 
 #submit {

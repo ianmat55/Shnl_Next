@@ -4,9 +4,9 @@ import Image from "next/image";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // test background images
-import weddingRad from "../../public/assets/test_images/wedding/wedding6.jpg";
-import commercialRad from "../../public/assets/test_images/lifestyle/header1.jpeg";
-import lifestyleRad from "../../public/assets/test_images/lifestyle/header2.jpeg";
+import weddingRad from "../../public/assets/wedding.jpg";
+import commercialRad from "../../public/assets/commercial.jpg";
+import lifestyleRad from "../../public/assets/film.jpg";
 import { useState } from "react";
 import { useWindowSizeContext } from "utils/context";
 import { Size } from "shared/types";
@@ -35,6 +35,10 @@ export default function Contact() {
 
   const handleBack = () => {
     setStep(step - 1);
+  };
+
+  const handleRadioSelect = (e: any) => {
+    console.log(e);
   };
 
   const onFormSubmit = (data: IFormInput) => console.log(data);
@@ -73,7 +77,11 @@ export default function Contact() {
               </div>
               <div className={styles.formElement}>
                 <div className={styles.category_choices}>
-                  <label className={styles.radioLabel} htmlFor="general">
+                  <label
+                    className={styles.radioLabel}
+                    htmlFor="general"
+                    onClick={(e) => handleRadioSelect(e)}
+                  >
                     <div className={styles.radioImg}>
                       <Image src={lifestyleRad} layout="fill" alt="General" />
                     </div>
@@ -86,7 +94,11 @@ export default function Contact() {
                       className={styles.radioInput}
                     />
                   </label>
-                  <label className={styles.radioLabel} htmlFor="wedding">
+                  <label
+                    className={styles.radioLabel}
+                    htmlFor="wedding"
+                    onClick={(e) => handleRadioSelect(e)}
+                  >
                     <div className={styles.radioImg}>
                       <Image src={weddingRad} layout="fill" alt="Wedding" />
                     </div>
@@ -99,7 +111,11 @@ export default function Contact() {
                       className={styles.radioInput}
                     />
                   </label>
-                  <label className={styles.radioLabel} htmlFor="business">
+                  <label
+                    className={styles.radioLabel}
+                    htmlFor="business"
+                    onClick={(e) => handleRadioSelect(e)}
+                  >
                     <div className={styles.radioImg}>
                       <Image src={commercialRad} layout="fill" alt="Business" />
                     </div>

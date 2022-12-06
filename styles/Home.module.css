@@ -100,9 +100,16 @@
   #home_social_icons {
     position: absolute;
     bottom: 3rem;
-    /* margin-left: 3.5rem; */
     right: 3rem;
     display: flex;
+    justify-content: center;
+    /* background-color: #f9ead7; */
+    border-radius: 10px;
+    background-color: #f2c892;
+  }
+
+  #home {
+    height: calc(100vh - 4rem);
   }
 
   /* #arrows {

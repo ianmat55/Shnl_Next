@@ -177,7 +177,7 @@ html {
     flex-direction: row;
     /* background-color: transparent; */
     position: relative;
-    height: auto;
+    height: 4rem;
     width: 100%;
     font-size: 1rem;
     justify-content: space-between;

@@ -59,7 +59,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             />
           </svg>
         </div> */}
-
+        {/* 
         {background.map((item, index) => {
           return (
             <div
@@ -77,7 +77,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
               </div>
             </div>
           );
-        })}
+        })} */}
         {/* <div className={styles.rightArrow}>
           <svg
             // onClick={() => incrementCount(1)}

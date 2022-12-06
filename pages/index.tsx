@@ -40,9 +40,15 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // const arrowSize = size.width < 1000 ? 24 : 34;
 
   return (
-    <div id={styles.homeBackgrounds}>
-      <div id={styles.arrows}>
-        {/* <div className={styles.leftArrow}>
+    <>
+      <Head>
+        <title>Novelry.ai</title>
+        <meta name="description" content="Short stories and romance novels" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div id={styles.homeBackgrounds}>
+        <div id={styles.arrows}>
+          {/* <div className={styles.leftArrow}>
           <svg
             // onClick={() => incrementCount(-1)}
             width={arrowSize}
@@ -59,7 +65,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             />
           </svg>
         </div> */}
-        {/* 
+          {/* 
         {background.map((item, index) => {
           return (
             <div
@@ -78,7 +84,7 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             </div>
           );
         })} */}
-        {/* <div className={styles.rightArrow}>
+          {/* <div className={styles.rightArrow}>
           <svg
             // onClick={() => incrementCount(1)}
             xmlns="http://www.w3.org/2000/svg"
@@ -96,32 +102,33 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
             />
           </svg>
         </div> */}
-      </div>
-      {background.map((item, index) => {
-        return (
-          <div
-            style={{
-              transform: `translateX(-${size!.width * count}px)`,
-              transition: "transform .8s ease-in-out",
-              position: "relative",
-              display: "flex",
-              height: "100vh",
-              width: `${size!.width * background.length}`,
-            }}
-            key={`img${index}`}
-          >
-            <div id={`img${index}`} className={styles.imageWrapper}>
-              <Image
-                src={item.image}
-                alt={`img${index}`}
-                className={styles.imageWrapper}
-                layout="fill"
-              />
+        </div>
+        {background.map((item, index) => {
+          return (
+            <div
+              style={{
+                transform: `translateX(-${size!.width * count}px)`,
+                transition: "transform .8s ease-in-out",
+                position: "relative",
+                display: "flex",
+                height: "100vh",
+                width: `${size!.width * background.length}`,
+              }}
+              key={`img${index}`}
+            >
+              <div id={`img${index}`} className={styles.imageWrapper}>
+                <Image
+                  src={item.image}
+                  alt={`img${index}`}
+                  className={styles.imageWrapper}
+                  layout="fill"
+                />
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

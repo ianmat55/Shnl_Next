@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import React from 'react'
-import Nav from './navbar'
+import Head from "next/head";
+import React from "react";
+import Nav from "./navbar";
 
 export default function Layout({ children }: any) {
   return (
@@ -14,9 +14,8 @@ export default function Layout({ children }: any) {
         />
       </Head>
       <Nav />
-      <main id='main'>
-        {children}
-      </main>
+      <main id="main">{children}</main>
+      <footer></footer>
     </>
-  )
+  );
 }

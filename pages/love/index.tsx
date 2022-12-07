@@ -2,7 +2,10 @@ import axios from "axios";
 import Gallery from "components/gallery";
 import { GalleryProps } from "../../shared/types";
 import Header from "components/header";
-import wedding6 from "../../public/assets/wedding.jpg";
+import wedding_desktop from "../../public/assets/wedding.jpg";
+import wedding_mobile from "../../public/assets/wedding_mobile.jpg";
+import { useWindowSizeContext } from "utils/context";
+import { Size } from "shared/types";
 
 export async function getStaticProps() {
   const res = await axios("https://api.shanelhonolulu.com/items/Love");
@@ -14,9 +17,11 @@ export async function getStaticProps() {
 }
 
 export default function Wedding({ images }: GalleryProps) {
+  const windowSize: Size = useWindowSizeContext();
+  const heroImage = windowSize!.width >= 800 ? wedding_desktop : wedding_mobile;
   return (
     <section className="content">
-      <Header title="WEDDING PHOTOGRAPHY" image={wedding6} />
+      <Header title="WEDDING PHOTOGRAPHY" image={heroImage} />
       <Gallery images={images} page="love" />
     </section>
   );

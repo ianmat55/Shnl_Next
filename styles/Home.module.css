@@ -98,14 +98,33 @@
 
 @media (min-width: 1000px) {
   #home_social_icons {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f2c892;
+  }
+
+  #stuff {
     position: absolute;
     bottom: 3rem;
     right: 3rem;
     display: flex;
+    flex-direction: column;
+    align-self: center;
     justify-content: center;
-    /* background-color: #f9ead7; */
-    border-radius: 10px;
-    background-color: #f2c892;
+  }
+
+  #upArrowContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #upArrowContainer svg {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
   }
 
   #home {

@@ -204,9 +204,9 @@
   width: 8rem;
 }
 
-.radioLabel > .radioImg {
+/* .radioLabel > .radioImg {
   cursor: pointer;
-}
+} */
 
 .radioImg:focus + .radioLabel > input[type="radio"]:checked {
   outline: 2px solid #008ac6;

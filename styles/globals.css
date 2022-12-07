@@ -20,6 +20,8 @@ h1 {
   justify-content: center;
   margin: auto;
   margin-bottom: 4rem;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .headerSection h1 {
@@ -105,6 +107,7 @@ input[type="radio"] {
   opacity: 0;
   width: 0;
   height: 0; */
+  cursor: pointer;
 }
 
 input[type="text"] {
@@ -197,6 +200,8 @@ html {
     height: 85vh;
     padding: 0;
     margin: 0 10rem;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
   .headerSection {

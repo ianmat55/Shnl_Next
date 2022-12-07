@@ -15,6 +15,7 @@ import desktop1 from "../public/assets/home.jpg";
 import { useWindowSizeContext } from "utils/context";
 import { Size } from "shared/types";
 import SocialIcons from "components/socials";
+// import ArrowUp from "../public/assets/arrow_up.svg";
 // import Link from "next/link";
 import Head from "next/head";
 // import Link from "next/link";
@@ -30,7 +31,6 @@ interface BackgroundImagesProps {
 const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // const [count, setCount] = useState(0);
   const [count] = useState(0);
-
   // const incrementCount = (int: number) => {
   //   if (count == 0 && int < 0) {
   //     return;
@@ -39,7 +39,6 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // };
 
   // const arrowSize = size.width < 1000 ? 24 : 34;
-
   return (
     <>
       <Head>
@@ -167,8 +166,59 @@ export default function Home() {
   return (
     <section id={styles.home}>
       {background}
-      <div id={styles.home_social_icons}>
-        <SocialIcons />
+      <div id={styles.stuff}>
+        {/* <div id={styles.upArrowContainer}>
+          <svg
+            fill="none"
+            viewBox="0 0 180 180"
+            width="100"
+            height="100"
+            className={styles.arrowUp}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#a)">
+              <circle cx="90" cy="74" r="50" fill="#FAEBD7" />
+              <path
+                d="M70.875 89L90 69.8394L109.125 89L115 83.1012L90 58L65 83.1012L70.875 89Z"
+                fill="#120B02"
+              />
+            </g>
+            <defs>
+              <filter
+                id="a"
+                x="0"
+                y="0"
+                width="180"
+                height="180"
+                color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  result="hardAlpha"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dy="16" />
+                <feGaussianBlur stdDeviation="20" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix values="0 0 0 0 0.0705882 0 0 0 0 0.0431373 0 0 0 0 0.00784314 0 0 0 0.2 0" />
+                <feBlend
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_20_74"
+                />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_20_74"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div> */}
+        <div id={styles.home_social_icons}>
+          <SocialIcons />
+        </div>
       </div>
     </section>
   );

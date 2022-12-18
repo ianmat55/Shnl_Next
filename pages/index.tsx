@@ -17,7 +17,6 @@ import { Size } from "shared/types";
 import SocialIcons from "components/socials";
 // import ArrowUp from "../public/assets/arrow_up.svg";
 // import Link from "next/link";
-import Head from "next/head";
 // import Link from "next/link";
 
 interface BackgroundImagesProps {

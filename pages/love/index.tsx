@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
 export default function Wedding({ images }: GalleryProps) {
   const windowSize: Size = useWindowSizeContext();
-  const heroImage = windowSize!.width >= 800 ? wedding_desktop : wedding_mobile;
+  const heroImage = windowSize!.width >= 700 ? wedding_desktop : wedding_mobile;
   return (
     <section className="content">
       <Header title="WEDDING PHOTOGRAPHY" image={heroImage} />

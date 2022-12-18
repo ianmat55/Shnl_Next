@@ -12,6 +12,22 @@ export default function Layout({ children }: any) {
           name="Shanel Photography"
           content="Proffessional photography portfolio"
         />
+        content="Honolulu based wedding, gradutaiton and general photography
+        services."
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Nav />
       <main id="main">{children}</main>

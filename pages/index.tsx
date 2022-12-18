@@ -41,14 +41,6 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // const arrowSize = size.width < 1000 ? 24 : 34;
   return (
     <>
-      <Head>
-        <title>Novelry.ai</title>
-        <meta
-          name="description"
-          content="Honolulu based wedding, gradutaiton and general photography services."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div id={styles.homeBackgrounds}>
         <div id={styles.arrows}>
           {/* <div className={styles.leftArrow}>

@@ -177,7 +177,7 @@
 
 .formElement textarea:focus ~ .input_label,
 .formElement input:focus ~ .input_label,
-.formElement input:valid .input_label {
+.formElement input:valid ~ .input_label {
   top: -30px;
   font-size: 14px;
   margin-top: 1rem;

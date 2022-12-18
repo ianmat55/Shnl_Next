@@ -3,15 +3,15 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// test background images
 import weddingRad from "../../public/assets/wedding.jpg";
 import commercialRad from "../../public/assets/commercial.jpg";
 import lifestyleRad from "../../public/assets/film.jpg";
 import { useState } from "react";
 import { useWindowSizeContext } from "utils/context";
 import { Size } from "shared/types";
+import { useRouter } from "next/router";
 
-interface IFormInput {
+interface IFormInputs {
   category: any;
   fullName: any;
   phoneNumber: any;
@@ -22,10 +22,15 @@ interface IFormInput {
 }
 
 export default function Contact() {
-  const { register, handleSubmit } = useForm<IFormInput>();
+  const router = useRouter();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInputs>();
   const [step, setStep] = useState(0);
   // const [validated, setValidated] = useState(false);
-
   const windowSize: Size = useWindowSizeContext();
   const translateDistance = windowSize!.width >= 1000 ? 96 : 100;
 
@@ -37,12 +42,11 @@ export default function Contact() {
     setStep(step - 1);
   };
 
-  const handleRadioSelect = (e: any) => {
-    console.log(e);
+  const onSubmit = () => {
+    setTimeout(() => {
+      router.push("/");
+    }, 1000);
   };
-
-  const onFormSubmit = (data: IFormInput) => console.log(data);
-  const onErrors = (errors: any) => console.error(errors);
 
   return (
     <div className="content">
@@ -56,7 +60,8 @@ export default function Contact() {
           id="form"
           name="contact"
           method="POST"
-          onSubmit={handleSubmit(onFormSubmit, onErrors)}
+          action="../api/send_email"
+          onSubmit={() => onSubmit()}
         >
           <div
             style={{
@@ -66,9 +71,6 @@ export default function Contact() {
           >
             <div className={styles.formDiv} id="step1">
               <h1> Howzit, </h1>
-              {/* <div id={styles.contactHeader}>
-              <Image src={aboutImage} layout="fill" />
-            </div> */}
               <div className={styles.formStep}>
                 <div>
                   <h1> Interested in a photoshoot? </h1>
@@ -77,28 +79,21 @@ export default function Contact() {
               </div>
               <div className={styles.formElement}>
                 <div className={styles.category_choices}>
-                  <label
-                    className={styles.radioLabel}
-                    htmlFor="general"
-                    onClick={(e) => handleRadioSelect(e)}
-                  >
+                  <label className={styles.radioLabel} htmlFor="general">
                     <div className={styles.radioImg}>
                       <Image src={lifestyleRad} layout="fill" alt="General" />
                     </div>
                     <i>General</i>
                     <input
-                      {...(register("category"), { required: true })}
+                      {...register("category")}
                       type="radio"
                       name="category"
                       value="general"
                       className={styles.radioInput}
+                      required
                     />
                   </label>
-                  <label
-                    className={styles.radioLabel}
-                    htmlFor="wedding"
-                    onClick={(e) => handleRadioSelect(e)}
-                  >
+                  <label className={styles.radioLabel} htmlFor="wedding">
                     <div className={styles.radioImg}>
                       <Image src={weddingRad} layout="fill" alt="Wedding" />
                     </div>
@@ -111,21 +106,18 @@ export default function Contact() {
                       className={styles.radioInput}
                     />
                   </label>
-                  <label
-                    className={styles.radioLabel}
-                    htmlFor="business"
-                    onClick={(e) => handleRadioSelect(e)}
-                  >
+                  <label className={styles.radioLabel} htmlFor="business">
                     <div className={styles.radioImg}>
                       <Image src={commercialRad} layout="fill" alt="Business" />
                     </div>
                     <i>Commercial</i>
                     <input
-                      {...(register("category"), { required: true })}
+                      {...register("category")}
                       type="radio"
                       name="category"
                       value="business"
                       className={styles.radioInput}
+                      required
                     />
                   </label>
                 </div>
@@ -153,7 +145,9 @@ export default function Contact() {
                   type="text"
                   name="fullName"
                   className={styles.input}
+                  required
                 />
+                {errors.fullName && <span>This field is required</span>}
                 <label className={styles.input_label} htmlFor="fullName">
                   {" "}
                   Name{" "}
@@ -182,11 +176,13 @@ export default function Contact() {
                   type="text"
                   name="email"
                   className={styles.input}
+                  required
                 />
                 <label className={styles.input_label} htmlFor="email">
                   {" "}
                   Email{" "}
                 </label>
+                {errors.email && <span>This field is required</span>}
               </div>
               <div className={styles.formElement}>
                 <input
@@ -194,23 +190,13 @@ export default function Contact() {
                   type="text"
                   name="phoneNumber"
                   className={styles.input}
+                  required
                 />
                 <label className={styles.input_label} htmlFor="phone">
                   {" "}
                   Phone number{" "}
                 </label>
-              </div>
-              <div className={styles.formElement}>
-                <input
-                  {...register("insta")}
-                  type="text"
-                  name="insta"
-                  className={styles.input}
-                />
-                <label className={styles.input_label} htmlFor="insta">
-                  {" "}
-                  Insta Handle (if applicable){" "}
-                </label>
+                {errors.phoneNumber && <span>This field is required</span>}
               </div>
               <div className={styles.next_container}>
                 <FontAwesomeIcon
@@ -240,7 +226,9 @@ export default function Contact() {
                   type="date"
                   name="eventDate"
                   className={`${styles.input}, ${styles.date_input}`}
+                  required
                 />
+                {errors.eventDate && <span>This field is required</span>}
               </div>
               <div className={styles.next_container}>
                 <FontAwesomeIcon

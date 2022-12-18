@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Lifestyle({ images }: GalleryProps) {
   const windowSize: Size = useWindowSizeContext();
   const heroImage =
-    windowSize!.width >= 700 ? lifestyle_desktop : lifestyle_mobile;
+    windowSize!.width >= 650 ? lifestyle_desktop : lifestyle_mobile;
   return (
     <section className="content">
       <Header title="LIFESTYLE" image={heroImage} />

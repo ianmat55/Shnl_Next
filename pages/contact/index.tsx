@@ -26,7 +26,7 @@ export default function Contact() {
 
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors },
   } = useForm<IFormInputs>();
   const [step, setStep] = useState(0);

@@ -22,6 +22,8 @@
     "prettier/prettier": "warn",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-non-null-assertion": "warn"
   }
 }

@@ -1,5 +1,5 @@
 import styles from "../../styles/Contact.module.css";
-import { useForm } from "react-hook-form";
+import React, { useForm } from "react-hook-form";
 import Image from "next/image";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

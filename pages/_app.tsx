@@ -1,21 +1,21 @@
-import '../styles/globals.css'
-import Layout from '../components/layout'
-import { WindowSizeProvider } from '../utils/context'
-import React from 'react'
+import "../styles/globals.css";
+import Layout from "../components/layout";
+import { WindowSizeProvider } from "../utils/context";
+import React from "react";
 
 interface MyAppProps {
-  Component: React.FC,
-  pageProps: any
+  Component: React.FC;
+  pageProps: any;
 }
 
 function MyApp({ Component, pageProps }: MyAppProps) {
   return (
     <WindowSizeProvider>
       <Layout>
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
     </WindowSizeProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

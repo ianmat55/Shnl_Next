@@ -1,6 +1,7 @@
 import Gallery from "../../components/gallery";
 import Header from "../../components/header";
 import axios from "axios";
+import React from "react-hook-form";
 import { GalleryProps, Size } from "shared/types";
 import lifestyle_desktop from "../../public/assets/film.jpg";
 import lifestyle_mobile from "../../public/assets/film_mobile.jpg";

@@ -13,13 +13,13 @@ import { Size } from "shared/types";
 import { useRouter } from "next/router";
 
 interface IFormInputs {
-  category: any;
-  fullName: any;
-  phoneNumber: any;
-  email: any;
-  insta?: any;
-  eventDate?: any;
-  message?: any;
+  category: string;
+  fullName: string;
+  phoneNumber: string;
+  email: string;
+  insta?: string;
+  eventDate?: string;
+  message?: string;
 }
 
 export default function Contact() {

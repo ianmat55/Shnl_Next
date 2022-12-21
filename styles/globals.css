@@ -15,20 +15,18 @@ h1 {
 }
 
 .headerSection {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  justify-content: center;
   margin: auto;
-  margin-bottom: 2rem;
   overflow: hidden;
 }
 
 .title {
+  height: 10%;
   width: 100vw;
   font-size: 2rem;
-  height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +34,13 @@ h1 {
 }
 
 .headerImage {
-  max-height: 95vh;
+  height: 90%;
   overflow: hidden;
+  position: relative;
+}
+
+.headerImage span {
+  bottom: 5rem;
 }
 
 * {
@@ -165,6 +168,16 @@ html {
   box-sizing: inherit;
 }
 
+@media only screen and (min-width: 650px) {
+  .headerSection {
+    height: auto;
+  }
+
+  .headerImage span {
+    bottom: 0;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   h1 {
     font-size: 32px;
@@ -210,7 +223,10 @@ html {
 
   .headerSection {
     flex-direction: row;
+    justify-content: center;
+    height: auto;
     padding: 0 4rem;
+    margin-bottom: 3rem;
   }
 
   .title {
@@ -220,6 +236,10 @@ html {
 
   .headerImage {
     padding: 2rem;
+  }
+
+  .headerImage span {
+    bottom: 0;
   }
 }
 

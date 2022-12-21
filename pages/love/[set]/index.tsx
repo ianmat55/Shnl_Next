@@ -24,7 +24,7 @@ export async function getStaticProps({ params }: any) {
   );
   const fileList = res.data.data.photo_set;
   const photoSet = await Promise.all(
-    fileList.map(async (file: any) => {
+    fileList.map(async (file: string) => {
       const res = await axios(
         `https://api.shanelhonolulu.com/items/Love_Sets/${file}`
       );

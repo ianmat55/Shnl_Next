@@ -1,6 +1,6 @@
 import axios from "axios";
 import PhotoSet from "components/photo_set";
-import React from "react-hook-form";
+import React from "react";
 
 // This function gets called at build time
 export async function getStaticPaths() {

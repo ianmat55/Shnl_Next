@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useState } from "react";
 import SocialIcons from "./socials";
+import React from "react";
 
 interface MenuLink {
   name: string;

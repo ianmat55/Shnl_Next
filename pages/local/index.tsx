@@ -1,6 +1,7 @@
 import styles from "../../styles/Commercial.module.css";
 import localHeader from "../../public/assets/commercial.jpg";
 import Header from "components/header";
+import React from "react";
 
 const Body = () => {
   return (

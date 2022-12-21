@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GalleryProps, GalleryData } from "shared/types";
 import styles from "../styles/gallery.module.css";
+import React from "react";
 
 export default function Gallery({ images, page }: GalleryProps) {
   const galleryImages = images.data.map((data: GalleryData) => {

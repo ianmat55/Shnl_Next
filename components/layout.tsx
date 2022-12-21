@@ -10,10 +10,9 @@ export default function Layout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="Shanel Photography"
-          content="Proffessional photography portfolio"
+          content="Honolulu based wedding, gradutaiton and general photography
+          services."
         />
-        content="Honolulu based wedding, gradutaiton and general photography
-        services."
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

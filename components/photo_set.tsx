@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PhotoSetObject, SortedPhotoSetData } from "shared/types";
 import styles from "../styles/gallery.module.css";
+import React from "react";
 
 interface PhotoSetProps {
   photoSet: PhotoSetObject[];
@@ -34,7 +35,7 @@ function backFillLandscapePhotos(
 function sortImages(photoSet: PhotoSetObject[]) {
   let header: PhotoSetObject | undefined;
   let portraitCount = 0;
-  const sortedPhotos = new Array();
+  const sortedPhotos: any = [];
 
   // first sort array so that landscape photos are at the end of the array
   // then iterate though list again and fill every 5xth position w/ a landscape photo where possible

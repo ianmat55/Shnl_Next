@@ -5,7 +5,7 @@ import Header from "components/header";
 import wedding_desktop from "../../public/assets/wedding.jpg";
 import wedding_mobile from "../../public/assets/wedding_mobile.jpg";
 import { useWindowSizeContext } from "utils/context";
-import React from "react-hook-form";
+import React from "react";
 
 export async function getStaticProps() {
   const res = await axios("https://api.shanelhonolulu.com/items/Love");

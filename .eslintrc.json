@@ -21,6 +21,6 @@
     "prettier/prettier": "warn",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    "semi": ["error", "never"]
+    "semi": [2, "always"]
   }
 }

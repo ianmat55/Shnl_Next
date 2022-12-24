@@ -26,11 +26,10 @@
 }
 
 .photoContainer {
-  margin: 0.5rem;
   text-align: center;
   position: relative;
   min-height: 40vh;
-  width: 40vw;
+  width: 50%;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 2px 5px 20px 0 rgba(0, 0, 0, 0.9);
@@ -70,7 +69,7 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-  margin: 0.5rem;
+  margin: 5px;
   box-shadow: 2px 5px 20px 0 rgba(0, 0, 0, 0.9);
   height: 35vh;
   width: 40vw;
@@ -152,6 +151,21 @@
   position: relative;
   transition-delay: 0.3s;
   margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .portraitPhoto {
+    height: 55vh;
+  }
+
+  .landscapePhoto {
+    height: 50vh;
+  }
+
+  .photoContainer {
+    width: 40vw;
+    min-height: 55vh;
+  }
 }
 
 @media only screen and (min-width: 1000px) {

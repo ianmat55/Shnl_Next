@@ -2,7 +2,7 @@
   /* Flexbox may be a better option to display images of different sizes */
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto 2rem auto;
+  margin: 1rem auto 2rem auto;
   justify-content: center;
   align-items: center;
   width: 95%;
@@ -153,9 +153,13 @@
   margin: 0;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 500px) {
   .portraitPhoto {
-    height: 55vh;
+    height: 60vh;
+  }
+
+  .caption h1 {
+    height: 20%;
   }
 
   .landscapePhoto {
@@ -164,7 +168,7 @@
 
   .photoContainer {
     width: 40vw;
-    min-height: 55vh;
+    min-height: 60vh;
   }
 }
 

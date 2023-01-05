@@ -69,7 +69,9 @@
   height: 100vh;
   padding: 1rem 3rem 3rem 3rem;
   margin: auto;
-  background-color: #faebd7;
+  /* background-color: #c8cbb4;
+  background-color: #96ab9a; */
+  background-color: #6a8a84;
 }
 
 #contactHeader {
@@ -166,8 +168,6 @@
 
 .input {
   border: 0;
-  border-bottom: 2px solid black;
-  background-color: #faebd7;
 }
 
 .input:focus {
@@ -221,7 +221,7 @@
 }
 
 .next_btn:hover {
-  color: cadetblue;
+  color: #c8cbb4;
 }
 
 .next_container {
@@ -244,7 +244,7 @@
 .back_button {
   width: 25%;
   padding: 0.5rem;
-  background-color: #f2c892;
+  background-color: #faebd7;
   border-radius: 10px;
   cursor: pointer;
   width: 8rem;
@@ -262,7 +262,7 @@
   padding: 1rem 0;
   margin: 2rem auto;
   width: 60%;
-  background-color: #d8ae83;
+  background-color: #faebd7;
   outline: none;
   border: none;
   border-radius: 5px;

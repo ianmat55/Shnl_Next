@@ -101,12 +101,12 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
           return (
             <div
               style={{
-                transform: `translateX(-${size!.width * count}px)`,
+                transform: `translateX(-${size?.width * count}px)`,
                 transition: "transform .8s ease-in-out",
                 position: "relative",
                 display: "flex",
                 height: "100vh",
-                width: `${size!.width * background.length}`,
+                width: `${size?.width * background.length}`,
               }}
               key={`img${index}`}
             >

@@ -108,6 +108,10 @@ ul li .sIcon {
   align-items: center;
 }
 
+.social_icon_wrappper a {
+  position: absolute;
+}
+
 .social_icon_wrapper:active {
   width: 11rem;
   transition-duration: 0.8s;

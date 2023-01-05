@@ -4,7 +4,7 @@ import styles from "../styles/navbar.module.css";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import SocialIcons from "./socials";
 import React from "react";
 
@@ -13,15 +13,9 @@ interface MenuLink {
   link: string;
 }
 
-interface SocialIcons {
-  insta: any;
-  facebook: any;
-  email: any;
-}
-
 interface MenuItemsProps {
   menuLinks: MenuLink[];
-  setSideBarOpen: any;
+  setSideBarOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const MenuItems = ({ menuLinks, setSideBarOpen }: MenuItemsProps) => {
@@ -115,10 +109,10 @@ export default function Nav() {
     //   name: "Film",
     //   link: "/film",
     // },
-    {
-      name: "Contact",
-      link: "/contact",
-    },
+    // {
+    //   name: "Contact",
+    //   link: "/contact",
+    // },
     // {
     //   name: "Ai",
     //   link: "/",

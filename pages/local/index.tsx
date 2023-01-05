@@ -11,10 +11,10 @@ const Body = () => {
     <div className={styles.bodyContainer}>
       {/* <h1 id={styles.catchline} className='text-2xl'> HELPING LOCAL <br /> BUSINESSES <br /> GROW </h1> */}
       <p className={styles.bodyText}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.{" "}
+        {/* Keeping it local, helping small businesses succeed.  */}
+        Whether you need headshots, product shots, or marketing images, I can
+        provide you with high-quality, professional photos that showcase your
+        business in the best possible light.
       </p>
     </div>
   );

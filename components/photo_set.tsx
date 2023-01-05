@@ -9,59 +9,50 @@ interface PhotoSetProps {
   location: string;
 }
 
+function sortImages(photoSet: PhotoSetObject[]) {
+  const header: PhotoSetObject = photoSet.filter(
+    (photo) => photo.data.header
+  )[0];
+
+  const portraits: PhotoSetObject[] = [];
+  const landscapes: PhotoSetObject[] = [];
+  for (const photo of photoSet) {
+    photo.data.landscape_portrait == "landscape"
+      ? landscapes.push(photo)
+      : portraits.push(photo);
+  }
+
+  const sortedPhotos: PhotoSetObject[] = portraits.concat(landscapes);
+  const backFilledArray = backFillLandscapePhotos(
+    sortedPhotos,
+    portraits.length
+  );
+
+  return { header, backFilledArray };
+}
+
 function backFillLandscapePhotos(
   photoSet: PhotoSetObject[],
   portraitCount: number
 ): PhotoSetObject[] {
-  let landscapePos = 4; // Every x amound of photos will be a landscape
-  let pointer_a = portraitCount;
+  console.log(photoSet.length);
+  let landscapePos = 4; // Every x amount of photos will be landscape (zero index)
+  let portrait_pointer = portraitCount;
 
   while (landscapePos <= photoSet.length - 1) {
     // skip last element if odd number of portraits since we want to backfill landscape photos
-    if (photoSet[pointer_a].data.landscape_portrait !== "landscape") {
+    if (photoSet[portrait_pointer].data.landscape_portrait !== "landscape") {
       continue;
     } else {
       // swap 5xth element with frontmost landscape photo in array
-      const temp = photoSet[pointer_a];
-      photoSet[pointer_a] = photoSet[landscapePos];
+      const temp = photoSet[portrait_pointer];
+      photoSet[portrait_pointer] = photoSet[landscapePos];
       photoSet[landscapePos] = temp;
       landscapePos += 5;
-      pointer_a++;
+      portrait_pointer++;
     }
   }
   return photoSet;
-}
-
-function sortImages(photoSet: PhotoSetObject[]) {
-  let header: PhotoSetObject | undefined;
-  let portraitCount = 0;
-  const sortedPhotos: any = [];
-
-  // first sort array so that landscape photos are at the end of the array
-  // then iterate though list again and fill every 5xth position w/ a landscape photo where possible
-  // if number of portrait photos is odd, move last portrait to end of array
-  for (let i = 0; i < photoSet.length; i++) {
-    const isLandscape: boolean =
-      photoSet[i].data.landscape_portrait == "landscape" ? true : false;
-
-    if (photoSet[i].data.header) {
-      header = photoSet[i];
-    } else if (isLandscape) {
-      sortedPhotos.push(photoSet[i]);
-    } else {
-      sortedPhotos.unshift(photoSet[i]);
-      portraitCount++;
-    }
-  }
-
-  if (portraitCount % 2 == 1) {
-    // lets just add another portrait at the end
-    sortedPhotos.push(header);
-  }
-
-  const backFilledArray = backFillLandscapePhotos(sortedPhotos, portraitCount);
-
-  return { header, backFilledArray };
 }
 
 export default function PhotoSet({ photoSet, title, location }: PhotoSetProps) {

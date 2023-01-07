@@ -94,7 +94,7 @@ export default function PhotoSet({ photoSet, title, location }: PhotoSetProps) {
       <div className={styles.setHeader}>
         <div className={styles.headerPhoto}>{setHeader}</div>
         <div className={styles.headerDescription}>
-          <h1> {title} </h1>
+          <h1 className={styles.setTitle}> {title} </h1>
           <h3> {location} </h3>
         </div>
       </div>

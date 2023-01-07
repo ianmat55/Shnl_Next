@@ -8,6 +8,10 @@
   width: 95%;
 }
 
+.setTitle {
+  font-size: 2rem;
+}
+
 .photoSet {
   display: flex;
   flex-wrap: wrap;

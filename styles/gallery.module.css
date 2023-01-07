@@ -8,10 +8,6 @@
   width: 95%;
 }
 
-.setTitle {
-  font-size: 2rem;
-}
-
 .photoSet {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +180,10 @@
     display: flex;
     justify-self: center;
     align-items: center;
+  }
+
+  .setTitle {
+    font-size: 2rem;
   }
 
   .headerDescription {

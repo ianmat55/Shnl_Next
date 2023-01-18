@@ -38,8 +38,6 @@ function backFillLandscapePhotos(
   photoSet: PhotoSetObject[],
   portraitCount: number
 ): PhotoSetObject[] {
-  console.log("photo set length");
-  console.log(photoSet.length);
   let landscapePos = 4; // Every x amount of photos will be landscape (zero index)
   let portrait_pointer = portraitCount;
 

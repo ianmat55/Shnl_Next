@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 export default function SocialIcons() {
-  console.log("fuck");
   return (
     <ul className={styles.iconContainer}>
       <a href="https://www.instagram.com/shanellenahs/">

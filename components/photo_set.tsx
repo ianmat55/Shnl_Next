@@ -22,11 +22,14 @@ function sortImages(photoSet: PhotoSetObject[]) {
       : portraits.push(photo);
   }
 
-  const sortedPhotos: PhotoSetObject[] = portraits.concat(landscapes);
-  const backFilledArray = backFillLandscapePhotos(
-    sortedPhotos,
-    portraits.length
-  );
+  let backFilledArray;
+
+  if (landscapes.length > 0) {
+    const sortedPhotos: PhotoSetObject[] = portraits.concat(landscapes);
+    backFilledArray = backFillLandscapePhotos(sortedPhotos, portraits.length);
+  } else {
+    backFilledArray = portraits;
+  }
 
   return { header, backFilledArray };
 }
@@ -35,6 +38,7 @@ function backFillLandscapePhotos(
   photoSet: PhotoSetObject[],
   portraitCount: number
 ): PhotoSetObject[] {
+  console.log("photo set length");
   console.log(photoSet.length);
   let landscapePos = 4; // Every x amount of photos will be landscape (zero index)
   let portrait_pointer = portraitCount;

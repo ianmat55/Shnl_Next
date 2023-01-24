@@ -30,6 +30,9 @@ interface BackgroundImagesProps {
 const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
   // const [count, setCount] = useState(0);
   const [count] = useState(0);
+
+  const logoWidth: string = size.width >= 1000 ? "320" : "200";
+  const logoHeight: string = size.width >= 1000 ? "290" : "150";
   // const incrementCount = (int: number) => {
   //   if (count == 0 && int < 0) {
   //     return;
@@ -44,8 +47,8 @@ const BackgroundImages = ({ background, size }: BackgroundImagesProps) => {
         <div id={styles.arrows}>
           <div className={styles.logoContainer}>
             <svg
-              width="320"
-              height="290"
+              width={logoWidth}
+              height={logoHeight}
               viewBox="0 0 354 324"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

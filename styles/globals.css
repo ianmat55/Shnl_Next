@@ -177,7 +177,7 @@ html {
   }
 
   #translate-nav {
-    justify-content: end;
+    justify-content: center;
     transform: translateX(0);
     /* height: 4rem; */
   }

@@ -172,11 +172,6 @@ ul li .sIcon {
   background-color: #e1306c75;
 }
 
-#mobileLogo {
-  margin-top: 1.5rem;
-  position: absolute;
-}
-
 /* #emailIcon {
 	background-color: transparent;
 }
@@ -192,10 +187,6 @@ ul li .sIcon {
 @media only screen and (min-width: 1000px) {
   #navbar_menu {
     display: flex;
-  }
-
-  #mobileLogo {
-    display: none;
   }
 
   #nav_links {

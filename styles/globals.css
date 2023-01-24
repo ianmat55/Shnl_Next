@@ -96,10 +96,6 @@ img {
   max-width: 100%;
 }
 
-svg {
-  cursor: pointer;
-}
-
 input {
   font-size: 1.5em;
   border: 0;
@@ -181,7 +177,7 @@ html {
   }
 
   #translate-nav {
-    justify-content: space-between;
+    justify-content: end;
     transform: translateX(0);
     /* height: 4rem; */
   }
@@ -197,7 +193,6 @@ html {
     height: 4rem;
     width: 100%;
     font-size: 1rem;
-    justify-content: space-between;
     padding: 0 2rem;
     /* color: #ffffff; */
   }

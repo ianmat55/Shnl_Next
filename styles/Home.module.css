@@ -11,6 +11,10 @@
   overscroll-behavior: none;
 }
 
+.logoContainer {
+  display: none;
+}
+
 #homeBackgrounds {
   display: flex;
   flex-direction: row;
@@ -97,6 +101,11 @@
 }
 
 @media (min-width: 1000px) {
+  .logoContainer {
+    display: block;
+    margin-bottom: 15rem;
+  }
+
   #home_social_icons {
     display: flex;
     justify-content: center;

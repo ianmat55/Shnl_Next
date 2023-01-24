@@ -14,7 +14,7 @@
 .logoContainer {
   display: block;
   height: 100vh;
-  margin-top: 10rem;
+  padding-top: 5rem;
 }
 
 #homeBackgrounds {
@@ -104,7 +104,7 @@
 
 @media (min-width: 1000px) {
   .logoContainer {
-    margin-top: 15rem;
+    padding-top: 8rem;
   }
 
   #home_social_icons {

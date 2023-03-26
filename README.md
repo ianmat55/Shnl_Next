@@ -1,6 +1,5 @@
-... in dev
-
 # Shanel Photography
+Note: Site has moved over to use wordpress, this is left up for demonstration purposes
 
 ---
 
